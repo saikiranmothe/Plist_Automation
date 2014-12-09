@@ -11,3 +11,8 @@ Feature: Login
     Then home page for the user "somashekar" should be displayed
     When user logs out from application
     And the user should be log out from the application
+
+ @smoke_common
+  Scenario: User login
+    Given that the user logged in as "somashekar" and "Qwinix1234"
+    Then home page for the user "somashekar" should be displayed
