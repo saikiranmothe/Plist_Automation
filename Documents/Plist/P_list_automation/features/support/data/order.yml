@@ -1,0 +1,16 @@
+##
+# P_list - Ruby Cucumber Automation
+#
+# Revision History:
+# -----------------
+# Creator Name  : Qwinix QA
+# Modifier By   : <NAME>,<MODIFY DATE>,<REASON>
+#
+# @description: This file contains execution order of api features. The highest number features executes first in the order
+
+#Login
+features/plist_login.feature : 1000
+
+#Logout
+#features//common/plist_logout.feature : 1
+

@@ -1,0 +1,77 @@
+[
+  {
+    "source": "^user click on Sign in button$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:1",
+    "steps": [
+      {
+        "name": "user click on Sign in button",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user logs in as \"([^\"]*)\" and \"([^\"]*)\"$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:9",
+    "steps": [
+      {
+        "name": "user logs in as \"somashekar\" and \"Qwinix1234\"",
+        "args": [
+          {
+            "offset": 17,
+            "val": "somashekar"
+          },
+          {
+            "offset": 34,
+            "val": "Qwinix1234"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^home page for the user \"([^\"]*)\" should be displayed$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:15",
+    "steps": [
+      {
+        "name": "home page for the user \"somashekar\" should be displayed",
+        "args": [
+          {
+            "offset": 24,
+            "val": "somashekar"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user logs out from application$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:21",
+    "steps": [
+      {
+        "name": "user logs out from application",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the user should be log out from the application$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:27",
+    "steps": [
+      {
+        "name": "the user should be log out from the application",
+        "args": [
+
+        ]
+      }
+    ]
+  }
+]
