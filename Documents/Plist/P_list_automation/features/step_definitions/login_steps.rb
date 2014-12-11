@@ -29,3 +29,12 @@ And(/^the user should be log out from the application$/) do
   puts loginpage.is_logout?
   end
 end
+
+Given(/^that the user logged in as "(.*?)" and "(.*?)"$/) do |username, password|
+   @site = "plist".downcase
+  visit @site, :login_page
+   on @site, :login_page do |loginpage|
+    loginpage.click_signin
+    loginpage.login username,password
+  end
+end
