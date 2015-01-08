@@ -6,11 +6,20 @@
 # Creator Name  : Qwinix QA
 # Modifier By   : <NAME>,<MODIFY DATE>,<REASON>
 #
-# @description: This file contains execution order of api features. The highest number features executes first in the order
+# @description: This file contains execution order of features. The highest number features executes first in the order
 
-#Login
-features/plist_login.feature : 1000
-
-#Logout
-#features//common/plist_logout.feature : 1
-
+##
+#join
+##
+features/stream/join/plist_join.feature : 800
+##
+#admin
+##
+features/stream/admin/admin_role.feature : 450
+features/stream/admin/admin_lock_unlock.feature : 440
+features/stream/admin/admin_felters.feature : 430
+features/stream/admin/admin_search.feature : 420
+features/stream/admin/admin_profile.feature : 410
+features/stream/admin/admin_banks_opportunities.feature : 400
+features/plist_login.feature : 390
+features/plist_admin_login.feature : 380

@@ -4,25 +4,29 @@ require 'watir-page-helper/extensions/element_extension'
 
 World WatirPageHelper::Commands
 
+#CONFIGFILE = YAML.load_file('configoptions.yml')
 
 WatirPageHelper.create
+
+#@browser = Watir::Browser.new ENV['BROWSER'] || CONFIGFILE['global']['browser']
+
+WatirPageHelper.browser.window.maximize
+
 
 FAILED_SCENARIOS_SCREENSHOTS_DIR = "failed_scenarios_screenshots"
 
 After do |scenario|
   if scenario.failed?
      Dir::mkdir("#{FAILED_SCENARIOS_SCREENSHOTS_DIR}") if not File.directory?("#{FAILED_SCENARIOS_SCREENSHOTS_DIR}")
-    # screenshot = "./#{FAILED_SCENARIOS_SCREENSHOTS_DIR}/FAILED_#{scenario.name.gsub(' ','_').gsub(/[^0-9A-Za-z_]/, '')}_#{Time.new.to_i}.png"
-    screenshot = "./#{FAILED_SCENARIOS_SCREENSHOTS_DIR}/FAILED_#{scenario.name.gsub(' ','_').gsub(/[^0-9A-Za-z_]/, '')}_#{Time.now.strftime("%H_%M_%S__%d_%m_%Y")}.png"
-    WatirPageHelper.browser.driver.save_screenshot(screenshot)
+     screenshot = "./#{FAILED_SCENARIOS_SCREENSHOTS_DIR}/FAILED_#{scenario.name.gsub(' ','_').gsub(/[^0-9A-Za-z_]/, '')}_#{Time.now.strftime("%H_%M_%S__%d_%m_%Y")}.png"
+     WatirPageHelper.browser.driver.save_screenshot(screenshot)
     embed screenshot, 'image/png'
-    Cucumber.wants_to_quit = true if ((scenario.title).eql?("User login"))
+    Cucumber.wants_to_quit #= true if ((scenario.title).eql?("User login"))
   end
 
 end
 
 puts "ENV => #{ENV.inspect}"
-
 if ENV['HEADLESS'] == 'true'
   require 'headless'
 
@@ -34,6 +38,7 @@ if ENV['HEADLESS'] == 'true'
     headless.destroy
   end
 else
+  
   at_exit do
     WatirPageHelper.browser.close
   end
@@ -57,7 +62,7 @@ def get_weight(x)
   weights = YAML::load(File.open('features/support/data/order.yml')) #this is expensive but is done only on rake start
   weight = weights[x]
   if weight == nil or weight == ''
-    weight = '1000' #this is because we want to run the newly added tests first.
+    weight = '800' #this is because we want to run the newly added tests first.
   end
   return weight.to_i()
 end
@@ -76,11 +81,10 @@ AfterConfiguration do |configuration|
     sorted_files
   }
 
-  puts "\n\n *************************** features will be executed in following order: \n"
+  puts "\n\n **features will be executed in following order: \n"
   for i in configuration.feature_files
     puts "#{i} : weight: #{get_weight(i)}"
   end
 end
 
 #--------------------------------> End Order of Execution Code <-----------------------------------#
-
