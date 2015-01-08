@@ -20,7 +20,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join_linkedin_steps.rb:13",
     "steps": [
+      {
+        "name": "I click Allow access link",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -36,7 +41,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join_linkedin_steps.rb:25",
     "steps": [
+      {
+        "name": "user join in as Linked in Email and password",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -60,7 +70,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join_linkedin_steps.rb:44",
     "steps": [
+      {
+        "name": "home page for the LinkedIn user should be display",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -124,7 +139,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join_steps.rb:47",
     "steps": [
+      {
+        "name": "user logs out from application",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -132,7 +152,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join_steps.rb:53",
     "steps": [
+      {
+        "name": "the user should be log out from the application",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -140,7 +165,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:1",
     "steps": [
+      {
+        "name": "I click on Sign in button",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -161,7 +191,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:19",
     "steps": [
+      {
+        "name": "home page for the user name should be display",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -169,7 +204,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:25",
     "steps": [
+      {
+        "name": "I click Sign In to ParticipationList with LinkedIn",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -273,12 +313,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:8",
     "steps": [
-      {
-        "name": "I should see Edit button for user to Lock",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -286,12 +321,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:17",
     "steps": [
-      {
-        "name": "I select 'Lock' for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -299,12 +329,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:23",
     "steps": [
-      {
-        "name": "I should see 'Lock' status for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -360,12 +385,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:66",
     "steps": [
-      {
-        "name": "I should not able to login the application",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -405,12 +425,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_login_steps.rb:17",
     "steps": [
-      {
-        "name": "admin logs out from application",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
