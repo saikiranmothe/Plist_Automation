@@ -25,6 +25,5 @@ end
 When(/^I click Sign In to ParticipationList with LinkedIn$/) do
  on @site, :login_page do |loginpage|
   loginpage.click_linkedin_sign
+  end
 end
-end
-
