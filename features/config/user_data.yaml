@@ -1,25 +1,16 @@
 ---
 default:
-  name : cucumber13
-  email : cucumber13@yopmail.com
-  username : cucumber13
+  name : qwinixqa2
+  email : qwinixqa2@yopmail.com
+  username : qwinixqa2
   password : Qwinix1
   ph_no : 1234567890
   city : abcd
   state : Indiana
   title : Lender
 
-linked_in_user:
-  linkedin_email : cucumberwatir@gmail.com
-  password : Qwinix1234
-  phone : 1234567890
-  city : qazxswe
-  state : Texas
-  title : Lender - Other
-
-
 common_user:
-  username : cucumber8
+  username : qwinixqa2
   password : Qwinix1
 
 admin:

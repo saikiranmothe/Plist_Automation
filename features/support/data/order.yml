@@ -11,7 +11,7 @@
 ##
 #join
 ##
-
+features/stream/join/plist_join.feature : 800
 ##
 #admin
 ##

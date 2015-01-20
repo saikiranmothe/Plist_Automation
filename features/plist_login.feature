@@ -7,8 +7,8 @@ Feature: Login
   @smoke_login
   Scenario: User login for the first time
     #Given I click on Sign in button 
-    Given I login as an common user
-    Then home page for the user name should be display
+    Given I login as aa user
+    Then I should see the home page with user name displayed
     When user logs out from application
     And the user should be log out from the application
 
@@ -19,4 +19,3 @@ Feature: Login
     Then user join in as Linked in Email and password
     Then I click Allow access link
     Then home page for the LinkedIn user should be display
-

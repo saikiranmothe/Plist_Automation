@@ -47,8 +47,6 @@ module WatirPageHelper::Plist
       return "User log out sccessfully" unless user_logout.exists?
     end
 
-##### Admin Role #############################################################################################################################################
-    
     def manage_users
      @@mang = @browser.button(:xpath,"//div[3]/div/div[2]/button")
      @@mang.wait_until_present
@@ -80,15 +78,8 @@ module WatirPageHelper::Plist
      end
   end
 
-  def verify_role_bef
-    @browser.td(:xpath, "//div[3]/table/tbody/tr/td[6]").wait_until_present
-    @browser.td(:xpath, "//div[3]/table/tbody/tr/td[6]").text
-  end
-
   def check_make_addmin
-     @browser.td(:xpath, "//div[3]/table/tbody/tr/td[6]").wait_until_present
-     @browser.td(:xpath, "//div[3]/table/tbody/tr/td[6]").text
-     @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").wait_until_present
+    @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").wait_until_present
      ele = @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").text
      if ele.include? "Make Admin"
         return ele
@@ -124,21 +115,6 @@ module WatirPageHelper::Plist
     else 
     return ele
    end
-  end
-
-  def check_admin_noti
-      #msg = "User has been given the admin role"  
-      @@mang.click
-      ele = @browser.a(:xpath, "//div[3]/div/div[2]/ul/li[2]/a")
-      ele.wait_until_present
-      ele.click
-      @browser.div(:xpath,"//div[2]/ul/li[1]/div").wait_until_present
-      noti = @browser.div(:xpath,"//div[2]/ul/li[1]/div").text
-    if noti.include? "User cucumber8 has been given the admin role"
-      return "Admin Role added sccessfully"
-    else
-      raise Exception.new "Failed to add Admin Role"
-    end
   end
 
   def check_remove_addmin
@@ -181,52 +157,43 @@ module WatirPageHelper::Plist
     end
   end
 
-  def check_remove_admin_noti
-      #remove_msg = "User has been removed the admin role"  
-      @@mang.click
-      ele = @browser.a(:xpath, "//div[3]/div/div[2]/ul/li[2]/a")
-      ele.wait_until_present
-      ele.click
-      @browser.div(:xpath,"//div[2]/ul/li[1]/div").wait_until_present
-       noti = @browser.div(:xpath,"//div[2]/ul/li[1]/div").text
-    if noti.include? "User cucumber8 has been removed from admin role"
-      return "Admin Role added sccessfully"
-    else
-      raise Exception.new "Failed to Remove Admin Role"
-    end
-  end
-
-#####Lock & Unlock, Block ################################################################################################################################
-  def check_user_status_bef
+#####Lock&Unlock#####Block############
+  def is_lock_before?
     @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").wait_until_present
     @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").text
   end
 
-  def check_edit_button
-      ele = @browser.a(:xpath, "//div[3]/table/tbody/tr[1]/td[1]/a")
+  def check_click_edit_button_lock
+          sleep 2
+            #@browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").wait_until_present
+            #ele = @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").text
+      #unless ele.include? "Active"
+            ele = @browser.a(:xpath, "//div[3]/table/tbody/tr/td[1]/a")
             ele.wait_until_present
         if ele.exists?
-           ele.click
-           return "Edit button is present"
+            ele.click
+          return "Edit button is present"
         else
           raise Exception.new "Edit button is not present"
         end
-      ele = @browser.input(:xpath, "//form/div[2]/div/div/div[1]/input")
-      ele.wait_until_present
-    if ele.exists?
-        return "User Edit form is present"
-    else
-        raise Exception.new "User Edit form is not present"
-    end
+            ele = @browser.input(:xpath, "//form/div[2]/div/div/div[1]/input")
+            ele.wait_until_present
+          if ele.exists?
+              return "User Edit form is present"
+          else
+              raise Exception.new "User Edit form is not present"
+          end
+      #else    
+        #msg = "User alreay Locked"
+      #end
+      #return msg
   end
 
   def select_lock
       selector = @browser.select_list(:id, "user_status")
-      selector.wait_until_present
       selector.when_present.select "Locked"
       @browser.input(:xpath, "//form/div[3]/div/input").when_present.click
   end
-
 
   def is_user_locked?
     sleep 2
@@ -236,11 +203,14 @@ module WatirPageHelper::Plist
     return "User #{ele} successful"
     else
     raise Exception.new "Unsccessful to Lock the common user"
-    end 
+    end
   end
 
-  def click_edit_button_active
+  def check_click_edit_button_active
      sleep 2
+      @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").wait_until_present
+      ele = @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").text
+      #return "User alreay in Active status" unless ele.include? "Active"
       ele = @browser.a(:xpath, "//div[3]/table/tbody/tr/td[1]/a")
       ele.wait_until_present
      if ele.exists?
@@ -266,7 +236,7 @@ module WatirPageHelper::Plist
   end
 
   def is_user_approved?
-     sleep 1
+     sleep 2
     @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").wait_until_present
   ele = @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").text
     if ele.include? "Active"
@@ -276,8 +246,11 @@ module WatirPageHelper::Plist
     end
   end
 
-  def click_edit_button_deactive
-     sleep 1
+  def check_click_edit_button_deactive
+     sleep 2
+      @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").wait_until_present
+      ele = @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").text
+      #return "User alreay in Deactivated status" unless ele.include? "Deactivated"
       ele = @browser.a(:xpath, "//div[3]/table/tbody/tr/td[1]/a")
       ele.wait_until_present
      if ele.exists?
@@ -317,7 +290,7 @@ module WatirPageHelper::Plist
     return "user not login sccessfully" unless @browser.a(:xpath,"//div[3]/div/div[1]/span/a").exists?
   end
 
-  #### Filters #################################################################################################################################################
+  ####Filters##############################################################################
   def check_filters
      ele = @browser.select(:xpath, "//div[1]/div/form/div[2]/select")
      sleep(2)
@@ -374,7 +347,7 @@ module WatirPageHelper::Plist
     end
   end
 
-##Admin Search##############################################################################################################################################
+##Admin Search#######################################################################
 
   def seach_field
    ele = @browser.input(:id, "text_search_query")
@@ -389,7 +362,7 @@ module WatirPageHelper::Plist
   def is_search_user? 
     @browser.td(:xpath, "//div[3]/table/tbody/tr/td[2]").wait_until_present
     search_result = @browser.td(:xpath, "//div[3]/table/tbody/tr/td[2]").text
-      if search_result.include? "cucumber8"
+      if search_result.include? "qwinixqa2"
          return "search result are displayning as excepted"
      else
          raise Exception.new "search result is not displayning as excepted"
@@ -413,7 +386,7 @@ module WatirPageHelper::Plist
   end
 
 
-## Profile and Bnaks #########################################################################################################################################
+###############Profile and Bnaks###############################################
    def profile_dropdown
     mang = @browser.button(:xpath,"//div[3]/div/div[2]/button")
      mang.wait_until_present
@@ -512,7 +485,64 @@ def manage_opp
       return "No Opp"    
     end
   end
-############################################################################################################################################################   
+#################################################################################
+
+def check_auth_button
+     @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").wait_until_present
+     ele = @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").text
+     if ele.include? "Authorize"
+        return ele
+     else
+        raise Exception.new "Authorize button is not present"
+     end
+  end
+
+def click_button
+    @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").when_present.click
+end
+
+def check_verification_logs enter_log
+     @browser.textarea(:name, "user[verification_log]").wait_until_present
+     @browser.textarea(:name, "user[verification_log]").clear
+     @browser.textarea(:name, "user[verification_log]").send_keys enter_log
+end
+
+ def click_verify_auth
+  ele = @browser.input(:xpath, "//div[2]/form/div[3]/div/input")
+    ele.wait_until_present
+    ele.click
+  end
+
+def is_authorized
+    sleep 2
+    @browser.td(:xpath, "//div[3]/table/tbody/tr/td[6]").wait_until_present
+    ele = @browser.td(:xpath, "//div[3]/table/tbody/tr/td[6]").text
+    if ele.include? "Authorized Affiliated User"
+       return ele
+   else
+    raise Exception.new "Unable to make the user authorized" 
+   end
+  end
+
+def check_auth_notification
+      @@mang.click
+      ele = @browser.a(:xpath, "//div[3]/div/div[2]/ul/li[2]/a")
+      ele.wait_until_present
+      ele.click
+      @browser.div(:xpath,"//div[2]/ul/li[1]/div").wait_until_present
+       noti = @browser.div(:xpath,"//div[2]/ul/li[1]/div").text
+    if noti.include? "You have been authorized to transact in ParticipationList"
+      return "User has been authorized successfuly"
+    else
+      raise Exception.new "Failed to see the notification"
+    end
+  end
+
+
+#################################################################################
+
+   
+
     def logout
         user_info = @browser.button(:xpath, "//div[3]/div/div[2]/button")
         user_info.wait_until_present

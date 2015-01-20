@@ -1,15 +1,16 @@
-Then(/^I verify user locked before$/) do
+Then(/^I verify user is locked$/) do
  on @site, :admin_page do |adminpage|
-  pending puts "User Already Locked" if adminpage.check_user_status_bef.include? "Locked"
-  end 
-end
+  sleep 2
+  pending puts "User Already Locked" unless adminpage.is_lock_before?.include? "Active"
+  end
+end 
 
 Then(/^I should see Edit button for user to Lock$/) do
   steps %Q{
-   Then I verify user locked before
+   Then I verify user is locked
   }
   on @site, :admin_page do |adminpage|
-  adminpage.check_edit_button
+  adminpage.check_click_edit_button_lock
   end
 end
 
@@ -25,18 +26,9 @@ Then(/^I should see 'Lock' status for user$/) do
   end
 end
 
-Then(/^I verify user active before$/) do
- on @site, :admin_page do |adminpage|
-  pending puts "User in Avtive status" if adminpage.check_user_status_bef.include? "Active"
-  end
-end 
-
 Then(/^I should see Edit button for user to Active$/) do
-  steps %Q{
-   Then I verify user active before
-  }
   on @site, :admin_page do |adminpage|
-  adminpage.click_edit_button_active
+  puts adminpage.check_click_edit_button_active
   end
  end
 
@@ -52,18 +44,9 @@ Then(/^I should see 'Active' status for user$/) do
   end
 end
 
-Then(/^I verify user Deactivated before$/) do
- on @site, :admin_page do |adminpage|
-  pending puts "User Already Deactivated" if adminpage.check_user_status_bef.include? "Deactivated"
-  end
-  end
-
 Then(/^I should see Edit button for user to Deactivate$/) do
-  steps %Q{
-   Then I verify user Deactivated before
-  }
   on @site, :admin_page do |adminpage|
-  puts adminpage.click_edit_button_deactive
+  puts adminpage.check_click_edit_button_deactive
   end
  end
 

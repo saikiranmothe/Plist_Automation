@@ -68,7 +68,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join_steps.rb:1",
     "steps": [
+      {
+        "name": "I click on Join button",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -76,7 +81,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join_steps.rb:9",
     "steps": [
+      {
+        "name": "I click on CREATE A NEW ACCOUNT link",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -84,7 +94,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join_steps.rb:15",
     "steps": [
+      {
+        "name": "I enter valid user details",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -92,7 +107,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join_steps.rb:22",
     "steps": [
+      {
+        "name": "I click on Select Bank from Join ParticipationList page",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -100,7 +120,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join_steps.rb:28",
     "steps": [
+      {
+        "name": "I select a bank from the list of banks",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -108,7 +133,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join_steps.rb:35",
     "steps": [
+      {
+        "name": "I click on Join ParticipationList button",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -116,7 +146,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join_steps.rb:41",
     "steps": [
+      {
+        "name": "home page for the new user name should be display",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -124,8 +159,16 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join_steps.rb:47",
     "steps": [
+
+    ]
+  },
+  {
+    "source": "^check the checkbox for authorization request$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_steps.rb:54",
+    "steps": [
       {
-        "name": "user logs out from application",
+        "name": "check the checkbox for authorization request",
         "args": [
 
         ]
@@ -135,7 +178,7 @@
   {
     "source": "^the user should be log out from the application$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/join_steps.rb:53",
+    "file_colon_line": "features/step_definitions/join_steps.rb:60",
     "steps": [
 
     ]
@@ -145,44 +188,29 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:1",
     "steps": [
-      {
-        "name": "I click on Sign in button",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
-    "source": "^I login as an common user$",
+    "source": "^I login as aa user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:10",
+    "file_colon_line": "features/step_definitions/login_steps.rb:9",
     "steps": [
-      {
-        "name": "I login as an common user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
-    "source": "^home page for the user name should be display$",
+    "source": "^I should see the home page with user name displayed$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:20",
+    "file_colon_line": "features/step_definitions/login_steps.rb:19",
     "steps": [
-      {
-        "name": "home page for the user name should be display",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
     "source": "^I click Sign In to ParticipationList with LinkedIn$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:26",
+    "file_colon_line": "features/step_definitions/login_steps.rb:25",
     "steps": [
 
     ]
@@ -192,12 +220,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_banks_steps.rb:1",
     "steps": [
-      {
-        "name": "I go to Manage Banks tab",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -205,12 +228,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_banks_steps.rb:7",
     "steps": [
-      {
-        "name": "I should see 'all the Banks' in the table",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -218,12 +236,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_banks_steps.rb:13",
     "steps": [
-      {
-        "name": "I go to Manage Opportunities tab",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -231,12 +244,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_banks_steps.rb:19",
     "steps": [
-      {
-        "name": "I should see 'all the Opportunities' in the table",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -252,12 +260,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_filters_steps.rb:7",
     "steps": [
-      {
-        "name": "I select 'Approved' status from the option",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -265,12 +268,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_filters_steps.rb:13",
     "steps": [
-      {
-        "name": "I should able to see all the approved user in the table",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -278,12 +276,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_filters_steps.rb:19",
     "steps": [
-      {
-        "name": "I select 'Blocked' status from the option",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -291,12 +284,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_filters_steps.rb:25",
     "steps": [
-      {
-        "name": "I should able to see all the blocked user in the table",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -304,12 +292,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_filters_steps.rb:31",
     "steps": [
-      {
-        "name": "I select 'Locked' status from the option",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -317,16 +300,11 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_filters_steps.rb:37",
     "steps": [
-      {
-        "name": "I should able to see all the locked user in the table",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
-    "source": "^I verify user locked before$",
+    "source": "^I verify user is locked$",
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:1",
     "steps": [
@@ -336,46 +314,23 @@
   {
     "source": "^I should see Edit button for user to Lock$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:7",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:8",
     "steps": [
-      {
-        "name": "I should see Edit button for user to Lock",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
     "source": "^I select 'Lock' for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:16",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:17",
     "steps": [
-      {
-        "name": "I select 'Lock' for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
     "source": "^I should see 'Lock' status for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:22",
-    "steps": [
-      {
-        "name": "I should see 'Lock' status for user",
-        "args": [
-
-        ]
-      }
-    ]
-  },
-  {
-    "source": "^I verify user active before$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:28",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:23",
     "steps": [
 
     ]
@@ -383,46 +338,23 @@
   {
     "source": "^I should see Edit button for user to Active$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:34",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:29",
     "steps": [
-      {
-        "name": "I should see Edit button for user to Active",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
     "source": "^I select 'Active' for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:43",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:35",
     "steps": [
-      {
-        "name": "I select 'Active' for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
     "source": "^I should see 'Active' status for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:49",
-    "steps": [
-      {
-        "name": "I should see 'Active' status for user",
-        "args": [
-
-        ]
-      }
-    ]
-  },
-  {
-    "source": "^I verify user Deactivated before$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:55",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:41",
     "steps": [
 
     ]
@@ -430,72 +362,47 @@
   {
     "source": "^I should see Edit button for user to Deactivate$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:61",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:47",
     "steps": [
-      {
-        "name": "I should see Edit button for user to Deactivate",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
     "source": "^I select 'Deactivated' for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:70",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:53",
     "steps": [
-      {
-        "name": "I select 'Deactivated' for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
     "source": "^I should see 'Deactivated' status for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:76",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:59",
     "steps": [
-      {
-        "name": "I should see 'Deactivated' status for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
     "source": "^I should not able to login the application$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:83",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:66",
     "steps": [
-      {
-        "name": "I should not able to login the application",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
     "source": "^I should able to login the application$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:89",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:72",
     "steps": [
-      {
-        "name": "I should able to login the application",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
     "source": "^user logout from application$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:95",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:78",
     "steps": [
 
     ]
@@ -505,12 +412,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_login_steps.rb:1",
     "steps": [
-      {
-        "name": "I login as an admin user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -518,12 +420,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_login_steps.rb:11",
     "steps": [
-      {
-        "name": "home page for the admin should be display",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -531,12 +428,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_login_steps.rb:17",
     "steps": [
-      {
-        "name": "admin logs out from application",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -552,12 +444,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_profile_steps.rb:1",
     "steps": [
-      {
-        "name": "I click on 'My Profile'",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -565,12 +452,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_profile_steps.rb:7",
     "steps": [
-      {
-        "name": "Profile file should be dispaly",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -578,12 +460,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:1",
     "steps": [
-      {
-        "name": "I go to Manage users tab",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -591,19 +468,11 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:9",
     "steps": [
-      {
-        "name": "I search for the common user \"cucumber8\"",
-        "args": [
-          {
-            "offset": 30,
-            "val": "cucumber8"
-          }
-        ]
-      }
+
     ]
   },
   {
-    "source": "^I verify the user admin role$",
+    "source": "^I should see Make Admin button for user$",
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:15",
     "steps": [
@@ -611,48 +480,17 @@
     ]
   },
   {
-    "source": "^I should see Make Admin button for user$",
+    "source": "^I press button 'Make Admin' for user$",
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:21",
     "steps": [
-      {
-        "name": "I should see Make Admin button for user",
-        "args": [
 
-        ]
-      }
-    ]
-  },
-  {
-    "source": "^I press button 'Make Admin' for user$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:30",
-    "steps": [
-      {
-        "name": "I press button 'Make Admin' for user",
-        "args": [
-
-        ]
-      }
     ]
   },
   {
     "source": "^I should see 'Remove Admin' Role button for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:36",
-    "steps": [
-      {
-        "name": "I should see 'Remove Admin' Role button for user",
-        "args": [
-
-        ]
-      }
-    ]
-  },
-  {
-    "source": "^I verify the user role$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:42",
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:27",
     "steps": [
 
     ]
@@ -660,66 +498,25 @@
   {
     "source": "^I should see Remove Admin Role button for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:48",
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:33",
     "steps": [
-      {
-        "name": "I should see Remove Admin Role button for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
     "source": "^I press button 'Remove Admin Role' for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:57",
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:39",
     "steps": [
-      {
-        "name": "I press button 'Remove Admin Role' for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
     "source": "^I should see 'Make Admin' Role button for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:63",
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:45",
     "steps": [
-      {
-        "name": "I should see 'Make Admin' Role button for user",
-        "args": [
 
-        ]
-      }
-    ]
-  },
-  {
-    "source": "^I should be able to see the Admin Notification$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:69",
-    "steps": [
-      {
-        "name": "I should be able to see the Admin Notification",
-        "args": [
-
-        ]
-      }
-    ]
-  },
-  {
-    "source": "^I should be able to see the Remove Admin Notification$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:75",
-    "steps": [
-      {
-        "name": "I should be able to see the Remove Admin Notification",
-        "args": [
-
-        ]
-      }
     ]
   },
   {
@@ -727,54 +524,87 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:1",
     "steps": [
-      {
-        "name": "I should see 'Search' field",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
     "source": "^I search for the common user by mail \"(.*?)\"$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:7",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:9",
     "steps": [
-      {
-        "name": "I search for the common user by mail \"qaautomation@yopmail.com\"",
-        "args": [
-          {
-            "offset": 38,
-            "val": "qaautomation@yopmail.com"
-          }
-        ]
-      }
+
     ]
   },
   {
     "source": "^I should able to see user in the table$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:13",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:15",
     "steps": [
-      {
-        "name": "I should able to see user in the table",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
     "source": "^I should able to see user name in the table$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:19",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:21",
     "steps": [
-      {
-        "name": "I should able to see user name in the table",
-        "args": [
 
-        ]
-      }
+    ]
+  },
+  {
+    "source": "^I should be able to see 'Authorize' button$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:27",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I enter verification logs \"(.*?)\"$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:34",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I click Authorize button$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:40",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should see the role Authorized Affiliated User$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:46",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should be able to see the Notification$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:52",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I click on edit profile$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_edituser_details_steps.rb:1",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I click on Save Profile$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_edituser_details_steps.rb:22",
+    "steps": [
+
     ]
   }
 ]

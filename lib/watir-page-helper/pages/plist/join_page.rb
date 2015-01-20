@@ -79,9 +79,27 @@ module WatirPageHelper::Plist
       select_bank = @browser.button(:xpath, "//div[1]/div[1]/div[1]/div[3]/button")
         if select_bank.wait_until_present
            select_bank.click
+            ele = @browser.input(:id, "authorized")
+            ele.wait_until_present
+          if ele.exists?
+            return "Bank Selected sccessfully"
+          else
+             raise Exception.new "Authorization checkbox is not available in Join page"
+          end
         else
            raise Exception.new "unable to find the list of banks"
         end
+    end
+
+    def click_checkbox
+      ele = @browser.input(:id, "authorized")
+      ele.wait_until_present
+      if ele.exists?
+        ele.click
+        return "checkbox is present"
+      else
+        raise Exception.new "Chekbox is not available"
+      end
     end
    
     #click on Join ParticipationList
@@ -114,6 +132,8 @@ module WatirPageHelper::Plist
       end 
     end
 
+
+    
 #########################################################################################
 #Sign In to ParticipationList with LinkedIn methods#
   

@@ -1,4 +1,3 @@
-@admin
 @admin_banks_opp
 Feature: Admin View all Opportunities Banks
          As an admin user

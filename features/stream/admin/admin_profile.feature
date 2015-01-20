@@ -1,4 +1,3 @@
-@admin
 @admin_profile
 Feature: Admin profile
          As an admin user
