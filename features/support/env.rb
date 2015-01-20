@@ -16,7 +16,6 @@ WatirPageHelper.browser.window.maximize
 FAILED_SCENARIOS_SCREENSHOTS_DIR = "failed_scenarios_screenshots"
 
 After do |scenario|
-WatirPageHelper.browser.cookies.clear
   if scenario.failed?
      Dir::mkdir("#{FAILED_SCENARIOS_SCREENSHOTS_DIR}") if not File.directory?("#{FAILED_SCENARIOS_SCREENSHOTS_DIR}")
      screenshot = "./#{FAILED_SCENARIOS_SCREENSHOTS_DIR}/FAILED_#{scenario.name.gsub(' ','_').gsub(/[^0-9A-Za-z_]/, '')}_#{Time.now.strftime("%H_%M_%S__%d_%m_%Y")}.png"
@@ -39,7 +38,8 @@ if ENV['HEADLESS'] == 'true'
     headless.destroy
   end
 else
-    at_exit do
+  
+  at_exit do
     WatirPageHelper.browser.close
   end
 end

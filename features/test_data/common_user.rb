@@ -10,7 +10,7 @@ class Common_user
   end
 
   def self.get_default_user
-    self.get_user("common_user")
+    self.get_user("admin")
   end
 
   def self.get_user(user)

@@ -1,9 +1,8 @@
-@admin
 @admin_role
-Feature: Make a common user as admin & remove his admin role
-         As an admin user, I can add admin role to common user 
-         and remove admin role from user
-
+Feature: Admin provides different user permissions
+         As an admin user, 
+         I can give various permissions to users
+       
 Background:
     Given I login as an admin user
     Then home page for the admin should be display
@@ -17,9 +16,6 @@ Scenario: I add admin role to common user
     Then I search for the common user "cucumber8"
     Then I should see 'Remove Admin' Role button for user
     When admin logs out from application
-    Given I login as an common user
-    Then home page for the user name should be display
-    Then I should be able to see the Admin Notification
   
 @remove_admin_role
 Scenario: I remove admin role from common user
@@ -28,7 +24,3 @@ Scenario: I remove admin role from common user
     Then I search for the common user "cucumber8"
     Then I should see 'Make Admin' Role button for user
     When admin logs out from application
-    Given I login as an common user
-    Then home page for the user name should be display
-    Then I should be able to see the Remove Admin Notification
-    #When admin logs out from application
