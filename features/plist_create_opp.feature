@@ -1,4 +1,4 @@
-@knowledge_center
+@create_opp
 Feature: Documents
   As a b2b user
   I should be able to view the document page
