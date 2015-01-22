@@ -15,7 +15,6 @@ common_user:
 
 admin:
   username : Tombarron
-<<<<<<< HEAD
   password : Password1
 
 
@@ -39,6 +38,3 @@ statistics:
   fundingdate : 02/23/2015
   maturitydate : 03/02/2015
   loanterm : 80
-=======
-  password : Password1
->>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
