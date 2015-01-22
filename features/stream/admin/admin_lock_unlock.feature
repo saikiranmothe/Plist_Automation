@@ -5,17 +5,17 @@ Feature: Make a common user account Lock & Unlock
 
 Background:
     Given I login as an admin user
-    Then home page for the admin should be display
-    Given I go to Manage users tab
+    When home page for the admin should be display
+    Then I go to Manage users tab
     Then I search for the common user "cucumber8"
+    Then I should see Edit button
 
 @lock_admin
 Scenario: I Lock common user account 
-    And I should see Edit button for user to Lock
     When I select 'Lock' for user
     Then I should see 'Lock' status for user
-    When admin logs out from application
-    Given I login as an common user
+    Then admin logs out from application
+    Then I login as an common user
     Then I should not able to login the application
       
 @block_admin

@@ -120,7 +120,11 @@
     ]
   },
   {
+<<<<<<< HEAD
     "source": "^user logs out from application$",
+=======
+    "source": "^check the checkbox for authorization request$",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "flags": "",
     "file_colon_line": "features/step_definitions/join_steps.rb:47",
     "steps": [
@@ -128,22 +132,35 @@
     ]
   },
   {
+<<<<<<< HEAD
     "source": "^check the checkbox for authorization request$",
     "flags": "",
     "file_colon_line": "features/step_definitions/join_steps.rb:54",
+=======
+    "source": "^I login as AA user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:1",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "steps": [
 
     ]
   },
   {
+<<<<<<< HEAD
     "source": "^the user should be log out from the application$",
     "flags": "",
     "file_colon_line": "features/step_definitions/join_steps.rb:60",
+=======
+    "source": "^I should see the home page with user name displayed$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:11",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "steps": [
 
     ]
   },
   {
+<<<<<<< HEAD
     "source": "^I click on Sign in button$",
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:1",
@@ -163,14 +180,67 @@
     "source": "^I should see the home page with user name displayed$",
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:19",
+=======
+    "source": "^I login as an admin user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:18",
     "steps": [
+      {
+        "name": "I login as an admin user",
+        "args": [
 
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^home page for the admin should be display$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:27",
+    "steps": [
+      {
+        "name": "home page for the admin should be display",
+        "args": [
+
+        ]
+      }
     ]
   },
   {
     "source": "^I click Sign In to ParticipationList with LinkedIn$",
     "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:34",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
+    "steps": [
+
+    ]
+  },
+  {
+<<<<<<< HEAD
+    "source": "^I click Sign In to ParticipationList with LinkedIn$",
+    "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:25",
+=======
+    "source": "^user login as LinkedIn Email \"(.*?)\" and password \"(.*?)\"$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:43",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^user logs out from application$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:49",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^the user should be log out from the application$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:55",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "steps": [
 
     ]
@@ -264,7 +334,11 @@
     ]
   },
   {
+<<<<<<< HEAD
     "source": "^I verify user is locked$",
+=======
+    "source": "^I should see Edit button$",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:1",
     "steps": [
@@ -272,6 +346,7 @@
     ]
   },
   {
+<<<<<<< HEAD
     "source": "^I should see Edit button for user to Lock$",
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:8",
@@ -283,6 +358,11 @@
     "source": "^I select 'Lock' for user$",
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:17",
+=======
+    "source": "^I select 'Lock' for user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:7",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "steps": [
 
     ]
@@ -290,7 +370,11 @@
   {
     "source": "^I should see 'Lock' status for user$",
     "flags": "",
+<<<<<<< HEAD
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:23",
+=======
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:15",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "steps": [
 
     ]
@@ -298,7 +382,11 @@
   {
     "source": "^I should see Edit button for user to Active$",
     "flags": "",
+<<<<<<< HEAD
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:29",
+=======
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:21",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "steps": [
 
     ]
@@ -306,7 +394,11 @@
   {
     "source": "^I select 'Active' for user$",
     "flags": "",
+<<<<<<< HEAD
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:35",
+=======
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:27",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "steps": [
 
     ]
@@ -314,7 +406,11 @@
   {
     "source": "^I should see 'Active' status for user$",
     "flags": "",
+<<<<<<< HEAD
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:41",
+=======
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:33",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "steps": [
 
     ]
@@ -322,7 +418,11 @@
   {
     "source": "^I should see Edit button for user to Deactivate$",
     "flags": "",
+<<<<<<< HEAD
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:47",
+=======
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:39",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "steps": [
 
     ]
@@ -330,7 +430,11 @@
   {
     "source": "^I select 'Deactivated' for user$",
     "flags": "",
+<<<<<<< HEAD
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:53",
+=======
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:45",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "steps": [
 
     ]
@@ -338,7 +442,11 @@
   {
     "source": "^I should see 'Deactivated' status for user$",
     "flags": "",
+<<<<<<< HEAD
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:59",
+=======
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:51",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "steps": [
 
     ]
@@ -346,7 +454,11 @@
   {
     "source": "^I should not able to login the application$",
     "flags": "",
+<<<<<<< HEAD
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:66",
+=======
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:58",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "steps": [
 
     ]
@@ -354,7 +466,11 @@
   {
     "source": "^I should able to login the application$",
     "flags": "",
+<<<<<<< HEAD
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:72",
+=======
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:64",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "steps": [
 
     ]
@@ -362,6 +478,7 @@
   {
     "source": "^user logout from application$",
     "flags": "",
+<<<<<<< HEAD
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:78",
     "steps": [
 
@@ -395,6 +512,9 @@
     "source": "^the admin user should be log out from the application$",
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_login_steps.rb:23",
+=======
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:70",
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     "steps": [
 
     ]
@@ -428,7 +548,19 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:9",
     "steps": [
+<<<<<<< HEAD
 
+=======
+      {
+        "name": "I search for the common user \"cucumber8\"",
+        "args": [
+          {
+            "offset": 30,
+            "val": "cucumber8"
+          }
+        ]
+      }
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     ]
   },
   {
@@ -436,47 +568,111 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:15",
     "steps": [
+<<<<<<< HEAD
 
+=======
+      {
+        "name": "I should see Make Admin button for user",
+        "args": [
+
+        ]
+      }
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     ]
   },
   {
     "source": "^I press button 'Make Admin' for user$",
     "flags": "",
+<<<<<<< HEAD
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:21",
     "steps": [
 
+=======
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:22",
+    "steps": [
+      {
+        "name": "I press button 'Make Admin' for user",
+        "args": [
+
+        ]
+      }
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     ]
   },
   {
     "source": "^I should see 'Remove Admin' Role button for user$",
     "flags": "",
+<<<<<<< HEAD
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:27",
     "steps": [
 
+=======
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:28",
+    "steps": [
+      {
+        "name": "I should see 'Remove Admin' Role button for user",
+        "args": [
+
+        ]
+      }
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     ]
   },
   {
     "source": "^I should see Remove Admin Role button for user$",
     "flags": "",
+<<<<<<< HEAD
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:33",
     "steps": [
 
+=======
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:34",
+    "steps": [
+      {
+        "name": "I should see Remove Admin Role button for user",
+        "args": [
+
+        ]
+      }
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     ]
   },
   {
     "source": "^I press button 'Remove Admin Role' for user$",
     "flags": "",
+<<<<<<< HEAD
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:39",
     "steps": [
 
+=======
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:41",
+    "steps": [
+      {
+        "name": "I press button 'Remove Admin Role' for user",
+        "args": [
+
+        ]
+      }
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     ]
   },
   {
     "source": "^I should see 'Make Admin' Role button for user$",
     "flags": "",
+<<<<<<< HEAD
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:45",
     "steps": [
 
+=======
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:47",
+    "steps": [
+      {
+        "name": "I should see 'Make Admin' Role button for user",
+        "args": [
+
+        ]
+      }
+>>>>>>> 9a36319bf4505875eedfc1521cb24c6546a1397f
     ]
   },
   {

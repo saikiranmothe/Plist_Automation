@@ -73,16 +73,11 @@ Feature: Create and publish New Opportunity
    Then I click to add description
    Then I click done button to complete document upload
    Then I should be able to see the new document is uploaded in the document tab
-
-  
-
-
-
-
-
-
-
-
-
-
+   
    #When user logs out from application
+  Scenario Outline:Learner uploads document
+    When the user should be able to upload file "pdf_UploadDoc" from "<doc_URL>"
+  Examples:
+    | doc_URL  |
+    |Documents/cucumber_cheez.pdf|
+
