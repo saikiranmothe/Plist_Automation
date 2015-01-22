@@ -1,0 +1,594 @@
+[
+  {
+    "source": "^I click Join ParticipationList with LinkedIn$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_linkedin_steps.rb:1",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should able to see LinkedIn login page$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_linkedin_steps.rb:7",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I click Allow access link$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_linkedin_steps.rb:13",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should able to see the Account setup page$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_linkedin_steps.rb:19",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^user join in as Linked in Email and password$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_linkedin_steps.rb:25",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I enter valid user details in Account setup page$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_linkedin_steps.rb:32",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I click on Select Bank from setup page$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_linkedin_steps.rb:38",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^home page for the LinkedIn user should be display$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_linkedin_steps.rb:44",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I click on Join button$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_steps.rb:1",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I click on CREATE A NEW ACCOUNT link$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_steps.rb:9",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I enter valid user details$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_steps.rb:15",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I click on Select Bank from Join ParticipationList page$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_steps.rb:22",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I select a bank from the list of banks$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_steps.rb:28",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I click on Join ParticipationList button$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_steps.rb:35",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^home page for the new user name should be display$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_steps.rb:41",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^check the checkbox for authorization request$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join_steps.rb:47",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I login as AA user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:1",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should see the home page with user name displayed$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:11",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I login as an admin user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:18",
+    "steps": [
+      {
+        "name": "I login as an admin user",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^home page for the admin should be display$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:27",
+    "steps": [
+      {
+        "name": "home page for the admin should be display",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I click Sign In to ParticipationList with LinkedIn$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:34",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^user login as LinkedIn Email \"(.*?)\" and password \"(.*?)\"$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:43",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^user logs out from application$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:49",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^the user should be log out from the application$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/login_steps.rb:55",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I go to Manage Banks tab$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_banks_steps.rb:1",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should see 'all the Banks' in the table$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_banks_steps.rb:7",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I go to Manage Opportunities tab$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_banks_steps.rb:13",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should see 'all the Opportunities' in the table$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_banks_steps.rb:19",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should see 'Filter By Status' option$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_filters_steps.rb:1",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I select 'Approved' status from the option$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_filters_steps.rb:7",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should able to see all the approved user in the table$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_filters_steps.rb:13",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I select 'Blocked' status from the option$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_filters_steps.rb:19",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should able to see all the blocked user in the table$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_filters_steps.rb:25",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I select 'Locked' status from the option$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_filters_steps.rb:31",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should able to see all the locked user in the table$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_filters_steps.rb:37",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should see Edit button$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:1",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I select 'Lock' for user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:7",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should see 'Lock' status for user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:15",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should see Edit button for user to Active$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:21",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I select 'Active' for user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:27",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should see 'Active' status for user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:33",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should see Edit button for user to Deactivate$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:39",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I select 'Deactivated' for user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:45",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should see 'Deactivated' status for user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:51",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should not able to login the application$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:58",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should able to login the application$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:64",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^user logout from application$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:70",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I click on 'My Profile'$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_profile_steps.rb:1",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^Profile file should be dispaly$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_profile_steps.rb:7",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I go to Manage users tab$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:1",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I search for the common user \"(.*?)\"$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:9",
+    "steps": [
+      {
+        "name": "I search for the common user \"cucumber8\"",
+        "args": [
+          {
+            "offset": 30,
+            "val": "cucumber8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should see Make Admin button for user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:15",
+    "steps": [
+      {
+        "name": "I should see Make Admin button for user",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I press button 'Make Admin' for user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:22",
+    "steps": [
+      {
+        "name": "I press button 'Make Admin' for user",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should see 'Remove Admin' Role button for user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:28",
+    "steps": [
+      {
+        "name": "I should see 'Remove Admin' Role button for user",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should see Remove Admin Role button for user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:34",
+    "steps": [
+      {
+        "name": "I should see Remove Admin Role button for user",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I press button 'Remove Admin Role' for user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:41",
+    "steps": [
+      {
+        "name": "I press button 'Remove Admin Role' for user",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should see 'Make Admin' Role button for user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:47",
+    "steps": [
+      {
+        "name": "I should see 'Make Admin' Role button for user",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should see 'Search' field$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:1",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I search for the common user by mail \"(.*?)\"$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:9",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should able to see user in the table$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:15",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should able to see user name in the table$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:21",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should be able to see 'Authorize' button$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:27",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I enter verification logs \"(.*?)\"$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:34",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I click Authorize button$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:40",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should see the role Authorized Affiliated User$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:46",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should be able to see the Notification$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_admin_search_steps.rb:52",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I click on edit profile$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_edituser_details_steps.rb:1",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I click on Save Profile$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/plist_edituser_details_steps.rb:22",
+    "steps": [
+
+    ]
+  }
+]

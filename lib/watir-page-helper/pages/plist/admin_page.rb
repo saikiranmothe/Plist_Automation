@@ -1,4 +1,4 @@
-$LOAD_PATH << './lib/watir-page-helper/pages/plist/'
+#$LOAD_PATH << './lib/watir-page-helper/pages/plist/'
 require 'watir-page-helper'
 
 module WatirPageHelper::Plist
@@ -7,47 +7,9 @@ module WatirPageHelper::Plist
 
     direct_url "st.plist.qwinixtech.com/"
        
-    def wait_for_login_page
-        @browser.input(:xpath, "//form/div[2]/div[1]/input").wait_until_present
-    end
-
-    #entering username and pwd
-     def admin_login(admin_user)
-        wait_for_login_page
-        @browser.input(:id, "user_login").wait_until_present
-        @browser.input(:id, "user_login").send_keys admin_user.username
-        @browser.input(:id, "user_password").wait_until_present
-        @browser.input(:id, "user_password").send_keys admin_user.password
-        login_btn = @browser.button(:xpath, "//form/div[2]/div[4]/button[2]").wait_until_present
-        login_bt = @browser.button(:xpath, "//form/div[2]/div[4]/button[2]").click
-    end
-
-    #verifying the username in login page
-    def verify_home
-        verify_homepage = @browser.li(:xpath,"//div[3]/div/ul/li[1]")
-         verify_homepage.wait_until_present
-        if verify_homepage.exists?
-          return "homepage is displaying"
-      else
-         raise Exception.new "homepage is not displaying"
-      end 
-    end
-
-    def logout_admin_user
-        user_info = @browser.button(:xpath, "//div[3]/div/div[2]/button")
-        user_info.wait_until_present
-        user_info.click
-        logout_link = @browser.a(:xpath,"//div[3]/div/div[2]/ul/li[12]/a")
-        logout_link.wait_until_present
-        logout_link.click
-    end
-
-    def is_logout_admin?
-      user_logout =  @browser.a(:xpath,"//div[3]/div/div[1]/span/a")
-      return "User log out sccessfully" unless user_logout.exists?
-    end
-
-    def manage_users
+####Admin and Remove admin############################################################################################
+  
+  def manage_users
      @@mang = @browser.button(:xpath,"//div[3]/div/div[2]/button")
      @@mang.wait_until_present
     if @@mang.exists?
@@ -55,18 +17,18 @@ module WatirPageHelper::Plist
     else
       raise Exception.new "setting-dropdown button is not present"
     end
-      mang_user_link = @browser.a(:xpath, "//div[3]/div/div[2]/ul/li[5]/a")
+      mang_user_link = @browser.a(:xpath, "//ul[@class='dropdown-menu']//a[text()='Manage Users']")
         mang_user_link.wait_until_present
         if mang_user_link.exists?
             mang_user_link.click
         else
           raise Exception.new "setting-dropdown Manage Users button is not present"
         end
-    end
+  end
 
   def search_c_user user
-       @browser.a(:xpath, "//div[1]/div/form/div[6]/a").when_present.click
        @browser.input(:id, "text_search_query").wait_until_present
+       @browser.a(:xpath, "//div[1]/div/form/div[6]/a").when_present.click
        @browser.input(:id, "text_search_query").send_keys user
        search_btn = @browser.button(:xpath, "//div[2]/div/span/button")
        search_btn.when_present.click
@@ -78,7 +40,7 @@ module WatirPageHelper::Plist
      end
   end
 
-  def check_make_addmin
+  def check_make_admin
     @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").wait_until_present
      ele = @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").text
      if ele.include? "Make Admin"
@@ -87,8 +49,13 @@ module WatirPageHelper::Plist
         raise Exception.new "Make Admin link is not present"
      end
   end
-
-  def click_make_addmin
+ 
+  def verify_role_bef
+    @browser.td(:xpath, "//div[3]/table/tbody/tr/td[6]").wait_until_present
+    @browser.td(:xpath, "//div[3]/table/tbody/tr/td[6]").text
+  end
+  
+  def click_make_admin
      @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").when_present.click
      confrim_btn = @browser.a(:xpath, "//div[9]/div/div/div[3]/a[1]")
      confrim_btn.wait_until_present
@@ -117,7 +84,7 @@ module WatirPageHelper::Plist
    end
   end
 
-  def check_remove_addmin
+  def check_remove_admin
     @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").wait_until_present
      ele_remove = @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").text                  
      if ele_remove.include? "Remove Admin Role"
@@ -127,7 +94,7 @@ module WatirPageHelper::Plist
      end
   end
 
-  def click_remove_addmin
+  def click_remove_admin
      @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").when_present.click
      confrim_btn = @browser.a(:xpath, "//div[9]/div/div/div[3]/a[1]")
      confrim_btn.wait_until_present
@@ -157,36 +124,32 @@ module WatirPageHelper::Plist
     end
   end
 
-#####Lock&Unlock#####Block############
-  def is_lock_before?
+#####Lock, Unlock and Block##################################################################
+  def check_user_status_bef
     @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").wait_until_present
     @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").text
   end
 
-  def check_click_edit_button_lock
-          sleep 2
-            #@browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").wait_until_present
-            #ele = @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").text
-      #unless ele.include? "Active"
-            ele = @browser.a(:xpath, "//div[3]/table/tbody/tr/td[1]/a")
-            ele.wait_until_present
-        if ele.exists?
-            ele.click
-          return "Edit button is present"
-        else
-          raise Exception.new "Edit button is not present"
-        end
-            ele = @browser.input(:xpath, "//form/div[2]/div/div/div[1]/input")
-            ele.wait_until_present
-          if ele.exists?
-              return "User Edit form is present"
-          else
-              raise Exception.new "User Edit form is not present"
-          end
-      #else    
-        #msg = "User alreay Locked"
-      #end
-      #return msg
+  def check_edit_button
+        @@ele = @browser.a(:xpath, "//div[3]/table/tbody/tr/td[1]/a")
+        @@ele.wait_until_present
+      if @@ele.exists?
+         @@ele.click
+        return "Edit button is present"
+      else
+        raise Exception.new "Edit button is not present"
+      end
+  end
+  
+  def click_edit_button
+        @@ele.click
+        ele = @browser.input(:xpath, "//form/div[2]/div/div/div[1]/input")
+        ele.wait_until_present
+      if ele.exists?
+          return "User Edit form is present"
+      else
+          raise Exception.new "User Edit form is not present"
+      end
   end
 
   def select_lock

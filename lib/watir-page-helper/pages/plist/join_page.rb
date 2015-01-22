@@ -134,7 +134,7 @@ module WatirPageHelper::Plist
 
 
     
-#########################################################################################
+############################################################################################
 #Sign In to ParticipationList with LinkedIn methods#
   
     #to click the LinkedIn button from plist page
@@ -224,22 +224,6 @@ module WatirPageHelper::Plist
          raise Exception.new "#{user_name} is present not in the homepage"
       end 
     end
-
-
-    def logout_common_user
-        user_info = @browser.button(:xpath, "//div[3]/div/div[2]/button")
-        user_info.wait_until_present
-        user_info.click
-        logout_link = @browser.a(:xpath, "//div[3]/div/div[2]/ul/li[8]/a")
-        logout_link.wait_until_present
-        logout_link.click
-    end
-
-    def is_logout?
-      user_logout =  @browser.a(:xpath,"//div[3]/div/div[1]/span/a")
-      return "User log out sccessfully" unless user_logout.exists?
-    end
-
 
 
 

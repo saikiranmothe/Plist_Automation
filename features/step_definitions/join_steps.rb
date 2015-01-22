@@ -44,22 +44,8 @@ Then(/^home page for the new user name should be display$/) do
   end  
 end
 
-When(/^user logs out from application$/) do
-  on @site, :join_page do |joinpage|
-  joinpage.logout_common_user
-  end
-end
-
-
 Then(/^check the checkbox for authorization request$/) do
   on @site, :join_page do |joinpage|
   puts joinpage.click_checkbox 
   end
 end
-
-And(/^the user should be log out from the application$/) do
-   on @site, :join_page do |joinpage|
-   puts joinpage.is_logout?
-   end
-end
-

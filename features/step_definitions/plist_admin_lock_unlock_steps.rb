@@ -1,21 +1,13 @@
-Then(/^I verify user is locked$/) do
- on @site, :admin_page do |adminpage|
-  sleep 2
-  pending puts "User Already Locked" unless adminpage.is_lock_before?.include? "Active"
-  end
-end 
-
-Then(/^I should see Edit button for user to Lock$/) do
-  steps %Q{
-   Then I verify user is locked
-  }
+Then(/^I should see Edit button$/) do
   on @site, :admin_page do |adminpage|
-  adminpage.check_click_edit_button_lock
-  end
+  adminpage.check_edit_button
+ end
 end
 
 When(/^I select 'Lock' for user$/) do
   on @site, :admin_page do |adminpage|
+pending "User Already Locked" if adminpage.check_user_status_bef.include? "Locked"
+  adminpage.click_edit_button
   adminpage.select_lock
   end
 end
