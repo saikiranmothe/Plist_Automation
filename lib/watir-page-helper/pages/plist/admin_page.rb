@@ -169,28 +169,6 @@ module WatirPageHelper::Plist
     end
   end
 
-  def check_click_edit_button_active
-     sleep 2
-      @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").wait_until_present
-      ele = @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").text
-      #return "User alreay in Active status" unless ele.include? "Active"
-      ele = @browser.a(:xpath, "//div[3]/table/tbody/tr/td[1]/a")
-      ele.wait_until_present
-     if ele.exists?
-        ele.click
-        return "Edit button is present"
-      else
-        raise Exception.new "Edit button is not present"
-      end
-      ele = @browser.input(:xpath, "//form/div[2]/div/div/div[1]/input")
-      ele.wait_until_present
-      if ele.exists?
-        return "User Edit form is present"
-      else
-        raise Exception.new "User Edit form is not present"
-      end
-  end
-
   def select_active
       selector = @browser.select_list(:id, "user_status")
       selector.wait_until_present
@@ -209,28 +187,6 @@ module WatirPageHelper::Plist
     end
   end
 
-  def check_click_edit_button_deactive
-     sleep 2
-      @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").wait_until_present
-      ele = @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").text
-      #return "User alreay in Deactivated status" unless ele.include? "Deactivated"
-      ele = @browser.a(:xpath, "//div[3]/table/tbody/tr/td[1]/a")
-      ele.wait_until_present
-     if ele.exists?
-        ele.click
-        return "Edit button is present"
-      else
-        raise Exception.new "Edit button is not present"
-      end
-      ele = @browser.input(:xpath, "//form/div[2]/div/div/div[1]/input")
-      ele.wait_until_present
-      if ele.exists?
-        return "User Edit form is present"
-      else
-        raise Exception.new "User Edit form is not present"
-      end
-  end
-  
   def select_block
       selector = @browser.select_list(:id, "user_status")
       selector.wait_until_present
