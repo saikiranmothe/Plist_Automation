@@ -1,3 +1,4 @@
+@admin
 @admin_filters
 Feature: Admin Filter the users by using Filter by Status option
          As an admin user

@@ -1,3 +1,4 @@
+@admin
 @admin_banks_opp
 Feature: Admin View all Opportunities Banks
          As an admin user
@@ -5,7 +6,7 @@ Feature: Admin View all Opportunities Banks
 
 @admin_dropdown
 Scenario: Admin View all Opportunities Banks
-    Given I go to Manage Banks tab
+    Then I go to Manage Banks tab
     Then I should see 'all the Banks' in the table
     Then I go to Manage Opportunities tab
     Then I should see 'all the Opportunities' in the table

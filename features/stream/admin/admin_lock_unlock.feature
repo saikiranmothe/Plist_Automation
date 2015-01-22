@@ -1,3 +1,4 @@
+@dmin
 @admin_status
 Feature: Make an user account Lock, Unlock and Active
          As an admin user, I can change the user ststus

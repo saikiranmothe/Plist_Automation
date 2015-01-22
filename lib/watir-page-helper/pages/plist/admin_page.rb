@@ -17,7 +17,7 @@ module WatirPageHelper::Plist
     else
       raise Exception.new "setting-dropdown button is not present"
     end
-      mang_user_link = @browser.a(:xpath, "//ul[@class='dropdown-menu']//a[text()='Manage Users']")
+      mang_user_link = @browser.a(:xpath,"//ul[@class='dropdown-menu']//a[text()='Manage Users']")
         mang_user_link.wait_until_present
         if mang_user_link.exists?
             mang_user_link.click
@@ -26,7 +26,7 @@ module WatirPageHelper::Plist
         end
   end
 
-  def search_c_user user
+  def search_user user
        @browser.input(:id, "text_search_query").wait_until_present
        @browser.a(:xpath, "//div[1]/div/form/div[6]/a").when_present.click
        @browser.input(:id, "text_search_query").send_keys user
@@ -57,18 +57,17 @@ module WatirPageHelper::Plist
   
   def click_make_admin
      @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").when_present.click
-     confrim_btn = @browser.a(:xpath, "//div[9]/div/div/div[3]/a[1]")
+     confrim_btn = @browser.a(:xpath,"//div[9]/div/div/div[3]/a[1]")
      confrim_btn.wait_until_present
     if confrim_btn.exists?
         confrim_btn.click
     else
         raise Exception.new "Confirm Make Admin popup is not present"
     end
-      success_btn = @browser.button(:xpath,"//div[7]/div/div/div[3]/button")
-     success_btn.wait_until_present
+    success_btn = @browser.button(:xpath,"//div[7]/div/div/div[3]/button")
+    success_btn.wait_until_present
     if success_btn.exists?
       success_btn.click
-      return "successful"
     else
       raise Exception.new "success popup is not displayning"
      end
@@ -211,8 +210,8 @@ module WatirPageHelper::Plist
 
   ####Filters##############################################################################
   def check_filters
-     ele = @browser.select(:xpath, "//div[1]/div/form/div[2]/select")
-     sleep(2)
+     ele = @browser.select(:id, "status")
+     ele.wait_until_present
     if ele.exists?
      return "Filter By Status is present"
     else
@@ -269,7 +268,7 @@ module WatirPageHelper::Plist
 ##Admin Search#######################################################################
 
   def seach_field
-   ele = @browser.input(:id, "text_search_query")
+   ele = @browser.input(:id,"text_search_query")
    ele.wait_until_present
      if ele.exists?
       return "Search field is present"
@@ -405,15 +404,14 @@ def manage_opp
     end
   end
 #################################################################################
-
 def check_auth_button
-     @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").wait_until_present
-     ele = @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").text
-     if ele.include? "Authorize"
-        return ele
-     else
-        raise Exception.new "Authorize button is not present"
-     end
+  @browser.a(:xpath, "//table[@id='table_user_collections']//td[7]/a[text()='Authorize']").wait_until_present
+  @@ele = @browser.a(:xpath, "//table[@id='table_user_collections']//td[7]/a[text()='Authorize']").text
+   if @@ele.include? "Authorize"
+    return @@ele
+   else
+    raise Exception.new "#{@@ele} button is not present"
+   end
   end
 
 def click_button
@@ -456,19 +454,6 @@ def check_auth_notification
       raise Exception.new "Failed to see the notification"
     end
   end
-
-
-#################################################################################
-
-   
-
-    def logout
-        user_info = @browser.button(:xpath, "//div[3]/div/div[2]/button")
-        user_info.wait_until_present
-        user_info.click
-        logout_link = @browser.a(:xpath, "//div[3]/div/div[2]/ul/li[6]/a")
-        logout_link.wait_until_present
-        logout_link.click
-    end
-  end 
+##################################################################################
+ end
 end
