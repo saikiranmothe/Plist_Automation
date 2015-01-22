@@ -132,7 +132,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:1",
     "steps": [
+      {
+        "name": "I login as AA user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -140,7 +145,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:11",
     "steps": [
+      {
+        "name": "I should see the home page with user name displayed",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -190,21 +200,18 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:49",
     "steps": [
+      {
+        "name": "user logs out from application",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^the user should be log out from the application$",
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:55",
-    "steps": [
-
-    ]
-  },
-  {
-    "source": "^I go to Manage Banks tab$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_banks_steps.rb:1",
     "steps": [
 
     ]
@@ -302,7 +309,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:7",
     "steps": [
+      {
+        "name": "I select 'Lock' for user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -310,77 +322,70 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:15",
     "steps": [
+      {
+        "name": "I should see 'Lock' status for user",
+        "args": [
 
-    ]
-  },
-  {
-    "source": "^I should see Edit button for user to Active$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:21",
-    "steps": [
-
+        ]
+      }
     ]
   },
   {
     "source": "^I select 'Active' for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:27",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:21",
     "steps": [
+      {
+        "name": "I select 'Active' for user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should see 'Active' status for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:33",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:29",
     "steps": [
+      {
+        "name": "I should see 'Active' status for user",
+        "args": [
 
-    ]
-  },
-  {
-    "source": "^I should see Edit button for user to Deactivate$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:39",
-    "steps": [
-
+        ]
+      }
     ]
   },
   {
     "source": "^I select 'Deactivated' for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:45",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:36",
     "steps": [
+      {
+        "name": "I select 'Deactivated' for user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should see 'Deactivated' status for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:51",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:44",
     "steps": [
+      {
+        "name": "I should see 'Deactivated' status for user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should not able to login the application$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:58",
-    "steps": [
-
-    ]
-  },
-  {
-    "source": "^I should able to login the application$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:64",
-    "steps": [
-
-    ]
-  },
-  {
-    "source": "^user logout from application$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:70",
+    "file_colon_line": "features/step_definitions/plist_admin_lock_unlock_steps.rb:51",
     "steps": [
 
     ]
@@ -414,15 +419,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:9",
     "steps": [
-      {
-        "name": "I search for the common user \"cucumber8\"",
-        "args": [
-          {
-            "offset": 30,
-            "val": "cucumber8"
-          }
-        ]
-      }
+
     ]
   },
   {
@@ -430,12 +427,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:15",
     "steps": [
-      {
-        "name": "I should see Make Admin button for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -443,12 +435,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:22",
     "steps": [
-      {
-        "name": "I press button 'Make Admin' for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -456,12 +443,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:28",
     "steps": [
-      {
-        "name": "I should see 'Remove Admin' Role button for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -469,12 +451,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:34",
     "steps": [
-      {
-        "name": "I should see Remove Admin Role button for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -482,12 +459,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:41",
     "steps": [
-      {
-        "name": "I press button 'Remove Admin Role' for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -495,12 +467,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/plist_admin_role_steps.rb:47",
     "steps": [
-      {
-        "name": "I should see 'Make Admin' Role button for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {

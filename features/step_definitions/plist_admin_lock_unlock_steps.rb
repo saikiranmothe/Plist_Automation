@@ -18,32 +18,25 @@ Then(/^I should see 'Lock' status for user$/) do
   end
 end
 
-Then(/^I should see Edit button for user to Active$/) do
-  on @site, :admin_page do |adminpage|
-  puts adminpage.check_click_edit_button_active
-  end
- end
-
 When(/^I select 'Active' for user$/) do
   on @site, :admin_page do |adminpage|
+  pending puts "User in Avtive status" if adminpage.check_user_status_bef.include? "Active"
+  adminpage.click_edit_button
   adminpage.select_active
   end
 end
 
 Then(/^I should see 'Active' status for user$/) do
-  on @site, :admin_page do |adminpage|
+ on @site, :admin_page do |adminpage|
   puts adminpage.is_user_approved?
   end
 end
 
-Then(/^I should see Edit button for user to Deactivate$/) do
-  on @site, :admin_page do |adminpage|
-  puts adminpage.check_click_edit_button_deactive
-  end
- end
 
 When(/^I select 'Deactivated' for user$/) do
   on @site, :admin_page do |adminpage|
+  pending puts "User Already Deactivated" if adminpage.check_user_status_bef.include? "Deactivated"
+  adminpage.click_edit_button
   adminpage.select_block
   end
 end
@@ -58,17 +51,5 @@ end
 Then(/^I should not able to login the application$/) do
    on @site, :admin_page do |adminpage|
   puts adminpage.is_login?
-  end
-end
-
-Then(/^I should able to login the application$/) do
-   on @site, :login_page do |loginpage|
-  puts loginpage.verify_user(@commonuser)
-end
-end
-
-When(/^user logout from application$/) do
-  on @site, :admin_page do |adminpage|
-  adminpage.logout
   end
 end
