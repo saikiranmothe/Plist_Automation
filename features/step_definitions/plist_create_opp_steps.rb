@@ -3,7 +3,6 @@ Then(/^I should see the create opportunity option from the main menu$/) do
   puts edituser.click_edit_button
   end  
 end
-end
 
 When(/^I click on main menu button$/) do
   pending # express the regexp above with the code you wish you had
