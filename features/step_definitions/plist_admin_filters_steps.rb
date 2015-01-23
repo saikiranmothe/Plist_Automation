@@ -1,4 +1,6 @@
 Then(/^I should see 'Filter By Status' option$/) do
+  #@site = "plist".downcase
+  #visit @site, :admin_page
   on @site, :admin_page do |adminpage|
   puts adminpage.check_filters
   end

@@ -1,3 +1,4 @@
+@admin
 @admin_role
 Feature: Admin provides different user permissions
          As an admin user, 
@@ -5,6 +6,7 @@ Feature: Admin provides different user permissions
        
 Background:
     Then I go to Manage users tab
+    Then I should see 'Search' field
     Then I search for the common user "cucumber8"
 
 @make_admin_role

@@ -1,8 +1,10 @@
-#Given(/^I go to Manage Banks tab$/) do
-  #on @site, :admin_page do |adminpage|
-  #puts adminpage.manage_banks
-  #end
-#end
+Then(/^I go to Manage Banks tab$/) do
+  @site = "plist".downcase
+  visit @site, :admin_page
+  on @site, :admin_page do |adminpage|
+  puts adminpage.manage_banks
+  end
+end
 
 Then(/^I should see 'all the Banks' in the table$/) do
   on @site, :admin_page do |adminpage|
