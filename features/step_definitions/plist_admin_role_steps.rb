@@ -6,9 +6,15 @@ Then(/^I go to Manage users tab$/) do
  end
 end
 
+Then(/^I should see 'Search' field$/) do
+  on @site, :admin_page do |adminpage|
+    puts adminpage.seach_field
+  end
+end
+
 Then(/^I search for the common user "(.*?)"$/) do |user|
   on @site, :admin_page do |adminpage|
-  puts adminpage.search_c_user user
+  puts adminpage.search_user user
   end
 end
 

@@ -1,4 +1,6 @@
 Then(/^I should see Edit button$/) do
+  @site = "plist".downcase
+  visit @site, :admin_page
   on @site, :admin_page do |adminpage|
   adminpage.check_edit_button
  end
