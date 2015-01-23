@@ -32,7 +32,7 @@ class User
   end
 
   def self.get_user(user)
-    path =File.dirname(__FILE__) + '/../config/user_data.yaml'
+    path = File.dirname(__FILE__) + '/../config/create_opp.yaml'
     users = YAML.load_file(path)
     User.new(users[user]["loantype"],users[user]["occupancytype"],users[user]["loansubtype"],users[user]["industry"],users[user]["loanrate"],users[user]["ratetype"],users[user]["loanamount"],users[user]["amounttoparticipate"],users[user]["servicingfee"],users[user]["initialservicingfee"],users[user]["loanquality"],users[user]["craeligible"],users[user]["guarantor"],users[user]["guarantoramount"],users[user]["tentclosingdate"],users[user]["closingdate"],users[user]["fundingdate"],users[user]["maturitydate"],users[user]["loanterm"])
   end
