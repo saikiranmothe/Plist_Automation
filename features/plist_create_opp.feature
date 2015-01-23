@@ -5,14 +5,14 @@ Feature: Create and publish New Opportunity
    So that I can publish the opportunity in the application
 
    Background:
-    Given I login as aa user
+    Given I login as AA user
     Then I should see the create opportunity option from the main menu
 
   @create_participnew
   Scenario: User create a new opportunity and publish
    When I click on main menu button
    Then I should be able to see the create opportunity option
-   And I click on create opportunity option
+#   And I click on create opportunity option
    Then I see the select opportunity type popup
    Then I click on Participation New radio button
    Then I click on confirm button
