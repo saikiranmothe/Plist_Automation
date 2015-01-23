@@ -18,7 +18,58 @@ module WatirPageHelper::Plist
         else
         raise Exception.new "Main menu button is not available" 
     end
+ end
+
+
+ def verify_popup
+   ele = @browser.form(:xpath,"//form[@id='new_opportunity']")
+   ele.wait_until_present
+   if ele.exists?
+      return "Popup is displayed with buttons"
+     else
+      return "Popup not available"
+  end 
+
+ end
+
+ def click_new_opp
+  @@ele = @browser.input(:xpath,"//form[@id='new_opportunity']/div[2]//label/input[@id='js-opportunity-participation-new']")
+  @@ele.text
+  return "#{@@ele}"
+  confirm_btn = @browser.input(:id,"create_opportunity_btn")
+  @@ele.click
+  confirm_btn.click
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 end
 end

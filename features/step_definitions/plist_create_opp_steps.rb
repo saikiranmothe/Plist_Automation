@@ -4,53 +4,25 @@ Then(/^I should see the create opportunity option from the main menu$/) do
   on @site, :create_opp_page do |create_opp|
   puts create_opp.create_opp  
 end
-  
-  # on @site, :edit_user_details_page do |edituser|
-  # puts edituser.click_edit_button
-  # end  
 end
 
-# When(/^I click on main menu button$/) do
-#   on @site, :edit_user_details_page do |edituser|
-#   puts edituser.click_edit_button
-#   end 
-# end
+Then(/^I should be able to see the create opportunity popup$/) do
+   on @site, :create_opp_page do |create_opp|
+  puts create_opp.verify_popup
+  end 
+end
 
-# Then(/^I should be able to see the create opportunity option$/) do
-#   on @site, :edit_user_details_page do |edituser|
-#   puts edituser.click_edit_button
-#   end 
-# end
+Then(/^I click on Participation New radio button$/) do
+  on @site, :create_opp_page do |create_opp|
+  puts create_opp.click_new_opp
+  end 
+end
 
-# Then(/^I click on create opportunity option$/) do
-#   on @site, :edit_user_details_page do |edituser|
-#   puts edituser.click_edit_button
-#   end 
-# end
-
-# Then(/^I see the select opportunity type popup$/) do
-#   on @site, :edit_user_details_page do |edituser|
-#   puts edituser.click_edit_button
-#   end 
-# end
-
-# Then(/^I click on Participation New radio button$/) do
-#   on @site, :edit_user_details_page do |edituser|
-#   puts edituser.click_edit_button
-#   end 
-# end
-
-# Then(/^I click on confirm button$/) do
-#   on @site, :edit_user_details_page do |edituser|
-#   puts edituser.click_edit_button
-#   end 
-# end
-
-# Then(/^I should be able to see the new opportunity created$/) do
-#   on @site, :edit_user_details_page do |edituser|
-#   puts edituser.click_edit_button
-#   end 
-# end
+Then(/^I should be able to see the new opportunity created$/) do
+  on @site, :edit_user_details_page do |edituser|
+  puts edituser.click_edit_button
+  end 
+end
 
 # When(/^I click on edit icon for originator$/) do
 #   on @site, :edit_user_details_page do |edituser|
