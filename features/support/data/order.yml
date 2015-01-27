@@ -18,8 +18,8 @@ features/plist_login.feature : 800
 
 ##
 #Create opp
-features/edit_user_details.feature : 2
-features/plist_create_opp.feature : 3
+features/stream/AA_user/edit_user_details.feature : 2
+features/stream/AA_user/plist_create_opp.feature : 3
 
 ##
 #admin

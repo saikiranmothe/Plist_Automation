@@ -10,7 +10,7 @@ statistics:
   amounttoparticipate : 80000
   servicingfee : 1.75
   initialservicingfee : 2500.00
-  loanquality : Pass - Good
+  loanquality : Pass-Good
   craeligible : Yes
   guarantor : 1
   guarantoramount : 1000
