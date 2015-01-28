@@ -14,32 +14,29 @@ Feature: Create and publish New Opportunity
    Then I click on Participation New radio button
    Then I should be able to see the new opportunity created
 
-   #Edit Originator
-   When I click on edit icon for originator
-   Then I fill the originator details "<loan_origin>" and "<lender>"
-   #Then I Select Loan Originator <loan_origin>
-   #Then I select Lender <lender>
+   # #Edit Originator
+   # When I click on edit icon for originator
+   # Then I fill the originator details <loan_origin> and <lender>
+   # Then I Save the changes
+   # Then I should see the changes
+
+   # #Edit Borrower details
+   # When I click on edit icon for borrower
+   # Then I Enter the borrwoer <borrower_name>
+   # Then I Select Type of <entity>
+   # And I Select State of Incorporation <state>
+   # Then I Enter Address line <address>
+   # Then I Enter the city <city>
+   # Then I Enter the state <state>
+   # Then I Enter the code <zipcode>
+   # Then I Save the changes
+   # Then I should see the Borrower detail changes
+
+  #Edit Description
+   When I click on edit icon for Description
+   When I Enter Loan narrative "New...." and Borrower general "New...."
    Then I Save the changes
-   Then I should see the changes
-
-  #  #Edit Borrower details
-  #  When I click on edit icon for borrower <borrow>
-  #  Then I Select Type of Entity <entity>
-  #  And I Select State of Incorporation <state>
-  #  Then I Enter Address (line 1) "line 1"
-  #  Then I Enter Address (line 2) "line 2"
-  #  Then I Enter city "zxcvb"
-  #  Then I Enter State <state>
-  #  Then I Enter the Zip Code "563101"
-  #  Then I Save the changes
-  #  Then I should see the Borrower detail changes
-
-  # #Edit Description
-  #  When I Enter Loan narrative "New Opp...."
-  #  Then I Enter Borrower general "New Opp...."
-  #  Then I update all the mandatory fields
-  #  Then I Save the changes
-  #  Then I should see the Description changes
+   Then I should see the Description changes
 
   # #Edit_statistics
   #  When I click on edit icon for statistics
@@ -63,5 +60,5 @@ Feature: Create and publish New Opportunity
   #  Then I click on Add files
 
 Examples:
-| loan_origin | lender | borrow | entity | state |
-| qwinixqa2 | qwinixqa | Soma L | cop | shisd |
+| loan_origin | lender   | borrower_name | entity      | state | address | city   | zipcode |
+| qwinixqa2   | qwinixqa | qwinixqa1     | Corporation | Iowa  | No 1    | mysore | 563101  |
