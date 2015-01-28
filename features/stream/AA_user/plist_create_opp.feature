@@ -4,78 +4,64 @@ Feature: Create and publish New Opportunity
    I should be able to create new opportunity
    So that I can publish the opportunity in the application
 
-
 #Background:
    #Given I login as AA user
 
 @create_participnew
   Scenario Outline: User create a new opportunity and publish
-    Given I should see the create opportunity option from the main menu
-    When I should be able to see the create opportunity popup
-    Then I click on Participation New radio button
-    Then I should be able to see the new opportunity created
-    
-#Scenario Outline:
-    When I click on edit icon for originator
-    Then I should see all the fields editable<loantype>
-  #  Then I click and select loan originator value
-  #  Then I click and select lender value
-  #  And I click on save button
-  #  Then I should see the originator details are updated
+   Given I should see the create opportunity option from the main menu
+   When I should be able to see the create opportunity popup
+   Then I click on Participation New radio button
+   Then I should be able to see the new opportunity created
 
-Examples:
-|loantype|
-|Commercial Real Estate: Term|
+   #Edit Originator
+   When I click on edit icon for originator
+   Then I fill the originator details "<loan_origin>" and "<lender>"
+   #Then I Select Loan Originator <loan_origin>
+   #Then I select Lender <lender>
+   Then I Save the changes
+   Then I should see the changes
 
-  # @edit_borrower
-  # Scenario:
-  #  When I click on edit icon for borrower
-  #  Then I should see all the borrower fields editable
+  #  #Edit Borrower details
+  #  When I click on edit icon for borrower <borrow>
+  #  Then I Select Type of Entity <entity>
+  #  And I Select State of Incorporation <state>
+  #  Then I Enter Address (line 1) "line 1"
+  #  Then I Enter Address (line 2) "line 2"
+  #  Then I Enter city "zxcvb"
+  #  Then I Enter State <state>
+  #  Then I Enter the Zip Code "563101"
+  #  Then I Save the changes
+  #  Then I should see the Borrower detail changes
+
+  # #Edit Description
+  #  When I Enter Loan narrative "New Opp...."
+  #  Then I Enter Borrower general "New Opp...."
   #  Then I update all the mandatory fields
-  #  And I click on save button
-  #  Then I should see the borrower details are updated
+  #  Then I Save the changes
+  #  Then I should see the Description changes
 
-  # @edit_description
-  # Scenario:
-  #  When I click on edit icon for description
-  #  Then I should see all the description fields editable
-  #  Then I update all the required fields
-  #  And I click on save button
-  #  Then I should see the description details are updated
-
-  # @edit_statistics
-  # Scenario:
+  # #Edit_statistics
   #  When I click on edit icon for statistics
-  #  Then I should see all the statistics fields editable
+  #  Then I select Loan Type ""
+  #  Then I select Loan Sub Type ""
   #  Then I update all the mandatory fields
-  #  And I click on save button
+  #  Then I select Bank Assessed Loan Quality ""
+  #  Then I Save the changes
   #  Then I should see the statistics fields are updated
 
-  # @edit_preliminary
-  # Scenario:
+  # #Edit_preliminary
   #  When I click on edit icon for preliminary underwriting
   #  Then I should see all the fields editable
   #  Then I update all the required fields
-  #  And I click on save button
+  #  Then I Save the changes
   #  Then I should see the preliminary underwriting fields are updated
 
-  # @new_document
-  # Scenario:
-  #  When I click on the document tab
-  #  Then I should be able to see new document button and New Folder button
-  #  Then I click on new document button
-  #  Then I should see the new document popup with add file button
-  #  Then I click on add files button
-  #  Then I should be able to see the navigation window to select document
-  #  Then I click to select file 
-  #  And I click open to upload the file
-  #  Then I should be able to see the file is uploaded
-  #  Then I click to add description
-  #  Then I click done button to complete document upload
-  #  Then I should be able to see the new document is uploaded in the document tab
+  # #Document
+  #  When I click on Documents
+  #  Then I click on new doc
+  #  Then I click on Add files
 
-
-  # Scenario:
-  #   When I click on Documents
-  #   Then I click on new doc
-  #   Then I click on Add files
+Examples:
+| loan_origin | lender | borrow | entity | state |
+| qwinixqa2 | qwinixqa | Soma L | cop | shisd |
