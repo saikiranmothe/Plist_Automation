@@ -88,9 +88,11 @@ module WatirPageHelper::Plist
         return "Details Saved" 
       end
     end
-#Edit Originator###############################################################################################
+
+#Edit Borrower###############################################################################################
+    
     def click_borrower
-        ele = @browser.a(:id, "borrower_pencil")
+        ele = @browser.a(:xpath, "//div[2]/div[1]/div[4]/section/a")
         ele.wait_until_present
       if ele.exists?
           ele.click
@@ -98,6 +100,93 @@ module WatirPageHelper::Plist
           raise Exception.new "Unable to find edit borrower pencil"
       end 
     end
+    
+    def enter_borrower borrower_name
+        @browser.input(:id,"opportunity_borrower_name").wait_until_present
+        @browser.input(:id,"opportunity_borrower_name").send_keys borrower_name
+    end
+
+    def incrop state
+        ele = @browser.select_list(:id,"opportunity_borrower_state_of_incorporation")
+        ele.wait_until_present
+        ele.select state
+    end
+
+    def type_entity entity
+        entity_type = @browser.select_list(:id,"opportunity_borrower_type_of_entity")
+        entity_type.wait_until_present
+        entity_type.select entity
+    end
+
+    def enter_address address
+        line1 = @browser.input(:id,"opportunity_address_attributes_address_line_1")
+        line1.wait_until_present
+        line1.send_keys address
+
+        line2 = @browser.input(:id,"opportunity_address_attributes_address_line_2")
+        line2.wait_until_present
+        line2.send_keys address
+    end
+
+    def enter_city city
+        line1 = @browser.input(:id,"opportunity_address_attributes_city")
+        line1.wait_until_present
+        line1.send_keys city
+    end
+
+    def enter_state state
+        ele = @browser.select_list(:id,"opportunity_address_attributes_state_id")
+        ele.wait_until_present
+        ele.select state
+    end 
+
+    def enter_zipcode zipcode
+        zip = @browser.input(:id,"opportunity_address_attributes_zip_code")
+        zip.wait_until_present
+        zip.send_keys zipcode
+    end
+
+    def verify_borrow_changes
+       ele = @browser.h4(:xpath,"//div[2]/div[1]/div[4]/section/h4")
+       ele.wait_until_present
+     if ele.exists?
+         return "Details Saved" 
+      else
+        raise Exception.new "Unable save the changes"
+      end
+    end
+
+#Edit Description#############################################################################################################
+    
+    def click_descrip
+        ele = @browser.a(:xpath, ".//*[@id='div_description_section']/a")
+        ele.wait_until_present
+      if ele.exists?
+          ele.click
+      else
+          raise Exception.new "Unable to find edit description pencil"
+      end 
+    end
+
+    def enter_description ln,bg
+      ele = @browser.textarea(:id, "opportunity_loan_narrative")
+      ele.wait_until_present
+      ele.send_keys ln
+      ele2 = @browser.textarea(:id, "opportunity_borrower_general")
+      ele2.wait_until_present
+      ele2.send_keys bg
+    end
+
+    def verify_descrip_changes
+       ele = @browser.p(:xpath,"//div[1]/div[5]/section/div[1]/p")
+       ele.wait_until_present
+     if ele.exists?
+         return "Description details Saved" 
+      else
+        raise Exception.new "Unable save the changes"
+      end
+    end 
+
 #Upload Documument#############################################################################################
 #Upload Document
     def document

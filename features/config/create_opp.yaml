@@ -1,7 +1,7 @@
 ---
 statistics:
-  loantype : Commercial Real Estate: Term
-  occupancytype : Owner Occupied
+  #loantype : Commercial Real Estate: Term
+  #occupancytype : Owner Occupied
   loansubtype : Retail
   industry : Healthcare
   loanrate : 8
@@ -10,7 +10,7 @@ statistics:
   amounttoparticipate : 80000
   servicingfee : 1.75
   initialservicingfee : 2500.00
-  loanquality : Pass-Good
+  #loanquality : Pass-Good
   craeligible : Yes
   guarantor : 1
   guarantoramount : 1000
