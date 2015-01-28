@@ -18,6 +18,7 @@ class Linkedin
   end
 
   def self.get_user(user)
+    binding.pry
     path =File.dirname(__FILE__) + '/../config/user_data.yaml'
     users = YAML.load_file(path)
     Linkedin.new(users[user]["linkedin_email"],users[user]["password"],users[user]["phone"],users[user]["city"],users[user]["state"],users[user]["title"])
