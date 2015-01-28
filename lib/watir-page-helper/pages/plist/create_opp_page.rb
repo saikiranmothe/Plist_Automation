@@ -88,7 +88,16 @@ module WatirPageHelper::Plist
         return "Details Saved" 
       end
     end
-  
+#Edit Originator###############################################################################################
+    def click_borrower
+        ele = @browser.a(:id, "borrower_pencil")
+        ele.wait_until_present
+      if ele.exists?
+          ele.click
+      else
+          raise Exception.new "Unable to find edit borrower pencil"
+      end 
+    end
 #Upload Documument#############################################################################################
 #Upload Document
     def document

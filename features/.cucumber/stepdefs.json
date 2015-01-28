@@ -171,7 +171,15 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:93",
     "steps": [
-
+      {
+        "name": "I Enter city \"zxcvb\"",
+        "args": [
+          {
+            "offset": 14,
+            "val": "zxcvb"
+          }
+        ]
+      }
     ]
   },
   {
@@ -187,7 +195,15 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:101",
     "steps": [
-
+      {
+        "name": "I Enter the Zip Code \"563101\"",
+        "args": [
+          {
+            "offset": 22,
+            "val": "563101"
+          }
+        ]
+      }
     ]
   },
   {
@@ -195,7 +211,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:105",
     "steps": [
+      {
+        "name": "I should see the Borrower detail changes",
+        "args": [
 
+        ]
+      }
     ]
   },
   {

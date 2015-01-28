@@ -17,22 +17,20 @@ Feature: Create and publish New Opportunity
    #Edit Originator
    When I click on edit icon for originator
    Then I fill the originator details "<loan_origin>" and "<lender>"
-   #Then I Select Loan Originator <loan_origin>
-   #Then I select Lender <lender>
    Then I Save the changes
    Then I should see the changes
 
-  #  #Edit Borrower details
-  #  When I click on edit icon for borrower <borrow>
-  #  Then I Select Type of Entity <entity>
-  #  And I Select State of Incorporation <state>
-  #  Then I Enter Address (line 1) "line 1"
-  #  Then I Enter Address (line 2) "line 2"
-  #  Then I Enter city "zxcvb"
-  #  Then I Enter State <state>
-  #  Then I Enter the Zip Code "563101"
-  #  Then I Save the changes
-  #  Then I should see the Borrower detail changes
+   #Edit Borrower details
+   When I click on edit icon for borrower
+   Then I Enter the "<borrower>"
+   Then I Select Type of "<entity>"
+   And I Select State of Incorporation "<state>"
+   Then I Enter Address line 1 and 2 "line 1" and "line 2"
+   Then I Enter city "zxcvb"
+   Then I Enter "<state>"
+   Then I Enter the Zip Code "563101"
+   Then I Save the changes
+   Then I should see the Borrower detail changes
 
   # #Edit Description
   #  When I Enter Loan narrative "New Opp...."
@@ -63,5 +61,5 @@ Feature: Create and publish New Opportunity
   #  Then I click on Add files
 
 Examples:
-| loan_origin | lender | borrow | entity | state |
+| loan_origin | lender | borrower | entity | state |
 | qwinixqa2 | qwinixqa | Soma L | cop | shisd |
