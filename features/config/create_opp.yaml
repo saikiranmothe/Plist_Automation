@@ -1,21 +1,29 @@
 ---
 statistics:
-  #loantype : Commercial Real Estate: Term
-  #occupancytype : Owner Occupied
   loansubtype : Retail
   industry : Healthcare
   loanrate : 8
   ratetype : Variable
-  loanamount : 150000
-  amounttoparticipate : 80000
-  servicingfee : 1.75
-  initialservicingfee : 2500.00
-  #loanquality : Pass-Good
+  loanamount : 15000000
+  amounttoparticipate : 8000000
+  originationfees : 1.75
+  servicingfee : 3.50
+  initialservicingfee : 250000
   craeligible : Yes
   guarantor : 1
-  guarantoramount : 1000
+  guarantoramount : 100000
   tentclosingdate : 03/31/2015
   closingdate : 04/06/2015
   fundingdate : 02/23/2015
   maturitydate : 03/02/2015
   loanterm : 80
+
+preliminary:
+  occupancy : 1.75
+  tenantquality : Local
+  leasetenures : 5+yrs
+  netincome : 5000000
+  debtcoverage : 2
+  collateral : 2
+  collateral_type : text
+
