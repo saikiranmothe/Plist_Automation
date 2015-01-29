@@ -100,7 +100,7 @@ end
 
 Then(/^I should see the Borrower detail changes$/) do
   on @site, :create_opp_page do |create_opp|
- create_opp.verify_borrow_changes
+puts create_opp.verify_borrow_changes
 end
 end
 
@@ -119,12 +119,69 @@ end
 
 Then(/^I should see the Description changes$/) do
    on @site, :create_opp_page do |create_opp|
- create_opp.verify_descrip_changes
+puts create_opp.verify_descrip_changes
 end
 end
 
+#Edit Satistics########################################################################################################
+When(/^I click on edit icon for statistics$/) do
+  on @site, :create_opp_page do |create_opp|
+ create_opp.click_satatis
+end
+end
 
-#######################################################################################################
+Then(/^I select Loan Type (.*)$/) do |loan_type|
+on @site, :create_opp_page do |create_opp|
+ create_opp.enter_loantype loan_type
+end
+end
+
+Then(/^I select Loan Occupancy Type (.*)$/) do |occupancy_type|
+on @site, :create_opp_page do |create_opp|
+ create_opp.loanoccupancy occupancy_type
+end
+end
+
+Then(/^I update all the mandatory fields$/) do
+  on @site, :create_opp_page do |create_opp|
+    @statistics = Statistics.get_user("statistics")
+    create_opp.statis_values(@statistics)
+end
+end
+
+Then(/^I select Bank Assessed Loan Quality (.*)$/) do |loan_quality|
+  on @site, :create_opp_page do |create_opp|
+ create_opp.loanquality loan_quality
+end
+end
+
+Then(/^I should see the statistics fields are updated$/) do
+  on @site, :create_opp_page do |create_opp|
+puts create_opp.verify_statistic_changes
+end
+end
+
+#Preliminary###############################################################################################################
+When(/^I click on edit icon for preliminary underwriting$/) do
+   on @site, :create_opp_page do |create_opp|
+   create_opp.click_preliminary
+end
+end
+
+Then(/^I update all the required fields$/) do
+ on @site, :create_opp_page do |create_opp|
+    @prelimary = Prelimary_data.get_user("preliminary")
+    create_opp.prelimary_values(@prelimary)
+end
+end
+
+Then(/^I should see the preliminary underwriting fields are updated$/) do
+   on @site, :create_opp_page do |create_opp|
+  puts create_opp.verify_prelimary_changes
+end
+end
+
+################################################################################################################
 When(/^I click on Documents$/) do
   on @site, :create_opp_page do |create_opp|
   create_opp.document
@@ -142,5 +199,3 @@ Then(/^I click on Add files$/) do
   create_opp.addfile
   end
 end
-######################################################################################################
-

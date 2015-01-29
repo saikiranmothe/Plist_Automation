@@ -185,7 +185,127 @@ module WatirPageHelper::Plist
       else
         raise Exception.new "Unable save the changes"
       end
-    end 
+    end
+
+#Edit statistics###############################################################################################
+     
+     def click_satatis
+        ele = @browser.a(:id, "statistics_pencil")
+        ele.wait_until_present
+      if ele.exists?
+          ele.click
+      else
+          raise Exception.new "Unable to find edit description pencil"
+      end 
+    end
+
+    def enter_loantype loan_type
+        ele = @browser.select_list(:id,"opportunity_loan_type_id")
+        ele.wait_until_present
+        ele.select loan_type
+    end
+
+    def loanoccupancy occupancy_type
+        ele = @browser.select_list(:id,"opportunity_occupancy_type")
+        ele.wait_until_present
+        ele.select occupancy_type
+    end
+
+    def statis_values(statistics)
+        ele = @browser.select_list(:id,"opportunity_loan_sub_type")
+        ele.wait_until_present
+        ele.select statistics.loansubtype
+        #sleep 2
+        @browser.input(:id, "opportunity_industry").when_present.send_keys statistics.industry
+        #sleep 2
+        @browser.input(:id, "opportunity_loan_rate").when_present.send_keys statistics.loanrate
+        #sleep 2 
+        @browser.select_list(:id,"opportunity_rate_type").when_present.select statistics.ratetype
+        #sleep 2
+        @browser.input(:id, "opportunity_loan_amount").when_present.send_keys statistics.loanamount
+        #sleep 2
+        @browser.input(:id, "opportunity_participation_amount").when_present.send_keys statistics.amounttoparticipate
+        #sleep 2
+        @browser.input(:name, "opportunity[origination_fees]").wait_until_present
+        @browser.input(:name, "opportunity[origination_fees]").send_keys statistics.originationfees
+        #sleep 2
+        #@browser.input(:id, "opportunity_servicing_fee").when_present.clear
+        @browser.input(:id, "opportunity_servicing_fee").when_present.send_keys statistics.servicingfee
+        #sleep 2
+        @browser.input(:id, "opportunity_initial_servicing_fee").when_present.send_keys statistics.initialservicingfee
+        #sleep 2
+        @browser.input(:id, "opportunity_cra_eligible_1").when_present.click 
+        #sleep 2
+        #@browser.select_list(:id,"opportunity_gurantors").wait_until_present
+        @browser.select_list(:id,"opportunity_gurantors").when_present.select statistics.guarantor
+        #sleep 2
+        @browser.input(:id, "opportunity_gurantors_amount").when_present.send_keys statistics.guarantoramount
+        #sleep 2
+        @browser.input(:id, "opportunity_tentative_closing_date").when_present.send_keys statistics.tentclosingdate
+        #sleep 2
+        @browser.input(:id, "opportunity_closing_date").when_present.send_keys statistics.closingdate
+        #sleep 2
+        @browser.input(:id, "opportunity_funding_date").when_present.send_keys statistics.fundingdate
+        #sleep 2
+        @browser.input(:id, "opportunity_maturity_date").when_present.send_keys statistics.maturitydate
+        #sleep 2
+        @browser.input(:id, "opportunity_loan_term").when_present.send_keys statistics.loanterm
+    end
+        
+    def loanquality loan_quality
+       ele = @browser.select_list(:id,"opportunity_issuer_rating")
+        ele.wait_until_present
+        ele.select loan_quality
+    end
+
+    def verify_statistic_changes
+      sleep 5
+       ele = @browser.a(:id, "preliminary_pencil")
+       ele.wait_until_present
+     if ele.exists?
+         return "Statistics details Saved" 
+      else
+        raise Exception.new "Unable save the changes"
+      end
+    end
+
+#Edit preliminary###############################################################################################
+    def click_preliminary
+
+        ele = @browser.a(:id, "preliminary_pencil")
+        ele.wait_until_present
+      if ele.exists?
+          ele.click
+      else
+          raise Exception.new "Unable to find edit borrower pencil"
+      end 
+    end
+
+    def prelimary_values(preliminary)
+      @browser.input(:id, "opportunity_occupancy").when_present.send_keys preliminary.occupancy
+        sleep 2
+      @browser.select_list(:id,"opportunity_tenant_quality").when_present.select preliminary.tenantquality
+        sleep 2
+      @browser.select_list(:id,"opportunity_lease_tenures").when_present.select preliminary.leasetenures
+        sleep 2
+      @browser.input(:id, "opportunity_net_operating_income").when_present.send_keys preliminary.netincome
+        sleep 2
+      @browser.input(:id, "opportunity_debt_service_coverage").when_present.send_keys preliminary.debtcoverage
+        sleep 2
+      @browser.input(:id, "opportunity_collateral_loan_to_value").when_present.send_keys preliminary.collateral
+        sleep 2
+      @browser.input(:id, "opportunity_type_of_collateral").when_present.send_keys preliminary.collateral_type
+    end
+
+    def verify_prelimary_changes
+       @browser.li(:xpath,"//*[@id='div_preliminary']/div/div[1]/ul/li[1]").wait_until_present
+       ele = @browser.li(:xpath,"//*[@id='div_preliminary']/div/div[1]/ul/li[1]").text
+     if ele.include? "-"
+         raise Exception.new "Unable save the changes" 
+      else
+         return "Preliminary details Saved"
+      end
+    end
 
 #Upload Documument#############################################################################################
 #Upload Document

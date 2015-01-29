@@ -56,7 +56,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:28",
     "steps": [
+      {
+        "name": "I click on edit icon for originator",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -64,7 +69,19 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:34",
     "steps": [
-
+      {
+        "name": "I fill the originator details <loan_origin> and <lender>",
+        "args": [
+          {
+            "offset": 30,
+            "val": "<loan_origin>"
+          },
+          {
+            "offset": 48,
+            "val": "<lender>"
+          }
+        ]
+      }
     ]
   },
   {
@@ -85,7 +102,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:46",
     "steps": [
+      {
+        "name": "I should see the changes",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -93,7 +115,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:53",
     "steps": [
+      {
+        "name": "I click on edit icon for borrower",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -101,7 +128,15 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:59",
     "steps": [
-
+      {
+        "name": "I Enter the borrwoer <borrower_name>",
+        "args": [
+          {
+            "offset": 21,
+            "val": "<borrower_name>"
+          }
+        ]
+      }
     ]
   },
   {
@@ -109,7 +144,15 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:65",
     "steps": [
-
+      {
+        "name": "I Select State of Incorporation <state>",
+        "args": [
+          {
+            "offset": 32,
+            "val": "<state>"
+          }
+        ]
+      }
     ]
   },
   {
@@ -117,7 +160,15 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:71",
     "steps": [
-
+      {
+        "name": "I Select Type of <entity>",
+        "args": [
+          {
+            "offset": 17,
+            "val": "<entity>"
+          }
+        ]
+      }
     ]
   },
   {
@@ -125,7 +176,15 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:77",
     "steps": [
-
+      {
+        "name": "I Enter Address line <address>",
+        "args": [
+          {
+            "offset": 21,
+            "val": "<address>"
+          }
+        ]
+      }
     ]
   },
   {
@@ -133,7 +192,15 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:83",
     "steps": [
-
+      {
+        "name": "I Enter the city <city>",
+        "args": [
+          {
+            "offset": 17,
+            "val": "<city>"
+          }
+        ]
+      }
     ]
   },
   {
@@ -141,7 +208,15 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:89",
     "steps": [
-
+      {
+        "name": "I Enter the state <state>",
+        "args": [
+          {
+            "offset": 18,
+            "val": "<state>"
+          }
+        ]
+      }
     ]
   },
   {
@@ -149,7 +224,15 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:95",
     "steps": [
-
+      {
+        "name": "I Enter the code <zipcode>",
+        "args": [
+          {
+            "offset": 17,
+            "val": "<zipcode>"
+          }
+        ]
+      }
     ]
   },
   {
@@ -157,7 +240,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:101",
     "steps": [
+      {
+        "name": "I should see the Borrower detail changes",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -207,9 +295,135 @@
     ]
   },
   {
+    "source": "^I click on edit icon for statistics$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:127",
+    "steps": [
+      {
+        "name": "I click on edit icon for statistics",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I select Loan Type (.*)$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:133",
+    "steps": [
+      {
+        "name": "I select Loan Type <loan_type>",
+        "args": [
+          {
+            "offset": 19,
+            "val": "<loan_type>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I select Loan Occupancy Type (.*)$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:139",
+    "steps": [
+      {
+        "name": "I select Loan Occupancy Type <occupancy_type>",
+        "args": [
+          {
+            "offset": 29,
+            "val": "<occupancy_type>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I update all the mandatory fields$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:145",
+    "steps": [
+      {
+        "name": "I update all the mandatory fields",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I select Bank Assessed Loan Quality (.*)$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:152",
+    "steps": [
+      {
+        "name": "I select Bank Assessed Loan Quality <loan_quality>",
+        "args": [
+          {
+            "offset": 36,
+            "val": "<loan_quality>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should see the statistics fields are updated$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:158",
+    "steps": [
+      {
+        "name": "I should see the statistics fields are updated",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I click on edit icon for preliminary underwriting$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:165",
+    "steps": [
+      {
+        "name": "I click on edit icon for preliminary underwriting",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I update all the required fields$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:171",
+    "steps": [
+      {
+        "name": "I update all the required fields",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should see the preliminary underwriting fields are updated$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:178",
+    "steps": [
+      {
+        "name": "I should see the preliminary underwriting fields are updated",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
     "source": "^I click on Documents$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:128",
+    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:185",
     "steps": [
 
     ]
@@ -217,7 +431,7 @@
   {
     "source": "^I click on new doc$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:134",
+    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:191",
     "steps": [
 
     ]
@@ -225,7 +439,7 @@
   {
     "source": "^I click on Add files$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:140",
+    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:197",
     "steps": [
 
     ]
