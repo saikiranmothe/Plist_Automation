@@ -330,6 +330,7 @@ module WatirPageHelper::Plist
     end
 
     def addfile
+      sleep 2
       click_document
       click_newdoc
       #path = File.basename("../plist_automation/Documents/cucumber_cheez.pdf")
@@ -351,6 +352,7 @@ module WatirPageHelper::Plist
     end
 
     def click_done
+      sleep 2
       ele =  @browser.button(:id, "document-click")
       ele.wait_until_present
       ele.click

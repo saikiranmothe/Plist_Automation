@@ -8,12 +8,12 @@ Feature: Admin Search the users by Name and Email
 Scenario Outline: Admin search the users by Name
     Then I go to Manage users tab
     Then I should see 'Search' field
-    Then I search for the common user <search_user>
+    Then I search for the AA user <search_user>
     Then I should able to see user in the table <search_user>
     And I should be able to see 'Authorize' button
     Then I enter verification logs "Is done"
     And I click Authorize button
-    Then I search for the common user <search_user>
+    Then I search for the AA user <search_user>
     Then I should see the role Authorized Affiliated User
     #Then user logs out from application
     #Given I login as AA user
@@ -23,4 +23,4 @@ Scenario Outline: Admin search the users by Name
 
     Examples:
     | search_user |
-    | qwinixqa2   |
+    | qwinixqa5   |
