@@ -182,20 +182,32 @@ end
 end
 
 ################################################################################################################
-When(/^I click on Documents$/) do
-  on @site, :create_opp_page do |create_opp|
-  create_opp.document
-  end
-end
+# When(/^I click on Documents$/) do
+#   on @site, :create_opp_page do |create_opp|
+#   create_opp.document
+#   end
+# end
 
-Then(/^I click on new doc$/) do
-   on @site, :create_opp_page do |create_opp|
-  create_opp.newdoc
-  end
-end
+# Then(/^I click on new doc$/) do
+#    on @site, :create_opp_page do |create_opp|
+#   create_opp.newdoc
+#   end
+# end
 
 Then(/^I click on Add files$/) do
    on @site, :create_opp_page do |create_opp|
   create_opp.addfile
+  end
+end
+
+Then(/^I click 'Done'$/) do
+on @site, :create_opp_page do |create_opp|
+  create_opp.click_done
+  end
+end
+
+Then(/^I Publish the opportunity$/) do
+  on @site, :create_opp_page do |create_opp|
+  create_opp.publish_opp
   end
 end

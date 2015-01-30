@@ -421,27 +421,42 @@
     ]
   },
   {
-    "source": "^I click on Documents$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:185",
-    "steps": [
-
-    ]
-  },
-  {
-    "source": "^I click on new doc$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:191",
-    "steps": [
-
-    ]
-  },
-  {
     "source": "^I click on Add files$",
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:197",
     "steps": [
+      {
+        "name": "I click on Add files",
+        "args": [
 
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I click 'Done'$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:203",
+    "steps": [
+      {
+        "name": "I click 'Done'",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I Publish the opportunity$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/aa_user/plist_create_opp_steps.rb:209",
+    "steps": [
+      {
+        "name": "I Publish the opportunity",
+        "args": [
+
+        ]
+      }
     ]
   },
   {
@@ -456,6 +471,62 @@
     "source": "^I click on Save Profile$",
     "flags": "",
     "file_colon_line": "features/step_definitions/aa_user/plist_edituser_details_steps.rb:22",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I search for the common user (.*)$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/admin/plist_admin_authorize_user_steps.rb:1",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should able to see user in the table (.*)$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/admin/plist_admin_authorize_user_steps.rb:8",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should be able to see 'Authorize' button$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/admin/plist_admin_authorize_user_steps.rb:14",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I enter verification logs \"(.*?)\"$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/admin/plist_admin_authorize_user_steps.rb:23",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I click Authorize button$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/admin/plist_admin_authorize_user_steps.rb:29",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should see the role Authorized Affiliated User$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/admin/plist_admin_authorize_user_steps.rb:35",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should be able to see the Notification$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/admin/plist_admin_authorize_user_steps.rb:41",
     "steps": [
 
     ]
@@ -573,7 +644,7 @@
     ]
   },
   {
-    "source": "^I select 'Active' for user$",
+    "source": "^I select 'Deactivated' for user$",
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:23",
     "steps": [
@@ -581,7 +652,7 @@
     ]
   },
   {
-    "source": "^I should see 'Active' status for user$",
+    "source": "^I should see 'Deactivated' status for user$",
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:31",
     "steps": [
@@ -589,73 +660,25 @@
     ]
   },
   {
-    "source": "^I select 'Deactivated' for user$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:38",
-    "steps": [
-
-    ]
-  },
-  {
-    "source": "^I should see 'Deactivated' status for user$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:46",
-    "steps": [
-
-    ]
-  },
-  {
     "source": "^I should not able to login the application$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:53",
+    "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:37",
     "steps": [
 
     ]
   },
   {
-    "source": "^I should able to see user in the table$",
+    "source": "^I select 'Active' for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_manage_users_steps.rb:1",
+    "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:43",
     "steps": [
 
     ]
   },
   {
-    "source": "^I should be able to see 'Authorize' button$",
+    "source": "^I should see 'Active' status for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_manage_users_steps.rb:7",
-    "steps": [
-
-    ]
-  },
-  {
-    "source": "^I enter verification logs \"(.*?)\"$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_manage_users_steps.rb:16",
-    "steps": [
-
-    ]
-  },
-  {
-    "source": "^I click Authorize button$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_manage_users_steps.rb:22",
-    "steps": [
-
-    ]
-  },
-  {
-    "source": "^I should see the role Authorized Affiliated User$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_manage_users_steps.rb:28",
-    "steps": [
-
-    ]
-  },
-  {
-    "source": "^I should be able to see the Notification$",
-    "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_manage_users_steps.rb:34",
+    "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:51",
     "steps": [
 
     ]
@@ -881,12 +904,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:1",
     "steps": [
-      {
-        "name": "I login as AA user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -894,12 +912,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:11",
     "steps": [
-      {
-        "name": "I should see the home page with user name displayed",
-        "args": [
 
-        ]
-      }
     ]
   },
   {

@@ -309,24 +309,73 @@ module WatirPageHelper::Plist
 
 #Upload Documument#############################################################################################
 #Upload Document
-    def document
-      sleep 5
-        @browser.a(:xpath,"//div[1]/div[2]/div[1]/section/ul/li[2]/a").when_present.click
+    def click_document
+      ele = @browser.a(:xpath,"//div[1]/div[2]/div[1]/section/ul/li[2]/a")
+      ele.wait_until_present
+      if ele.exists?
+         ele.click
+      else
+         raise Exception.new "Unable to find Documents tab" 
+      end
     end
 
-    def newdoc
-      sleep 5
-      @browser.a(:xpath,"//div[2]/div[1]/div[2]/div[2]/div[1]/div[3]/a").click
+    def click_newdoc
+      ele = @browser.a(:xpath,"//div[2]/div[1]/div[2]/div[2]/div[1]/div[3]/a")
+      ele.wait_until_present
+      if ele.exists?
+         ele.click
+      else
+         raise Exception.new "Unable to find New Documents tab" 
+      end
     end
 
     def addfile
-      sleep 5
-      path = "/home/somsekhar/Downloads/cucumber_cheez.pdf"
-      @browser.input(:name, "document[file]").send_keys (path)
-      #@browser.table(:xpath,"//div[2]/div[3]/div/div/div[2]/form/div[2]/table")
+      click_document
+      click_newdoc
+      #path = File.basename("../plist_automation/Documents/cucumber_cheez.pdf")
+      path2 = "/home/somsekhar/Downloads/cucumber_cheez.pdf"
+      sleep 3
+      @browser.input(:xpath, "//form/div[2]/div[1]/div/div/span/input").send_keys (path2)
+      #add_file.send_keys (path2)
+      sleep 3
+      @browser.span(:xpath, "//*[@id='fileupload']/div[2]/table/tbody/tr/td[4]/span").wait_until_present 5
+      ele = @browser.span(:xpath, "//*[@id='fileupload']/div[2]/table/tbody/tr/td[4]/span").text
+      @@ele = @browser.td(:xpath,"//*[@id='fileupload']/div[2]/table/tbody/tr/td[1]").text
+     if ele.include? "Uploaded"
+       p "File Uploaded"
+     else
+       raise Exception.new "Failed"
+      #@browser.input(:id, "document_file").send_keys (path2)
+      #sleep 5
+     end
     end
 
+    def click_done
+      ele =  @browser.button(:id, "document-click")
+      ele.wait_until_present
+      ele.click
+      @browser.a(:xpath,"//tr[2]/td[1]/div/ul/li/a").wait_until_present 5
+      ele = @browser.a(:xpath,"//tr[2]/td[1]/div/ul/li/a").text
+     if ele.include? @@ele
+        p "File dispalying as expected"
+     else
+        raise Exception.new "Failed"
+     end
+    end
 
+    def publish_opp
+      publish_link = @browser.a(:xpath, "//section[@class='actions-b']//div[1]/a")
+      publish_link.wait_until_present
+      publish_link.click
+      #text_open = @browser.li(:xpath, "//section[@id='opportunity_loan_status']/ul/li[2]").text
+      ele = @browser.li(:xpath, "//section[@id='opportunity_loan_status']/ul/li[@class='active']")
+      ele.wait_until_present
+      if ele.exists? #&& text_open.include? "Open"
+        p "Published"
+      else
+        raise Exception.new "Failed"
+      end
+    end
  
 
 

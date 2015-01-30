@@ -1,8 +1,8 @@
 ---
 default:
-  name : qwinixqa2
-  email : qwinixqa2@yopmail.com
-  username : qwinixqa2
+  name : qwinixqa3
+  email : qwinixqa3@yopmail.com
+  username : qwinixqa3
   password : Qwinix1
   ph_no : 1234567890
   city : abcd
@@ -10,11 +10,9 @@ default:
   title : Lender
 
 common_user:
-  username : qwinixqa2
+  username : qwinixqa3
   password : Qwinix1
 
 admin:
   username : Tombarron
   password : Password1
-
-

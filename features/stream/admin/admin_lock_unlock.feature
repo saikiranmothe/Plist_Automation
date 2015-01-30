@@ -6,7 +6,7 @@ Feature: Make an user account Lock, Unlock and Active
          
 Background:
     Given I go to Manage users tab
-    Then I search for the common user "qwinixqa2"
+    Then I search for the common user "cucumber8"
     Then I should see Edit button
 
 @lock_admin

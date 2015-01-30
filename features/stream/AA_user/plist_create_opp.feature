@@ -1,11 +1,12 @@
+@aa_user
 @create_opp
 Feature: Create and publish New Opportunity
    As a AA user
    I should be able to create new opportunity
    So that I can publish the opportunity in the application
 
-#Background:
-   #Given I login as AA user
+Background:
+  Given I login as AA user
 
 @create_participnew
   Scenario Outline: User create a new opportunity and publish
@@ -53,10 +54,14 @@ Feature: Create and publish New Opportunity
    Then I Save the changes
    Then I should see the preliminary underwriting fields are updated
 
-  # #Document
-  #  When I click on Documents
-  #  Then I click on new doc
-  #  Then I click on Add files
+  #Document upload
+   # When I attach a document
+   # Then I click on new doc
+   Then I click on Add files
+   Then I click 'Done'
+
+  #Publish Opp
+  Then I Publish the opportunity
 
 Examples:
 | loan_origin | lender   | borrower_name | entity      | state | address | city   | zipcode | loan_type | occupancy_type   | loan_quality   |
