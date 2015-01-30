@@ -10,11 +10,11 @@
 
 ##
 #join
-features/stream/join/plist_join.feature : 1
+features/stream/join/plist_join.feature : 800
 
 ##
 #Login
-features/plist_login.feature : 800
+features/plist_login.feature : 799
 
 ##
 #Create opp
@@ -23,9 +23,10 @@ features/stream/AA_user/plist_create_opp.feature : 3
 
 ##
 #admin
+features/plist_admin_login.feature : 798
 features/stream/admin/admin_lock_unlock.feature : 700
 features/stream/admin/admin_role.feature : 699
-features/stream/admin/admin_manage_users.feature : 698
+features/stream/admin/admin_authorize_user.feature : 698
 features/stream/admin/admin_felters.feature : 697
 features/stream/admin/admin_profile.feature : 696
 features/stream/admin/admin_banks_opportunities.feature : 695

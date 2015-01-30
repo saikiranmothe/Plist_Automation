@@ -8,15 +8,8 @@ Feature: Login
   Scenario: User login for the first time
     Given I login as AA user
     Then I should see the home page with user name displayed
-    #Then user logs out from application
-    #Then the user should be log out from the application
-
-  @login_admin
-  Scenario: Admin user login
-    Then I login as an admin user
-    Then home page for the admin should be display
-    #Then user logs out from application
-    #Then the user should be log out from the application
+    Then user logs out from application
+    Then the user should be log out from the application
 
   @smoke_login_linkedin
   Scenario: User login for the first time using Linkedin
@@ -25,3 +18,10 @@ Feature: Login
     Then I click Allow access link
     Then home page for the LinkedIn user should be display
     Then user logs out from application
+
+  #   @login_admin
+  # Scenario: Admin user login
+  #   Then I login as an admin user
+  #   Then home page for the admin should be display
+  #   #Then user logs out from application
+  #   #Then the user should be log out from the application

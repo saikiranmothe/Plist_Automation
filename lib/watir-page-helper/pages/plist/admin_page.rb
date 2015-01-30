@@ -131,10 +131,10 @@ module WatirPageHelper::Plist
 
   def check_edit_button
         @@ele = @browser.a(:xpath, "//div[3]/table/tbody/tr/td[1]/a")
-        @@ele.wait_until_present
+        @@ele.wait_until_present 5
       if @@ele.exists?
-         @@ele.click
-        return "Edit button is present"
+         #@@ele.click
+        puts "Edit button is present"
       else
         raise Exception.new "Edit button is not present"
       end
@@ -168,6 +168,23 @@ module WatirPageHelper::Plist
     end
   end
 
+  def select_block
+      selector = @browser.select_list(:id, "user_status")
+      selector.wait_until_present
+      selector.when_present.select "Deactivated"
+      @browser.input(:xpath, "//form/div[3]/div/input").when_present.click
+  end
+
+  def is_user_blocked?
+    sleep 2
+    ele = @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").text
+    if ele.include? "Deactivated"
+    return "User #{ele} successful"
+    else
+    raise Exception.new "Unsccessful to Block the user account"
+    end
+  end 
+
   def select_active
       selector = @browser.select_list(:id, "user_status")
       selector.wait_until_present
@@ -185,23 +202,6 @@ module WatirPageHelper::Plist
     raise Exception.new "Unsccessful to active the user account"
     end
   end
-
-  def select_block
-      selector = @browser.select_list(:id, "user_status")
-      selector.wait_until_present
-      selector.when_present.select "Deactivated"
-      @browser.input(:xpath, "//form/div[3]/div/input").when_present.click
-  end
-
-  def is_user_blocked?
-    sleep 2
-  ele = @browser.td(:xpath, "//div[3]/table/tbody/tr/td[4]").text
-    if ele.include? "Deactivated"
-    return "User #{ele} successful"
-    else
-    raise Exception.new "Unsccessful to Block the user account"
-    end
-  end 
 
   def is_login?
     sleep 2
@@ -277,10 +277,18 @@ module WatirPageHelper::Plist
     end        
   end
 
-  def is_search_user? 
-    @browser.td(:xpath, "//div[3]/table/tbody/tr/td[2]").wait_until_present
+  def search_aa_user search_user
+       @browser.input(:id, "text_search_query").wait_until_present
+       @browser.a(:xpath, "//div[1]/div/form/div[6]/a").when_present.click
+       @browser.input(:id, "text_search_query").send_keys search_user
+       search_btn = @browser.button(:xpath, "//div[2]/div/span/button")
+       search_btn.when_present.click
+  end
+
+  def is_search_user? search_user
+    @browser.td(:xpath, "//div[3]/table/tbody/tr/td[2]").wait_until_present 
     search_result = @browser.td(:xpath, "//div[3]/table/tbody/tr/td[2]").text
-      if search_result.include? "qwinixqa2"
+      if search_result.include? search_user
          return "search result are displayning as excepted"
      else
          raise Exception.new "search result is not displayning as excepted"
@@ -309,8 +317,7 @@ module WatirPageHelper::Plist
     mang = @browser.button(:xpath,"//div[3]/div/div[2]/button")
      mang.wait_until_present
     if mang.exists?
-      sleep(3)
-      mang.click
+       mang.click
       return "setting-dropdown button is present"
     else
       raise Exception.new "setting-dropdown button is not present"
@@ -321,7 +328,6 @@ module WatirPageHelper::Plist
      mang = @browser.button(:xpath,"//div[3]/div/div[2]/button")
      mang.wait_until_present
     if mang.exists?
-      sleep(3)
       mang.click
     else
       raise Exception.new "setting-dropdown button is not present"
@@ -329,8 +335,7 @@ module WatirPageHelper::Plist
       my_profile = @browser.a(:xpath, "//div[3]/div/div[2]/ul/li[1]/a")
         my_profile.wait_until_present
         if my_profile.exists?
-          sleep(3)
-           my_profile.click
+            my_profile.click
         else
           raise Exception.new "setting-dropdown Myprofile button is not present"
         end
@@ -350,15 +355,13 @@ module WatirPageHelper::Plist
      mang = @browser.button(:xpath,"//div[3]/div/div[2]/button")
      mang.wait_until_present
     if mang.exists?
-      sleep(3)
-      mang.click
+        mang.click
     else
       raise Exception.new "setting-dropdown button is not present"
     end
       mang_bank_link = @browser.a(:xpath, "//div[3]/div/div[2]/ul/li[6]/a")
         mang_bank_link.wait_until_present
         if mang_bank_link.exists?
-          sleep(3)
            mang_bank_link.click
         else
           raise Exception.new "setting-dropdown Manage Banks button is not present"
@@ -379,16 +382,14 @@ def manage_opp
      mang = @browser.button(:xpath,"//div[3]/div/div[2]/button")
      mang.wait_until_present
     if mang.exists?
-      sleep(3)
-      mang.click
+        mang.click
     else
       raise Exception.new "setting-dropdown button is not present"
     end
       mang_opp_link = @browser.a(:xpath, "//div[3]/div/div[2]/ul/li[8]/a")
         mang_opp_link.wait_until_present
         if mang_opp_link.exists?
-          sleep(3)
-           mang_opp_link.click
+          mang_opp_link.click
         else
           raise Exception.new "setting-dropdown Manage Opp button is not present"
         end

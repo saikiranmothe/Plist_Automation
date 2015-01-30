@@ -31,6 +31,7 @@ module WatirPageHelper::Plist
     #entering username and pwd
     def login common_user
         wait_for_login_page
+        sleep 2
         @browser.input(:id, "user_login").wait_until_present
         @browser.input(:id, "user_login").send_keys common_user.username
          @browser.input(:id, "user_password").wait_until_present
@@ -59,6 +60,7 @@ module WatirPageHelper::Plist
     #entering username and pwd for admin
      def admin_login(admin_user)
         click_signin
+        sleep 2
         @browser.input(:id, "user_login").wait_until_present
         @browser.input(:id, "user_login").send_keys admin_user.username
         @browser.input(:id, "user_password").wait_until_present
