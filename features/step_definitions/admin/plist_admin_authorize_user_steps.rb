@@ -1,4 +1,4 @@
-Then(/^I search for the common user (.*)$/) do |search_user|
+Then(/^I search for the AA user (.*)$/) do |search_user|
   on @site, :admin_page do |adminpage|
   puts adminpage.search_aa_user search_user
 end
