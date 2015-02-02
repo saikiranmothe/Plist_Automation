@@ -5,6 +5,7 @@ Feature: Admin Login
    I should be able login as Admin
    So that I can use P_list application
 
+
 @login_admin
   Scenario: Admin user login
     Then I login as an admin user
