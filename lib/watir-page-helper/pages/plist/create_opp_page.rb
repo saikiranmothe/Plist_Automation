@@ -1,6 +1,6 @@
-$LOAD_PATH << './lib/watir-page-helper/pages/plist/'
+#$LOAD_PATH << './lib/watir-page-helper/pages/plist/'
 require 'watir-page-helper'
-#require 'watir-webdriver'
+require 'watir-webdriver'
 
 module WatirPageHelper::Plist
   module CreateOppPage
@@ -80,7 +80,7 @@ module WatirPageHelper::Plist
     end 
 
     def verify_changes
-       @browser.li(:xpath,"//div[3]/section/div/div/ul/li[1]").wait_until_present
+       @browser.li(:xpath,"//div[3]/section/div/div/ul/li[1]").wait_until_present 
       ele = @browser.li(:xpath,"//div[3]/section/div/div/ul/li[1]").text
       if ele.include? "-"
         raise Exception.new "Unable save the changes" 
@@ -283,17 +283,11 @@ module WatirPageHelper::Plist
 
     def prelimary_values(preliminary)
       @browser.input(:id, "opportunity_occupancy").when_present.send_keys preliminary.occupancy
-        sleep 2
       @browser.select_list(:id,"opportunity_tenant_quality").when_present.select preliminary.tenantquality
-        sleep 2
       @browser.select_list(:id,"opportunity_lease_tenures").when_present.select preliminary.leasetenures
-        sleep 2
       @browser.input(:id, "opportunity_net_operating_income").when_present.send_keys preliminary.netincome
-        sleep 2
       @browser.input(:id, "opportunity_debt_service_coverage").when_present.send_keys preliminary.debtcoverage
-        sleep 2
       @browser.input(:id, "opportunity_collateral_loan_to_value").when_present.send_keys preliminary.collateral
-        sleep 2
       @browser.input(:id, "opportunity_type_of_collateral").when_present.send_keys preliminary.collateral_type
     end
 
@@ -334,7 +328,7 @@ module WatirPageHelper::Plist
       click_document
       click_newdoc
       #path = File.basename("../plist_automation/Documents/cucumber_cheez.pdf")
-      path2 = "/home/somsekhar/Downloads/cucumber_cheez.pdf"
+      path2 = "//home//qwinix//Downloads//cucumber_cheez.pdf"
       sleep 3
       @browser.input(:xpath, "//form/div[2]/div[1]/div/div/span/input").send_keys (path2)
       #add_file.send_keys (path2)

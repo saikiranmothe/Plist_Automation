@@ -35,33 +35,24 @@ module WatirPageHelper::Plist
     def enter_join_data(user)
       wait_for_join_page
       #name
-      @browser.input(:id, "user_name").send_keys user.name
-       sleep 1
+      @browser.input(:id, "user_name").when_present.send_keys user.name
       #Email
-      @browser.input(:id, "user_email").send_keys user.email
-       sleep 1
+      @browser.input(:id, "user_email").when_present.send_keys user.email
       #Username
-      @browser.input(:id, "user_username").send_keys user.username
-       sleep 1
+      @browser.input(:id, "user_username").when_present.send_keys user.username
       #Password
-      @browser.input(:id, "user_password").send_keys user.password
-       sleep(2)
+      @browser.input(:id, "user_password").when_present.send_keys user.password
       #Confirm Pwd
-      @browser.input(:id, "user_password_confirmation").send_keys user.password
-       sleep 1
+      @browser.input(:id, "user_password_confirmation").when_present.send_keys user.password
       #phone number
-      @browser.input(:id, "phone_us").send_keys user.ph_no
-       sleep 1
+      @browser.input(:id, "phone_us").when_present.send_keys user.ph_no
       #city
-      @browser.input(:id, "user_city").send_keys user.city
-       sleep 1
+      @browser.input(:id, "user_city").when_present.send_keys user.city
       #State
           selector = @browser.select_list(:id, "user_state")
            selector.when_present.select user.state
-       sleep 2
       #Title
       @browser.select_list(:id, "select_title").when_present.select user.title
-       sleep 2
     end
 
   

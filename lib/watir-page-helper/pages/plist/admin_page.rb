@@ -1,11 +1,12 @@
-$LOAD_PATH << './lib/watir-page-helper/pages/plist/'
+#$LOAD_PATH << './lib/watir-page-helper/pages/plist/'
 require 'watir-page-helper'
-
+require 'join_page'
 module WatirPageHelper::Plist
   module AdminPage
     extend WatirPageHelper::ClassMethods
+      include JoinPage
 
-    direct_url "st.plist.qwinixtech.com/"
+    #direct_url "st.plist.qwinixtech.com/"
        
 ####Admin and Remove admin############################################################################################
   
@@ -378,7 +379,7 @@ module WatirPageHelper::Plist
    end
   end
 
-def manage_opp
+  def manage_opp
      mang = @browser.button(:xpath,"//div[3]/div/div[2]/button")
      mang.wait_until_present
     if mang.exists?
@@ -395,7 +396,7 @@ def manage_opp
         end
   end
 
-   def is_opp?
+  def is_opp?
     ele = @browser.tr(:xpath, "//div[3]/div/div[3]/table/tbody/tr[*]")
     ele.wait_until_present
     if ele.exists?
@@ -405,9 +406,10 @@ def manage_opp
     end
   end
 #################################################################################
-def check_auth_button
-  @browser.a(:xpath, "//table[@id='table_user_collections']//td[7]/a[text()='Authorize']").wait_until_present
-  @@ele = @browser.a(:xpath, "//table[@id='table_user_collections']//td[7]/a[text()='Authorize']").text
+
+  def check_auth_button
+    @browser.a(:xpath, "//table[@id='table_user_collections']//td[7]/a[text()='Authorize']").wait_until_present
+    @@ele = @browser.a(:xpath, "//table[@id='table_user_collections']//td[7]/a[text()='Authorize']").text
    if @@ele.include? "Authorize"
     return @@ele
    else
@@ -415,15 +417,15 @@ def check_auth_button
    end
   end
 
-def click_button
+  def click_button
     @browser.a(:xpath, "//div[3]/table/tbody/tr/td[7]/a[3]").when_present.click
-end
+  end
 
-def check_verification_logs enter_log
+  def check_verification_logs enter_log
      @browser.textarea(:name, "user[verification_log]").wait_until_present
      @browser.textarea(:name, "user[verification_log]").clear
      @browser.textarea(:name, "user[verification_log]").send_keys enter_log
-end
+  end
 
  def click_verify_auth
   ele = @browser.input(:xpath, "//div[2]/form/div[3]/div/input")
@@ -431,7 +433,7 @@ end
     ele.click
   end
 
-def is_authorized
+  def is_authorized
     sleep 2
     @browser.td(:xpath, "//div[3]/table/tbody/tr/td[6]").wait_until_present
     ele = @browser.td(:xpath, "//div[3]/table/tbody/tr/td[6]").text
@@ -442,7 +444,7 @@ def is_authorized
    end
   end
 
-def check_auth_notification
+  def check_auth_notification
       @@mang.click
       ele = @browser.a(:xpath, "//div[3]/div/div[2]/ul/li[2]/a")
       ele.wait_until_present
@@ -455,6 +457,103 @@ def check_auth_notification
       raise Exception.new "Failed to see the notification"
     end
   end
-##################################################################################
+#Disable/Enable User Registration#################################################################################
+  
+  def check_before
+   @browser.checkbox(:id,"suspend-user-registration")
+  end
+
+  def check_enable
+     enable_ele = @browser.checkbox(:id,"suspend-user-registration")
+     enable_ele.wait_until_present
+    if enable_ele.exists?
+       enable_ele.set
+       enable_ele.set?
+       confrim_msg = @browser.p(:xpath, ".//*[@id='div_modal_message']/div/div/div[2]/div/p")
+      if confrim_msg.wait_until_present
+         confrim_msg.text
+         close_btn = @browser.button(:xpath,"//div[@id='div_modal_message']/div/div//button[text()='Close']")
+         close_btn.click
+         return "#{confrim_msg}"
+      else
+         raise Exception.new "#{confrim_msg} dialog box not present"
+      end
+    else
+      raise Exception.new "Unable to find the check box" 
+    end
+  end
+
+  def check_disable
+     disable_ele = @browser.checkbox(:id,"suspend-user-registration")
+     disable_ele.wait_until_present
+    if disable_ele.set?
+       disable_ele.clear
+       confrim_msg = @browser.p(:xpath, ".//*[@id='div_modal_message']/div/div/div[2]/div/p")
+      if confrim_msg.wait_until_present
+         confrim_msg.text
+         close_btn = @browser.button(:xpath,"//div[@id='div_modal_message']/div/div//button[text()='Close']")
+         close_btn.click
+         close_btn.click
+      else
+         raise Exception.new "#{confrim_msg} dialog box not present"
+      end
+    else
+      raise Exception.new "Unable to find the check box" 
+    end
+  end
+
+
+  def verify_user_reg
+    click_join
+      msg = @browser.h4(:xpath, "//div[9]/div/div/div[1]/h4").text
+      dialog = @browser.div(:xpath, "//div[9]/div/div/div[1]")
+      dialog.wait_until_present
+    if dialog.exists?
+       p "#{msg}"
+       @browser.a(:xpath,"//div[9]/div/div/div[3]/a").click
+    else
+      raise Exception.new "#{msg} dialog not present"
+    end
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  end
 end

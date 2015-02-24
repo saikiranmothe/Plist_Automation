@@ -29,17 +29,17 @@ module WatirPageHelper::Plist
     end
 
     #entering username and pwd
-    def login common_user
+    def login user
         wait_for_login_page
         sleep 2
         @browser.input(:id, "user_login").wait_until_present
-        @browser.input(:id, "user_login").send_keys common_user.username
+        @browser.input(:id, "user_login").send_keys user.username
          @browser.input(:id, "user_password").wait_until_present
-        @browser.input(:id, "user_password").send_keys common_user.password
+        @browser.input(:id, "user_password").send_keys user.password
         login_btn = @browser.button(:xpath, "//form/div[2]/div[4]/button[2]").wait_until_present
         login_bt = @browser.button(:xpath, "//form/div[2]/div[4]/button[2]").click
     end
-
+    
     #verifying the login page
     def is_loggedin?
         sleep 3
@@ -60,7 +60,6 @@ module WatirPageHelper::Plist
     #entering username and pwd for admin
      def admin_login(admin_user)
         click_signin
-        sleep 2
         @browser.input(:id, "user_login").wait_until_present
         @browser.input(:id, "user_login").send_keys admin_user.username
         @browser.input(:id, "user_password").wait_until_present
@@ -108,6 +107,54 @@ module WatirPageHelper::Plist
         @browser.input(:id, "session_password-oauth2SAuthorizeForm").wait_until_present
         @browser.input(:id, "session_password-oauth2SAuthorizeForm").send_keys pwd
     end
+
+    def click_forgot_pwd_link
+      click_signin
+      pwd_link = @browser.a(:xpath,"//form[@id='form_sign_in_page']//a[text()='Forgot User Name / Password?']")
+      pwd_link.wait_until_present
+      pwd_link.click
+    end
+    
+    def enter_mail email
+        pwd_form = @browser.form(:id,"new_user")
+      if pwd_form.exists?
+        msg = @browser.h1(:xpath,".//*[@id='new_user']/div[2]/h1").text
+        @browser.input(:id,"user_email").when_present.send_keys email
+        @browser.input(:value,"Submit").when_present.click
+      else
+        raise Exception.new "#{msg} form is not present"
+      end
+    end
+
+    def verify_msg
+     
+      
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   end
 end
