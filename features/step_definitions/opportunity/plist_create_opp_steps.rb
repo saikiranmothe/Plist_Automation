@@ -50,6 +50,7 @@ end
 end
 
 #Edit Borrower######################################################################################################
+
 When(/^I click on edit icon for borrower$/) do
  on @site, :create_opp_page do |create_opp|
  create_opp.click_borrower
@@ -112,9 +113,9 @@ end
 end
 
 When(/^I Enter Loan narrative "(.*?)" and Borrower general "(.*?)"$/) do |ln, bg|
-   on @site, :create_opp_page do |create_opp|
- create_opp.enter_description ln,bg
-end
+  on @site, :create_opp_page do |create_opp|
+   create_opp.enter_description ln,bg
+  end
 end
 
 Then(/^I should see the Description changes$/) do
@@ -124,6 +125,7 @@ end
 end
 
 #Edit Satistics########################################################################################################
+
 When(/^I click on edit icon for statistics$/) do
   on @site, :create_opp_page do |create_opp|
  create_opp.click_satatis

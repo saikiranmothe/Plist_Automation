@@ -2,7 +2,7 @@ Given(/^I login as AA user$/) do
   @site = "plist".downcase
   visit @site, :login_page
   on @site, :login_page do |loginpage|
-  @commonuser = Common_user.get_user("common_user")
+  @commonuser = User.get_user("default")
   loginpage.click_signin
   loginpage.login(@commonuser)
 end
@@ -15,7 +15,7 @@ end
 end
 
 
-Then(/^I login as an admin user$/) do
+Given(/^I login as an admin user$/) do
   @site = "plist".downcase
   visit @site, :login_page
   on @site, :login_page do |loginpage|
