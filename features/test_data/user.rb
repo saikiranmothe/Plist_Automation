@@ -17,6 +17,10 @@ class User
 
   def self.get_default_user
     self.get_user("default")
+     self.get_user("common_user")
+      self.get_user("common_user1")
+       self.get_user("admin")
+        self.get_user("linkedin")
   end
 
   def self.get_user(user)

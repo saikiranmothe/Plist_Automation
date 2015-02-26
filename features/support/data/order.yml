@@ -15,11 +15,12 @@ features/stream/join/plist_join.feature : 800
 ##
 #Login
 features/plist_login.feature : 799
-features/plist_forgot_pwd.feature : 1
+features/plist_forgot_pwd.feature : 10
 
 ##
 #Create opp
-features/stream/opportunity/edit_user_details.feature : 2
+features/stream/opportunity/edit_user_details.feature : 20
+features/stream/opportunity/plist_participate_opp.feature : 399
 features/stream/opportunity/plist_create_opp.feature : 400
 
 ##

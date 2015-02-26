@@ -124,8 +124,21 @@ module WatirPageHelper::Plist
       end 
     end
 
-
-    
+    def upload_img
+      img_link = @browser.a(:xpath,"//form[@id='form_join_plist']//a[text()='Add Picture']")
+     if img_link.exists?
+        img_link.click
+        img_path = "/home/qwinix/Bradley.jpg"
+        sleep 3
+        img_btn = @browser.div(:xpath,"//form[@id='user_form_photo']/div[3]/div[1]")
+        img_btn.wait_until_present
+        sleep 3
+        img_btn.send_keys (img_path)
+        @browser.input(:xpath,"//form[@id='user_form_photo']/div[3]/div[1]/input").when_present.click
+      else
+        rise Exception.new "#{img_link} link is not present"
+      end
+    end    
 ############################################################################################
 #Sign In to ParticipationList with LinkedIn methods#
   

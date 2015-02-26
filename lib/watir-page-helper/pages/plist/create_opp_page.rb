@@ -1,6 +1,6 @@
-#$LOAD_PATH << './lib/watir-page-helper/pages/plist/'
+$LOAD_PATH << './lib/watir-page-helper/pages/plist/'
 require 'watir-page-helper'
-require 'watir-webdriver'
+#require 'watir-webdriver'
 
 module WatirPageHelper::Plist
   module CreateOppPage
@@ -42,8 +42,10 @@ module WatirPageHelper::Plist
     def verify_opp
         @browser.h5(:xpath, "//div[@id='div_opportunity_header']//div[4]/h5").wait_until_present
         ele = @browser.h5(:xpath, "//div[@id='div_opportunity_header']//div[4]/h5").text
-      if ele.include? @@ele
-          return "New Opportunity Created"
+        $ele_id = @browser.span(:xpath, "//div[@id='div_opportunity_header']/div/div/div[1]/div[3]/h5/span").text
+        p $ele_id
+      if ele.include? @@ele 
+        return "New Opportunity Created"
       else
           raise Exception.new "Unable to dispaly new opportunity page"
       end
@@ -80,7 +82,7 @@ module WatirPageHelper::Plist
     end 
 
     def verify_changes
-       @browser.li(:xpath,"//div[3]/section/div/div/ul/li[1]").wait_until_present 
+       @browser.li(:xpath,"//div[3]/section/div/div/ul/li[1]").wait_until_present
       ele = @browser.li(:xpath,"//div[3]/section/div/div/ul/li[1]").text
       if ele.include? "-"
         raise Exception.new "Unable save the changes" 
@@ -226,8 +228,9 @@ module WatirPageHelper::Plist
         #sleep 2
         @browser.input(:id, "opportunity_participation_amount").when_present.send_keys statistics.amounttoparticipate
         #sleep 2
-        @browser.input(:name, "opportunity[origination_fees]").wait_until_present
-        @browser.input(:name, "opportunity[origination_fees]").send_keys statistics.originationfees
+        #@browser.text(:id,"opportunity_origination_fees").wait_until_present
+        @browser.input(:id,"opportunity_origination_fees").clear
+        @browser.input(:id, "opportunity_origination_fees").send_keys statistics.originationfees
         #sleep 2
         #@browser.input(:id, "opportunity_servicing_fee").when_present.clear
         @browser.input(:id, "opportunity_servicing_fee").when_present.send_keys statistics.servicingfee
@@ -283,11 +286,17 @@ module WatirPageHelper::Plist
 
     def prelimary_values(preliminary)
       @browser.input(:id, "opportunity_occupancy").when_present.send_keys preliminary.occupancy
+        #sleep 2
       @browser.select_list(:id,"opportunity_tenant_quality").when_present.select preliminary.tenantquality
+       # sleep 2
       @browser.select_list(:id,"opportunity_lease_tenures").when_present.select preliminary.leasetenures
+       # sleep 2
       @browser.input(:id, "opportunity_net_operating_income").when_present.send_keys preliminary.netincome
+        #sleep 2
       @browser.input(:id, "opportunity_debt_service_coverage").when_present.send_keys preliminary.debtcoverage
+       # sleep 2
       @browser.input(:id, "opportunity_collateral_loan_to_value").when_present.send_keys preliminary.collateral
+        #sleep 2
       @browser.input(:id, "opportunity_type_of_collateral").when_present.send_keys preliminary.collateral_type
     end
 
@@ -323,14 +332,13 @@ module WatirPageHelper::Plist
       end
     end
 
-    def addfile
-      sleep 2
+    def addfile text,dt
       click_document
       click_newdoc
       #path = File.basename("../plist_automation/Documents/cucumber_cheez.pdf")
-      path2 = "//home//qwinix//Downloads//cucumber_cheez.pdf"
+      path2 = "C:\\Users\\slal\\Documents\\cucumber_cheez.pdf"
       sleep 3
-      @browser.input(:xpath, "//form/div[2]/div[1]/div/div/span/input").send_keys (path2)
+      @browser.input(:xpath, "//form/div[2]/div[1]/div/div/span/input").send_keys path2
       #add_file.send_keys (path2)
       sleep 3
       @browser.span(:xpath, "//*[@id='fileupload']/div[2]/table/tbody/tr/td[4]/span").wait_until_present 5
@@ -338,11 +346,14 @@ module WatirPageHelper::Plist
       @@ele = @browser.td(:xpath,"//*[@id='fileupload']/div[2]/table/tbody/tr/td[1]").text
      if ele.include? "Uploaded"
        p "File Uploaded"
+       @browser.input(:id, "document_description").wait_until_present
+       desc = @browser.input(:id, "document_description")
+       desc.send_keys text
+       @browser.input(:id, "document_document_date").send_keys dt
+       @browser.select_list(:id, "document_frequency").select "Monthly"
      else
        raise Exception.new "Failed"
-      #@browser.input(:id, "document_file").send_keys (path2)
-      #sleep 5
-     end
+      end  
     end
 
     def click_done
@@ -364,6 +375,18 @@ module WatirPageHelper::Plist
       publish_link.wait_until_present
       publish_link.click
       #text_open = @browser.li(:xpath, "//section[@id='opportunity_loan_status']/ul/li[2]").text
+      if @browser.input(:id,"opportunity_publish_to_all_authorized_users").wait_until_present 
+         @browser.input(:id,"opportunity_publish_to_all_authorized_users").click
+         @browser.input(:value,"Save and Continue").click
+         if @browser.input(:id,"opportunity_agree_to_terms_and_conditions").wait_until_present
+            @browser.input(:id,"opportunity_agree_to_terms_and_conditions").click
+            @browser.input(:value,"Publish Opportunity").click
+          else
+            raise Exception.new "No popup displayed"
+          end
+      else
+        raise Exception.new "Select Who Can Participate popup not present"
+      end
       ele = @browser.li(:xpath, "//section[@id='opportunity_loan_status']/ul/li[@class='active']")
       ele.wait_until_present
       if ele.exists? #&& text_open.include? "Open"
@@ -372,175 +395,6 @@ module WatirPageHelper::Plist
         raise Exception.new "Failed"
       end
     end
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
