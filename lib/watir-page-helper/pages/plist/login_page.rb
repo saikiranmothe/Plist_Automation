@@ -110,30 +110,64 @@ module WatirPageHelper::Plist
 
     def click_forgot_pwd_link
       click_signin
-      pwd_link = @browser.a(:xpath,"//form[@id='form_sign_in_page']//a[text()='Forgot User Name / Password?']")
-      pwd_link.wait_until_present
-      pwd_link.click
+      @browser.a(:xpath, "//div[2]/form/div[2]/div[3]/a").when_present.click
     end
     
     def enter_mail email
-        pwd_form = @browser.form(:id,"new_user")
+        pwd_form = @browser.form(:id, "new_user")
       if pwd_form.exists?
-        msg = @browser.h1(:xpath,".//*[@id='new_user']/div[2]/h1").text
-        @browser.input(:id,"user_email").when_present.send_keys email
-        @browser.input(:value,"Submit").when_present.click
+        msg = @browser.h1(:xpath, ".//*[@id='new_user']/div[2]/h1").text
+        @browser.input(:id, "user_email").when_present.send_keys email
+        click_submit
+      else
+        raise Exception.new "#{msg} form is not present"
+      end
+    end
+
+    def click_submit
+      @browser.input(:value, "Submit").when_present.click
+    end
+
+    def enter_mail email1
+        pwd_form = @browser.form(:id, "new_user")
+      if pwd_form.exists?
+        msg = @browser.h1(:xpath, ".//*[@id='new_user']/div[2]/h1").text
+        @browser.input(:id, "user_email").when_present.send_keys email1
+        click_submit
+      else
+        raise Exception.new "#{msg} form is not present"
+      end
+    end
+
+    def empty
+       pwd_form = @browser.form(:id, "new_user")
+      if pwd_form.exists?
+        msg = @browser.h1(:xpath, ".//*[@id='new_user']/div[2]/h1").text
+        @browser.input(:id, "user_email").when_present.send_keys ""
+        click_submit
       else
         raise Exception.new "#{msg} form is not present"
       end
     end
 
     def verify_msg
-     
-      
+      @@check_msg = @browser.p(:xpath, "//div[2]/div/div/p")
+      @@check_msg.wait_until_present
+     if @@check_msg.present?
+       return "#{@@check_msg}"
+     else
+       raise Exception.new "#{@@check_msg} banner msg is not displaying"
+     end
+    end
+
+    def empty_msg
+      raise Exception.new "Sending Request When enter Empty email"  unless @browser.input(:id, "user_email").exists?
     end
 
 
-
-
+    def invalid_msg
+    raise Exception.new "Sending Request When enter Invalid email"  unless @browser.input(:id, "user_email").exists?
+    end
 
 
 

@@ -39,14 +39,14 @@ Background:
   #  Then I Save the changes
   #  Then I should see the Description changes
 
-  # #Edit_statistics
-  #  When I click on edit icon for statistics
-  #  Then I select Loan Type <loan_type>
-  #  Then I select Loan Occupancy Type <occupancy_type>
-  #  Then I update all the mandatory fields
-  #  Then I select Bank Assessed Loan Quality <loan_quality>
-  #  Then I Save the changes
-  #  Then I should see the statistics fields are updated
+  #Edit_statistics
+   When I click on edit icon for statistics
+   Then I select Loan Type <loan_type>
+   Then I select Loan Occupancy Type <occupancy_type>
+   Then I update all the mandatory fields
+   Then I select Bank Assessed Loan Quality <loan_quality>
+   Then I Save the changes
+   Then I should see the statistics fields are updated
 
   # #Edit_preliminary
   #  When I click on edit icon for preliminary underwriting
@@ -54,12 +54,12 @@ Background:
   #  Then I Save the changes
   #  Then I should see the preliminary underwriting fields are updated
 
-  #Document upload
-   Then I click on Add files
-   Then I click 'Done'
+  # #Document upload
+  #  Then I click on Add files
+  #  Then I click 'Done'
 
-  #Publish Opp
-  Then I Publish the opportunity
+  # #Publish Opp
+  # Then I Publish the opportunity
 
 Examples:
 | loan_origin | lender   | borrower_name | entity      | state | address | city   | zipcode | loan_type                    | occupancy_type | loan_quality |

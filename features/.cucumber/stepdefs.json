@@ -328,6 +328,90 @@
     ]
   },
   {
+    "source": "^I click on Forgot Password\\?$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:1",
+    "steps": [
+      {
+        "name": "I click on Forgot Password?",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I Enter (.*)$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:9",
+    "steps": [
+      {
+        "name": "I Enter <email>",
+        "args": [
+          {
+            "offset": 8,
+            "val": "<email>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I enter invalid (.*)$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:15",
+    "steps": [
+      {
+        "name": "I enter invalid <email1>",
+        "args": [
+          {
+            "offset": 16,
+            "val": "<email1>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I enter Empty email$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:21",
+    "steps": [
+      {
+        "name": "I enter Empty email",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should see banner message$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:28",
+    "steps": [
+      {
+        "name": "I should see banner message",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should not see banner message$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:34",
+    "steps": [
+      {
+        "name": "I should not see banner message",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
     "source": "^I click Join ParticipationList with LinkedIn$",
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_linkedin_steps.rb:1",
@@ -432,7 +516,7 @@
     ]
   },
   {
-    "source": "^I click on Join ParticipationList button$",
+    "source": "^I click on Join ParticipationList$",
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:35",
     "steps": [
@@ -448,9 +532,17 @@
     ]
   },
   {
-    "source": "^check the checkbox for authorization request$",
+    "source": "^I check the authorization request$",
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:47",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I Upload an image$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join/join_steps.rb:53",
     "steps": [
 
     ]
@@ -466,7 +558,7 @@
   {
     "source": "^I should see the home page with user name displayed$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:11",
+    "file_colon_line": "features/step_definitions/login_steps.rb:12",
     "steps": [
 
     ]
@@ -474,7 +566,7 @@
   {
     "source": "^I login as an admin user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:18",
+    "file_colon_line": "features/step_definitions/login_steps.rb:19",
     "steps": [
 
     ]
@@ -482,7 +574,7 @@
   {
     "source": "^home page for the admin should be display$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:27",
+    "file_colon_line": "features/step_definitions/login_steps.rb:29",
     "steps": [
 
     ]
@@ -490,7 +582,7 @@
   {
     "source": "^I click Sign In to ParticipationList with LinkedIn$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:34",
+    "file_colon_line": "features/step_definitions/login_steps.rb:36",
     "steps": [
 
     ]
@@ -498,7 +590,7 @@
   {
     "source": "^user login as LinkedIn Email \"(.*?)\" and password \"(.*?)\"$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:43",
+    "file_colon_line": "features/step_definitions/login_steps.rb:45",
     "steps": [
 
     ]
@@ -506,7 +598,7 @@
   {
     "source": "^user logs out from application$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:49",
+    "file_colon_line": "features/step_definitions/login_steps.rb:51",
     "steps": [
 
     ]
@@ -514,7 +606,7 @@
   {
     "source": "^the user should be log out from the application$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:55",
+    "file_colon_line": "features/step_definitions/login_steps.rb:57",
     "steps": [
 
     ]
@@ -787,6 +879,14 @@
     "source": "^I click on Save Profile$",
     "flags": "",
     "file_colon_line": "features/step_definitions/opportunity/plist_edituser_details_steps.rb:22",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I search for Opportunity by Id$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/opportunity/plist_participate_opp_steps.rb:1",
     "steps": [
 
     ]

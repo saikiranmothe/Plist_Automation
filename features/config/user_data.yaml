@@ -13,6 +13,10 @@ common_user:
   username : qwinixqa5
   password : Qwinix1
 
+common_user1:
+  username : qwinixqa6
+  password : Qwinix1
+
 admin:
   username : Tombarron
   password : Password1
