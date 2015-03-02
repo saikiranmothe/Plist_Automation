@@ -14,7 +14,7 @@ Feature: Login
   @smoke_login_linkedin
   Scenario: User login for the first time using Linkedin
     Given I click Sign In to ParticipationList with LinkedIn
-    Then user login as LinkedIn Email "cucumberwatir@gmail.com" and password "Qwinix1234"
+    Then user login as LinkedIn
     Then I click Allow access link
     Then home page for the LinkedIn user should be display
     Then user logs out from application

@@ -115,7 +115,7 @@ module WatirPageHelper::Plist
     
     #verifying the username in login page
     def verify_user(user)
-      sleep(2)
+      @browser.a(:xpath, "//div[3]/div/div[1]/span/a").wait_until_present
          user_name = @browser.a(:xpath, "//div[3]/div/div[1]/span/a").text
       if user_name.include? user.name 
           return "#{user_name} is present in the homepage"

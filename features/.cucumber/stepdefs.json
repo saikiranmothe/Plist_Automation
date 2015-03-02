@@ -860,21 +860,14 @@
     ]
   },
   {
-    "source": "^user login as LinkedIn Email \"(.*?)\" and password \"(.*?)\"$",
+    "source": "^user login as LinkedIn$",
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:45",
     "steps": [
       {
-        "name": "user login as LinkedIn Email \"cucumberwatir@gmail.com\" and password \"Qwinix1234\"",
+        "name": "user login as LinkedIn",
         "args": [
-          {
-            "offset": 30,
-            "val": "cucumberwatir@gmail.com"
-          },
-          {
-            "offset": 69,
-            "val": "Qwinix1234"
-          }
+
         ]
       }
     ]
@@ -882,7 +875,7 @@
   {
     "source": "^user logs out from application$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:51",
+    "file_colon_line": "features/step_definitions/login_steps.rb:52",
     "steps": [
       {
         "name": "user logs out from application",
@@ -895,7 +888,7 @@
   {
     "source": "^the user should be log out from the application$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:57",
+    "file_colon_line": "features/step_definitions/login_steps.rb:58",
     "steps": [
       {
         "name": "the user should be log out from the application",

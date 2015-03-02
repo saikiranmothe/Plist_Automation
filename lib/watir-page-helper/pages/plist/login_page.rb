@@ -29,13 +29,13 @@ module WatirPageHelper::Plist
     end
 
     #entering username and pwd
-    def login user
+    def login common_user
         wait_for_login_page
         sleep 2
         @browser.input(:id, "user_login").wait_until_present
-        @browser.input(:id, "user_login").send_keys user.username
+        @browser.input(:id, "user_login").send_keys common_user.username
          @browser.input(:id, "user_password").wait_until_present
-        @browser.input(:id, "user_password").send_keys user.password
+        @browser.input(:id, "user_password").send_keys common_user.password
         login_btn = @browser.button(:xpath, "//form/div[2]/div[4]/button[2]").wait_until_present
         login_bt = @browser.button(:xpath, "//form/div[2]/div[4]/button[2]").click
     end
@@ -101,13 +101,14 @@ module WatirPageHelper::Plist
     end
 
     #entering email and pwd 
-    def signin_with_linkedin email,pwd
+    def signin_with_linkedin(linked_user)
         @browser.input(:id, "session_key-oauth2SAuthorizeForm").wait_until_present
-        @browser.input(:id, "session_key-oauth2SAuthorizeForm").send_keys email
+        @browser.input(:id, "session_key-oauth2SAuthorizeForm").send_keys linked_user.email
         @browser.input(:id, "session_password-oauth2SAuthorizeForm").wait_until_present
-        @browser.input(:id, "session_password-oauth2SAuthorizeForm").send_keys pwd
+        @browser.input(:id, "session_password-oauth2SAuthorizeForm").send_keys linked_user.password
     end
 
+#Forgot Password#########################################################################################
     def click_forgot_pwd_link
       click_signin
       @browser.a(:xpath, "//div[2]/form/div[2]/div[3]/a").when_present.click

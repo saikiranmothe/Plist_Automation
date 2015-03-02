@@ -4,6 +4,7 @@ rvm:
 notifications:
   recipients:
     - slakshmana@qwinixtech.com
+    - slal@qwinixtech.com
 
 before_script:
 #   #- export DISPLAY=:99.0
