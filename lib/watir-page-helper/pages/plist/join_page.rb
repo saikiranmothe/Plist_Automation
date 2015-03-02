@@ -96,6 +96,7 @@ module WatirPageHelper::Plist
    
     #click on Join ParticipationList
     def click_join_plist
+       sleep 3
       click_join_plist = @browser.button(:id, "join")
         if click_join_plist.wait_until_present
            click_join_plist.click
