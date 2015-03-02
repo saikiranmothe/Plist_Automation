@@ -4,10 +4,13 @@ rvm:
 notifications:
   recipients:
     - slakshmana@qwinixtech.com
+    - slal@qwinixtech.com
 
 before_script:
-  #- export DISPLAY=:99.0
-  - ./travis.sh
+#   #- export DISPLAY=:99.0
+#   - ./travis.sh
+ - export DISPLAY=:99.0
+ - sh -e /etc/init.d/xvfb start
 env:
   - WEB_DRIVER=firefox
 #  - WEB_DRIVER=chrome

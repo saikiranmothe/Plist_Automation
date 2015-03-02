@@ -20,3 +20,7 @@ common_user1:
 admin:
   username : Tombarron
   password : Password1
+
+linkedin:
+  email : cucumberwatir@gmail.com
+  password : Qwinix1234

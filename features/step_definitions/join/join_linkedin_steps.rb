@@ -24,7 +24,7 @@ end
 
 Then(/^user join in as Linked in Email and password$/) do
  on @site, :join_page do |joinpage|
-     @linked_user = Linkedin.get_user("linked_in_user")
+     @linked_user = User.get_user("linked_in_user")
     joinpage.login_with_linkedin(@linked_user)
   end
 end

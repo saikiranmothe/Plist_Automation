@@ -42,9 +42,10 @@ Then(/^I click Sign In to ParticipationList with LinkedIn$/) do
 end
 end
 
-Then(/^user login as LinkedIn Email "(.*?)" and password "(.*?)"$/) do |email, pwd|
+Then(/^user login as LinkedIn$/) do 
  on @site, :login_page do |loginpage|
-  loginpage.signin_with_linkedin email,pwd
+  @linked = User.get_user("linkedin")
+  loginpage.signin_with_linkedin(@linked)
 end
 end
 
