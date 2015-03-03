@@ -570,7 +570,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:29",
     "steps": [
+      {
+        "name": "home page for the admin should be display",
+        "args": [
 
+        ]
+      }
     ]
   },
   {

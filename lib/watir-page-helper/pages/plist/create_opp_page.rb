@@ -229,7 +229,7 @@ module WatirPageHelper::Plist
         @browser.input(:id, "opportunity_participation_amount").when_present.send_keys statistics.amounttoparticipate
         #sleep 2
         #@browser.text(:id,"opportunity_origination_fees").wait_until_present
-        @browser.input(:id,"opportunity_origination_fees").clear
+        #@browser.input(:id,"opportunity_origination_fees").clear
         @browser.input(:id, "opportunity_origination_fees").send_keys statistics.originationfees
         #sleep 2
         #@browser.input(:id, "opportunity_servicing_fee").when_present.clear
@@ -336,7 +336,7 @@ module WatirPageHelper::Plist
       click_document
       click_newdoc
       #path = File.basename("../plist_automation/Documents/cucumber_cheez.pdf")
-      path2 = "C:\\Users\\slal\\Documents\\cucumber_cheez.pdf"
+      path2 = "/home/qwinix/workspace/Plist_Automation/Documents/cucumber_cheez.pdf"
       sleep 3
       @browser.input(:xpath, "//form/div[2]/div[1]/div/div/span/input").send_keys path2
       #add_file.send_keys (path2)
