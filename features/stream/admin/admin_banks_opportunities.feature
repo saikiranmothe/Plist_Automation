@@ -10,5 +10,5 @@ Scenario: Admin View all Opportunities Banks
     Then I should see 'all the Banks' in the table
     Then I go to Manage Opportunities tab
     Then I should see 'all the Opportunities' in the table
-    #Then user logs out from application
+    Then user logs out from application
     
