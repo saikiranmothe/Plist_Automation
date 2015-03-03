@@ -92,7 +92,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_dis_enable_steps.rb:1",
     "steps": [
+      {
+        "name": "I Disable user registration",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -100,7 +105,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_dis_enable_steps.rb:7",
     "steps": [
+      {
+        "name": "I Enable user registration",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -108,7 +118,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_dis_enable_steps.rb:13",
     "steps": [
+      {
+        "name": "New user should not able to register with the Plist",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -116,7 +131,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_dis_enable_steps.rb:19",
     "steps": [
+      {
+        "name": "New user should able to register with the Plist",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -260,7 +280,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:1",
     "steps": [
+      {
+        "name": "I go to Manage users tab",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -396,12 +421,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_linkedin_steps.rb:13",
     "steps": [
-      {
-        "name": "I click Allow access link",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -441,12 +461,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_linkedin_steps.rb:44",
     "steps": [
-      {
-        "name": "home page for the LinkedIn user should be display",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -542,7 +557,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:19",
     "steps": [
+      {
+        "name": "I login as an admin user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -558,12 +578,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:36",
     "steps": [
-      {
-        "name": "I click Sign In to ParticipationList with LinkedIn",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -571,12 +586,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:45",
     "steps": [
-      {
-        "name": "user login as LinkedIn",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
