@@ -465,11 +465,11 @@ module WatirPageHelper::Plist
 
   def check_enable
      enable_ele = @browser.checkbox(:id,"suspend-user-registration")
-     enable_ele.wait_until_present
+     enable_ele.wait_until_present 10
     if enable_ele.exists?
        enable_ele.set
        enable_ele.set?
-       confrim_msg = @browser.p(:xpath, ".//*[@id='div_modal_message']/div/div/div[2]/div/p")
+       confrim_msg = @browser.p(:xpath, "//div[@id='div_modal_message']/div/div/div[2]/div/p")
       if confrim_msg.wait_until_present
          confrim_msg.text
          close_btn = @browser.button(:xpath,"//div[@id='div_modal_message']/div/div//button[text()='Close']")
@@ -485,7 +485,7 @@ module WatirPageHelper::Plist
 
   def check_disable
      disable_ele = @browser.checkbox(:id,"suspend-user-registration")
-     disable_ele.wait_until_present
+     disable_ele.wait_until_present 10
     if disable_ele.set?
        disable_ele.clear
        confrim_msg = @browser.p(:xpath, ".//*[@id='div_modal_message']/div/div/div[2]/div/p")

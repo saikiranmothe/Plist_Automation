@@ -96,7 +96,8 @@ module WatirPageHelper::Plist
    
     #click on Join ParticipationList
     def click_join_plist
-      click_join_plist = @browser.button(:id, "join")
+       sleep 3
+      click_join_plist = @browser.button(:xpath, "//form/div[5]/div/button") #:id, "join")
         if click_join_plist.wait_until_present
            click_join_plist.click
         else
@@ -175,7 +176,8 @@ module WatirPageHelper::Plist
           access_btn.click
       else
         raise Exception.new "Allow access button is not present"
-      end  
+      end 
+      sleep 3 
     end
 
     #verifying setup page
@@ -220,7 +222,8 @@ module WatirPageHelper::Plist
     end
     
     def verify_user_linkedin
-         user_name = @browser.a(:xpath,"//div[3]/div/div[1]/span/a")
+      sleep 5
+         user_name = @browser.h3(:xpath, "//div[1]/section/div[2]/h3") #//div[3]/div/div[1]/span/a")
          user_name.wait_until_present
          user_name.text
       if user_name.exists?

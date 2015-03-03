@@ -4,15 +4,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:1",
     "steps": [
-      {
-        "name": "I search for the AA user <search_user>",
-        "args": [
-          {
-            "offset": 25,
-            "val": "<search_user>"
-          }
-        ]
-      }
+
     ]
   },
   {
@@ -20,15 +12,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:8",
     "steps": [
-      {
-        "name": "I should able to see user in the table <search_user>",
-        "args": [
-          {
-            "offset": 39,
-            "val": "<search_user>"
-          }
-        ]
-      }
+
     ]
   },
   {
@@ -36,12 +20,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:14",
     "steps": [
-      {
-        "name": "I should be able to see 'Authorize' button",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -49,15 +28,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:23",
     "steps": [
-      {
-        "name": "I enter verification logs \"Is done\"",
-        "args": [
-          {
-            "offset": 27,
-            "val": "Is done"
-          }
-        ]
-      }
+
     ]
   },
   {
@@ -65,12 +36,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:29",
     "steps": [
-      {
-        "name": "I click Authorize button",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -78,12 +44,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:35",
     "steps": [
-      {
-        "name": "I should see the role Authorized Affiliated User",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -99,12 +60,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_banks_steps.rb:1",
     "steps": [
-      {
-        "name": "I go to Manage Banks tab",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -112,12 +68,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_banks_steps.rb:9",
     "steps": [
-      {
-        "name": "I should see 'all the Banks' in the table",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -125,12 +76,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_banks_steps.rb:15",
     "steps": [
-      {
-        "name": "I go to Manage Opportunities tab",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -138,12 +84,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_banks_steps.rb:21",
     "steps": [
-      {
-        "name": "I should see 'all the Opportunities' in the table",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -211,12 +152,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_filters_steps.rb:9",
     "steps": [
-      {
-        "name": "I select 'Approved' status from the option",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -224,12 +160,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_filters_steps.rb:15",
     "steps": [
-      {
-        "name": "I should able to see all the approved user in the table",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -237,12 +168,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_filters_steps.rb:21",
     "steps": [
-      {
-        "name": "I select 'Blocked' status from the option",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -250,12 +176,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_filters_steps.rb:27",
     "steps": [
-      {
-        "name": "I should able to see all the blocked user in the table",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -263,12 +184,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_filters_steps.rb:33",
     "steps": [
-      {
-        "name": "I select 'Locked' status from the option",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -276,12 +192,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_filters_steps.rb:39",
     "steps": [
-      {
-        "name": "I should able to see all the locked user in the table",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -297,12 +208,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_lock_unlock_steps.rb:9",
     "steps": [
-      {
-        "name": "I select 'Lock' for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -310,12 +216,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_lock_unlock_steps.rb:17",
     "steps": [
-      {
-        "name": "I should see 'Lock' status for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -323,12 +224,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_lock_unlock_steps.rb:23",
     "steps": [
-      {
-        "name": "I select 'Deactivated' for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -336,12 +232,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_lock_unlock_steps.rb:31",
     "steps": [
-      {
-        "name": "I should see 'Deactivated' status for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -357,12 +248,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_lock_unlock_steps.rb:43",
     "steps": [
-      {
-        "name": "I select 'Active' for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -370,12 +256,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_lock_unlock_steps.rb:51",
     "steps": [
-      {
-        "name": "I should see 'Active' status for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -383,12 +264,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_profile_steps.rb:1",
     "steps": [
-      {
-        "name": "I click on 'My Profile'",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -396,12 +272,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_profile_steps.rb:9",
     "steps": [
-      {
-        "name": "Profile file should be dispaly",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -422,12 +293,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:9",
     "steps": [
-      {
-        "name": "I should see 'Search' field",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -435,15 +301,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:15",
     "steps": [
-      {
-        "name": "I search for the common user \"cucumber8\"",
-        "args": [
-          {
-            "offset": 30,
-            "val": "cucumber8"
-          }
-        ]
-      }
+
     ]
   },
   {
@@ -451,12 +309,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:21",
     "steps": [
-      {
-        "name": "I should see Make Admin button for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -464,12 +317,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:28",
     "steps": [
-      {
-        "name": "I press button 'Make Admin' for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -477,12 +325,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:34",
     "steps": [
-      {
-        "name": "I should see 'Remove Admin' Role button for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -490,12 +333,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:40",
     "steps": [
-      {
-        "name": "I should see Remove Admin Role button for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -503,12 +341,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:47",
     "steps": [
-      {
-        "name": "I press button 'Remove Admin Role' for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -516,12 +349,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:53",
     "steps": [
-      {
-        "name": "I should see 'Make Admin' Role button for user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -529,12 +357,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:1",
     "steps": [
-      {
-        "name": "I click on Forgot Password?",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -542,15 +365,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:9",
     "steps": [
-      {
-        "name": "I Enter <email>",
-        "args": [
-          {
-            "offset": 8,
-            "val": "<email>"
-          }
-        ]
-      }
+
     ]
   },
   {
@@ -558,15 +373,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:15",
     "steps": [
-      {
-        "name": "I enter invalid <email1>",
-        "args": [
-          {
-            "offset": 16,
-            "val": "<email1>"
-          }
-        ]
-      }
+
     ]
   },
   {
@@ -574,12 +381,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:21",
     "steps": [
-      {
-        "name": "I enter Empty email",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -587,12 +389,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:28",
     "steps": [
-      {
-        "name": "I should see banner message",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -600,12 +397,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:34",
     "steps": [
-      {
-        "name": "I should not see banner message",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -629,12 +421,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_linkedin_steps.rb:13",
     "steps": [
-      {
-        "name": "I click Allow access link",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -674,12 +461,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_linkedin_steps.rb:44",
     "steps": [
-      {
-        "name": "home page for the LinkedIn user should be display",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -687,12 +469,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:1",
     "steps": [
-      {
-        "name": "I click on Join button",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -700,12 +477,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:9",
     "steps": [
-      {
-        "name": "I click on CREATE A NEW ACCOUNT link",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -713,12 +485,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:15",
     "steps": [
-      {
-        "name": "I enter valid user details",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -726,12 +493,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:22",
     "steps": [
-      {
-        "name": "I click on Select Bank from Join ParticipationList page",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -739,12 +501,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:28",
     "steps": [
-      {
-        "name": "I select a bank from the list of banks",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -752,12 +509,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:35",
     "steps": [
-      {
-        "name": "I click on Join ParticipationList",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -765,12 +517,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:41",
     "steps": [
-      {
-        "name": "home page for the new user name should be display",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -778,12 +525,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:47",
     "steps": [
-      {
-        "name": "I check the authorization request",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -799,12 +541,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:1",
     "steps": [
-      {
-        "name": "I login as AA user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -812,12 +549,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:12",
     "steps": [
-      {
-        "name": "I should see the home page with user name displayed",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -851,12 +583,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:36",
     "steps": [
-      {
-        "name": "I click Sign In to ParticipationList with LinkedIn",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -864,12 +591,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:45",
     "steps": [
-      {
-        "name": "user login as LinkedIn",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -890,12 +612,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:58",
     "steps": [
-      {
-        "name": "the user should be log out from the application",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -903,12 +620,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:1",
     "steps": [
-      {
-        "name": "I should see the create opportunity option from the main menu",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -916,12 +628,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:9",
     "steps": [
-      {
-        "name": "I should be able to see the create opportunity popup",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -929,12 +636,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:15",
     "steps": [
-      {
-        "name": "I click on Participation New radio button",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -942,12 +644,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:21",
     "steps": [
-      {
-        "name": "I should be able to see the new opportunity created",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -971,12 +668,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:40",
     "steps": [
-      {
-        "name": "I Save the changes",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -1088,12 +780,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:129",
     "steps": [
-      {
-        "name": "I click on edit icon for statistics",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -1101,15 +788,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:135",
     "steps": [
-      {
-        "name": "I select Loan Type <loan_type>",
-        "args": [
-          {
-            "offset": 19,
-            "val": "<loan_type>"
-          }
-        ]
-      }
+
     ]
   },
   {
@@ -1117,15 +796,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:141",
     "steps": [
-      {
-        "name": "I select Loan Occupancy Type <occupancy_type>",
-        "args": [
-          {
-            "offset": 29,
-            "val": "<occupancy_type>"
-          }
-        ]
-      }
+
     ]
   },
   {
@@ -1133,12 +804,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:147",
     "steps": [
-      {
-        "name": "I update all the mandatory fields",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -1146,15 +812,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:154",
     "steps": [
-      {
-        "name": "I select Bank Assessed Loan Quality <loan_quality>",
-        "args": [
-          {
-            "offset": 36,
-            "val": "<loan_quality>"
-          }
-        ]
-      }
+
     ]
   },
   {
@@ -1162,12 +820,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:160",
     "steps": [
-      {
-        "name": "I should see the statistics fields are updated",
-        "args": [
 
-        ]
-      }
     ]
   },
   {
@@ -1239,12 +892,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/opportunity/plist_participate_opp_steps.rb:1",
     "steps": [
-      {
-        "name": "I search for Opportunity by Id",
-        "args": [
 
-        ]
-      }
     ]
   }
 ]

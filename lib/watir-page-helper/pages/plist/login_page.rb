@@ -107,7 +107,8 @@ module WatirPageHelper::Plist
         @browser.input(:id, "session_password-oauth2SAuthorizeForm").wait_until_present
         @browser.input(:id, "session_password-oauth2SAuthorizeForm").send_keys linked_user.password
     end
-
+    
+    
 #Forgot Password#########################################################################################
     def click_forgot_pwd_link
       click_signin
