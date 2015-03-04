@@ -1,4 +1,4 @@
-#$LOAD_PATH << './lib/watir-page-helper/pages/plist/'
+$LOAD_PATH << './lib/watir-page-helper/pages/plist/'
 require 'watir-page-helper'
 require 'join_page'
 module WatirPageHelper::Plist
@@ -457,48 +457,47 @@ module WatirPageHelper::Plist
       raise Exception.new "Failed to see the notification"
     end
   end
+
 #Disable/Enable User Registration#################################################################################
-  
-  def check_before
-   @browser.checkbox(:id,"suspend-user-registration")
-  end
+  # def check_before
+  #  @browser.checkbox(:id,"suspend-user-registration")
+  # end
 
   def check_enable
      enable_ele = @browser.checkbox(:id,"suspend-user-registration")
-     enable_ele.wait_until_present 10
+     enable_ele.wait_until_present 
     if enable_ele.exists?
        enable_ele.set
-       enable_ele.set?
-       confrim_msg = @browser.p(:xpath, "//div[@id='div_modal_message']/div/div/div[2]/div/p")
-      if confrim_msg.wait_until_present
-         confrim_msg.text
-         close_btn = @browser.button(:xpath,"//div[@id='div_modal_message']/div/div//button[text()='Close']")
-         close_btn.click
+       sleep 3
+       confrim_msg = @browser.div(:xpath, "//div[7]/div/div/div[2]/div")
+       confrim_msg.text #"//div[@id='div_modal_message']/div/div/div[2]/div/p")
+      if confrim_msg.exists?
+         @browser.button(:xpath,"//div[@id='div_modal_message']//button[text()='Close']").when_present.click
          return "#{confrim_msg}"
       else
          raise Exception.new "#{confrim_msg} dialog box not present"
       end
     else
-      raise Exception.new "Unable to find the check box" 
+      raise Exception.new "Unable to find the #{confrim_msg} check box" 
     end
   end
 
   def check_disable
      disable_ele = @browser.checkbox(:id,"suspend-user-registration")
-     disable_ele.wait_until_present 10
+     disable_ele.wait_until_present 
     if disable_ele.set?
        disable_ele.clear
-       confrim_msg = @browser.p(:xpath, ".//*[@id='div_modal_message']/div/div/div[2]/div/p")
-      if confrim_msg.wait_until_present
-         confrim_msg.text
-         close_btn = @browser.button(:xpath,"//div[@id='div_modal_message']/div/div//button[text()='Close']")
-         close_btn.click
-         close_btn.click
+       sleep 3
+       confrim_msg = @browser.div(:xpath, "//div[7]/div/div/div[2]/div")
+       confrim_msg.text
+      if confrim_msg.exists?
+         @browser.button(:xpath,"//div[@id='div_modal_message']//button[text()='Close']").when_present.click
+         return "#{confrim_msg}"
       else
          raise Exception.new "#{confrim_msg} dialog box not present"
       end
     else
-      raise Exception.new "Unable to find the check box" 
+      raise Exception.new "Unable to find the #{confrim_msg} check box" 
     end
   end
 
@@ -509,7 +508,7 @@ module WatirPageHelper::Plist
       dialog = @browser.div(:xpath, "//div[9]/div/div/div[1]")
       dialog.wait_until_present
     if dialog.exists?
-       p "#{msg}"
+       return "#{msg}"
        @browser.a(:xpath,"//div[9]/div/div/div[3]/a").click
     else
       raise Exception.new "#{msg} dialog not present"

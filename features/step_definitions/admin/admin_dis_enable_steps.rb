@@ -6,7 +6,7 @@ end
 
 When(/^I Enable user registration$/) do
  on @site, :admin_page do |adminpage|
- adminpage.check_disable
+puts adminpage.check_disable
  end	
 end
 

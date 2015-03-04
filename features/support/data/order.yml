@@ -18,7 +18,7 @@ features/plist_login.feature : 799
 features/plist_forgot_pwd.feature : 10
 
 ##
-#Create opp
+#Opportunity
 features/stream/opportunity/edit_user_details.feature : 20
 features/stream/opportunity/plist_participate_opp.feature : 399
 features/stream/opportunity/plist_create_opp.feature : 400
