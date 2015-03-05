@@ -5,5 +5,5 @@ Cucumber::Rake::Task.new(:cucumber) do |t|
   t.profile = 'ci'
 end
 
-task :default => :cucumber
+task :ci => :cucumber
 

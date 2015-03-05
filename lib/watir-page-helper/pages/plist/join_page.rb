@@ -35,33 +35,24 @@ module WatirPageHelper::Plist
     def enter_join_data(user)
       wait_for_join_page
       #name
-      @browser.input(:id, "user_name").send_keys user.name
-       sleep 1
+      @browser.input(:id, "user_name").when_present.send_keys user.name
       #Email
-      @browser.input(:id, "user_email").send_keys user.email
-       sleep 1
+      @browser.input(:id, "user_email").when_present.send_keys user.email
       #Username
-      @browser.input(:id, "user_username").send_keys user.username
-       sleep 1
+      @browser.input(:id, "user_username").when_present.send_keys user.username
       #Password
-      @browser.input(:id, "user_password").send_keys user.password
-       sleep(2)
+      @browser.input(:id, "user_password").when_present.send_keys user.password
       #Confirm Pwd
-      @browser.input(:id, "user_password_confirmation").send_keys user.password
-       sleep 1
+      @browser.input(:id, "user_password_confirmation").when_present.send_keys user.password
       #phone number
-      @browser.input(:id, "phone_us").send_keys user.ph_no
-       sleep 1
+      @browser.input(:id, "phone_us").when_present.send_keys user.ph_no
       #city
-      @browser.input(:id, "user_city").send_keys user.city
-       sleep 1
+      @browser.input(:id, "user_city").when_present.send_keys user.city
       #State
           selector = @browser.select_list(:id, "user_state")
            selector.when_present.select user.state
-       sleep 2
       #Title
       @browser.select_list(:id, "select_title").when_present.select user.title
-       sleep 2
     end
 
   
@@ -105,7 +96,8 @@ module WatirPageHelper::Plist
    
     #click on Join ParticipationList
     def click_join_plist
-      click_join_plist = @browser.button(:id, "join")
+       sleep 3
+      click_join_plist = @browser.button(:xpath, "//form/div[5]/div/button") #:id, "join")
         if click_join_plist.wait_until_present
            click_join_plist.click
         else
@@ -124,7 +116,7 @@ module WatirPageHelper::Plist
     
     #verifying the username in login page
     def verify_user(user)
-      sleep(2)
+      @browser.a(:xpath, "//div[3]/div/div[1]/span/a").wait_until_present
          user_name = @browser.a(:xpath, "//div[3]/div/div[1]/span/a").text
       if user_name.include? user.name 
           return "#{user_name} is present in the homepage"
@@ -133,8 +125,21 @@ module WatirPageHelper::Plist
       end 
     end
 
-
-    
+    def upload_img
+      img_link = @browser.a(:xpath,"//form[@id='form_join_plist']//a[text()='Add Picture']")
+     if img_link.exists?
+        img_link.click
+        img_path = "/home/qwinix/Bradley.jpg"
+        sleep 3
+        img_btn = @browser.div(:xpath,"//form[@id='user_form_photo']/div[3]/div[1]")
+        img_btn.wait_until_present
+        sleep 3
+        img_btn.send_keys (img_path)
+        @browser.input(:xpath,"//form[@id='user_form_photo']/div[3]/div[1]/input").when_present.click
+      else
+        rise Exception.new "#{img_link} link is not present"
+      end
+    end    
 ############################################################################################
 #Sign In to ParticipationList with LinkedIn methods#
   
@@ -171,7 +176,8 @@ module WatirPageHelper::Plist
           access_btn.click
       else
         raise Exception.new "Allow access button is not present"
-      end  
+      end 
+      sleep 3 
     end
 
     #verifying setup page
@@ -216,7 +222,8 @@ module WatirPageHelper::Plist
     end
     
     def verify_user_linkedin
-         user_name = @browser.a(:xpath,"//div[3]/div/div[1]/span/a")
+      sleep 5
+         user_name = @browser.h3(:xpath, "//div[1]/section/div[2]/h3") #//div[3]/div/div[1]/span/a")
          user_name.wait_until_present
          user_name.text
       if user_name.exists?

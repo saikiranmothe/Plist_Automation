@@ -2,55 +2,94 @@
   {
     "source": "^I search for the AA user (.*)$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_authorize_user_steps.rb:1",
+    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:1",
     "steps": [
-
+      {
+        "name": "I search for the AA user <search_user>",
+        "args": [
+          {
+            "offset": 25,
+            "val": "<search_user>"
+          }
+        ]
+      }
     ]
   },
   {
     "source": "^I should able to see user in the table (.*)$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_authorize_user_steps.rb:8",
+    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:8",
     "steps": [
-
+      {
+        "name": "I should able to see user in the table <search_user>",
+        "args": [
+          {
+            "offset": 39,
+            "val": "<search_user>"
+          }
+        ]
+      }
     ]
   },
   {
     "source": "^I should be able to see 'Authorize' button$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_authorize_user_steps.rb:14",
+    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:14",
     "steps": [
+      {
+        "name": "I should be able to see 'Authorize' button",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I enter verification logs \"(.*?)\"$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_authorize_user_steps.rb:23",
+    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:23",
     "steps": [
-
+      {
+        "name": "I enter verification logs \"Is done\"",
+        "args": [
+          {
+            "offset": 27,
+            "val": "Is done"
+          }
+        ]
+      }
     ]
   },
   {
     "source": "^I click Authorize button$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_authorize_user_steps.rb:29",
+    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:29",
     "steps": [
+      {
+        "name": "I click Authorize button",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should see the role Authorized Affiliated User$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_authorize_user_steps.rb:35",
+    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:35",
     "steps": [
+      {
+        "name": "I should see the role Authorized Affiliated User",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should be able to see the Notification$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_authorize_user_steps.rb:41",
+    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:41",
     "steps": [
 
     ]
@@ -58,39 +97,111 @@
   {
     "source": "^I go to Manage Banks tab$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_banks_steps.rb:1",
+    "file_colon_line": "features/step_definitions/admin/admin_banks_steps.rb:1",
     "steps": [
+      {
+        "name": "I go to Manage Banks tab",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should see 'all the Banks' in the table$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_banks_steps.rb:9",
+    "file_colon_line": "features/step_definitions/admin/admin_banks_steps.rb:9",
     "steps": [
+      {
+        "name": "I should see 'all the Banks' in the table",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I go to Manage Opportunities tab$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_banks_steps.rb:15",
+    "file_colon_line": "features/step_definitions/admin/admin_banks_steps.rb:15",
     "steps": [
+      {
+        "name": "I go to Manage Opportunities tab",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should see 'all the Opportunities' in the table$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_banks_steps.rb:21",
+    "file_colon_line": "features/step_definitions/admin/admin_banks_steps.rb:21",
     "steps": [
+      {
+        "name": "I should see 'all the Opportunities' in the table",
+        "args": [
 
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I Disable user registration$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/admin/admin_dis_enable_steps.rb:1",
+    "steps": [
+      {
+        "name": "I Disable user registration",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I Enable user registration$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/admin/admin_dis_enable_steps.rb:7",
+    "steps": [
+      {
+        "name": "I Enable user registration",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^New user should not able to register with the Plist$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/admin/admin_dis_enable_steps.rb:13",
+    "steps": [
+      {
+        "name": "New user should not able to register with the Plist",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^New user should able to register with the Plist$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/admin/admin_dis_enable_steps.rb:19",
+    "steps": [
+      {
+        "name": "New user should able to register with the Plist",
+        "args": [
+
+        ]
+      }
     ]
   },
   {
     "source": "^I should see 'Filter By Status' option$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_filters_steps.rb:1",
+    "file_colon_line": "features/step_definitions/admin/admin_filters_steps.rb:1",
     "steps": [
 
     ]
@@ -98,55 +209,85 @@
   {
     "source": "^I select 'Approved' status from the option$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_filters_steps.rb:9",
+    "file_colon_line": "features/step_definitions/admin/admin_filters_steps.rb:9",
     "steps": [
+      {
+        "name": "I select 'Approved' status from the option",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should able to see all the approved user in the table$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_filters_steps.rb:15",
+    "file_colon_line": "features/step_definitions/admin/admin_filters_steps.rb:15",
     "steps": [
+      {
+        "name": "I should able to see all the approved user in the table",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I select 'Blocked' status from the option$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_filters_steps.rb:21",
+    "file_colon_line": "features/step_definitions/admin/admin_filters_steps.rb:21",
     "steps": [
+      {
+        "name": "I select 'Blocked' status from the option",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should able to see all the blocked user in the table$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_filters_steps.rb:27",
+    "file_colon_line": "features/step_definitions/admin/admin_filters_steps.rb:27",
     "steps": [
+      {
+        "name": "I should able to see all the blocked user in the table",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I select 'Locked' status from the option$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_filters_steps.rb:33",
+    "file_colon_line": "features/step_definitions/admin/admin_filters_steps.rb:33",
     "steps": [
+      {
+        "name": "I select 'Locked' status from the option",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should able to see all the locked user in the table$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_filters_steps.rb:39",
+    "file_colon_line": "features/step_definitions/admin/admin_filters_steps.rb:39",
     "steps": [
+      {
+        "name": "I should able to see all the locked user in the table",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should see Edit button$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:1",
+    "file_colon_line": "features/step_definitions/admin/admin_lock_unlock_steps.rb:1",
     "steps": [
 
     ]
@@ -154,39 +295,59 @@
   {
     "source": "^I select 'Lock' for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:9",
+    "file_colon_line": "features/step_definitions/admin/admin_lock_unlock_steps.rb:9",
     "steps": [
+      {
+        "name": "I select 'Lock' for user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should see 'Lock' status for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:17",
+    "file_colon_line": "features/step_definitions/admin/admin_lock_unlock_steps.rb:17",
     "steps": [
+      {
+        "name": "I should see 'Lock' status for user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I select 'Deactivated' for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:23",
+    "file_colon_line": "features/step_definitions/admin/admin_lock_unlock_steps.rb:23",
     "steps": [
+      {
+        "name": "I select 'Deactivated' for user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should see 'Deactivated' status for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:31",
+    "file_colon_line": "features/step_definitions/admin/admin_lock_unlock_steps.rb:31",
     "steps": [
+      {
+        "name": "I should see 'Deactivated' status for user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should not able to login the application$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:37",
+    "file_colon_line": "features/step_definitions/admin/admin_lock_unlock_steps.rb:37",
     "steps": [
 
     ]
@@ -194,105 +355,311 @@
   {
     "source": "^I select 'Active' for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:43",
+    "file_colon_line": "features/step_definitions/admin/admin_lock_unlock_steps.rb:43",
     "steps": [
+      {
+        "name": "I select 'Active' for user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should see 'Active' status for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_lock_unlock_steps.rb:51",
+    "file_colon_line": "features/step_definitions/admin/admin_lock_unlock_steps.rb:51",
     "steps": [
+      {
+        "name": "I should see 'Active' status for user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I click on 'My Profile'$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_profile_steps.rb:1",
+    "file_colon_line": "features/step_definitions/admin/admin_profile_steps.rb:1",
     "steps": [
+      {
+        "name": "I click on 'My Profile'",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^Profile file should be dispaly$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_profile_steps.rb:9",
+    "file_colon_line": "features/step_definitions/admin/admin_profile_steps.rb:9",
     "steps": [
+      {
+        "name": "Profile file should be dispaly",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I go to Manage users tab$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_role_steps.rb:1",
+    "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:1",
     "steps": [
+      {
+        "name": "I go to Manage users tab",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should see 'Search' field$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_role_steps.rb:9",
+    "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:9",
     "steps": [
+      {
+        "name": "I should see 'Search' field",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I search for the common user \"(.*?)\"$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_role_steps.rb:15",
+    "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:15",
     "steps": [
-
+      {
+        "name": "I search for the common user \"cucumber8\"",
+        "args": [
+          {
+            "offset": 30,
+            "val": "cucumber8"
+          }
+        ]
+      }
     ]
   },
   {
     "source": "^I should see Make Admin button for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_role_steps.rb:21",
+    "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:21",
     "steps": [
+      {
+        "name": "I should see Make Admin button for user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I press button 'Make Admin' for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_role_steps.rb:28",
+    "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:28",
     "steps": [
+      {
+        "name": "I press button 'Make Admin' for user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should see 'Remove Admin' Role button for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_role_steps.rb:34",
+    "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:34",
     "steps": [
+      {
+        "name": "I should see 'Remove Admin' Role button for user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should see Remove Admin Role button for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_role_steps.rb:40",
+    "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:40",
     "steps": [
+      {
+        "name": "I should see Remove Admin Role button for user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I press button 'Remove Admin Role' for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_role_steps.rb:47",
+    "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:47",
     "steps": [
+      {
+        "name": "I press button 'Remove Admin Role' for user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should see 'Make Admin' Role button for user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/plist_admin_role_steps.rb:53",
+    "file_colon_line": "features/step_definitions/admin/admin_role_steps.rb:53",
     "steps": [
+      {
+        "name": "I should see 'Make Admin' Role button for user",
+        "args": [
 
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I click on Forgot Password\\?$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:1",
+    "steps": [
+      {
+        "name": "I click on Forgot Password?",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I Enter (.*)$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:9",
+    "steps": [
+      {
+        "name": "I Enter <email>",
+        "args": [
+          {
+            "offset": 8,
+            "val": "<email>"
+          }
+        ]
+      },
+      {
+        "name": "I Enter Address line <address>",
+        "args": [
+          {
+            "offset": 8,
+            "val": "Address line <address>"
+          }
+        ]
+      },
+      {
+        "name": "I Enter Loan narrative \"New....\" and Borrower general \"New....\"",
+        "args": [
+          {
+            "offset": 8,
+            "val": "Loan narrative \"New....\" and Borrower general \"New....\""
+          }
+        ]
+      },
+      {
+        "name": "I Enter the borrwoer <borrower_name>",
+        "args": [
+          {
+            "offset": 8,
+            "val": "the borrwoer <borrower_name>"
+          }
+        ]
+      },
+      {
+        "name": "I Enter the city <city>",
+        "args": [
+          {
+            "offset": 8,
+            "val": "the city <city>"
+          }
+        ]
+      },
+      {
+        "name": "I Enter the code <zipcode>",
+        "args": [
+          {
+            "offset": 8,
+            "val": "the code <zipcode>"
+          }
+        ]
+      },
+      {
+        "name": "I Enter the state <state>",
+        "args": [
+          {
+            "offset": 8,
+            "val": "the state <state>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I enter invalid (.*)$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:15",
+    "steps": [
+      {
+        "name": "I enter invalid <email1>",
+        "args": [
+          {
+            "offset": 16,
+            "val": "<email1>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I enter Empty email$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:21",
+    "steps": [
+      {
+        "name": "I enter Empty email",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should see banner message$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:28",
+    "steps": [
+      {
+        "name": "I should see banner message",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should not see banner message$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:34",
+    "steps": [
+      {
+        "name": "I should not see banner message",
+        "args": [
+
+        ]
+      }
     ]
   },
   {
@@ -316,7 +683,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_linkedin_steps.rb:13",
     "steps": [
+      {
+        "name": "I click Allow access link",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -356,7 +728,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_linkedin_steps.rb:44",
     "steps": [
+      {
+        "name": "home page for the LinkedIn user should be display",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -400,7 +777,7 @@
     ]
   },
   {
-    "source": "^I click on Join ParticipationList button$",
+    "source": "^I click on Join ParticipationList$",
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:35",
     "steps": [
@@ -416,9 +793,17 @@
     ]
   },
   {
-    "source": "^check the checkbox for authorization request$",
+    "source": "^I check the authorization request$",
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:47",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I Upload an image$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join/join_steps.rb:53",
     "steps": [
 
     ]
@@ -428,53 +813,83 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:1",
     "steps": [
+      {
+        "name": "I login as AA user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should see the home page with user name displayed$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:11",
+    "file_colon_line": "features/step_definitions/login_steps.rb:12",
     "steps": [
+      {
+        "name": "I should see the home page with user name displayed",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I login as an admin user$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:18",
+    "file_colon_line": "features/step_definitions/login_steps.rb:19",
     "steps": [
+      {
+        "name": "I login as an admin user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^home page for the admin should be display$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:27",
+    "file_colon_line": "features/step_definitions/login_steps.rb:29",
     "steps": [
+      {
+        "name": "home page for the admin should be display",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I click Sign In to ParticipationList with LinkedIn$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:34",
+    "file_colon_line": "features/step_definitions/login_steps.rb:36",
     "steps": [
+      {
+        "name": "I click Sign In to ParticipationList with LinkedIn",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
-    "source": "^user login as LinkedIn Email \"(.*?)\" and password \"(.*?)\"$",
+    "source": "^user login as LinkedIn$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:43",
+    "file_colon_line": "features/step_definitions/login_steps.rb:45",
     "steps": [
+      {
+        "name": "user login as LinkedIn",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^user logs out from application$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:49",
+    "file_colon_line": "features/step_definitions/login_steps.rb:52",
     "steps": [
       {
         "name": "user logs out from application",
@@ -487,15 +902,20 @@
   {
     "source": "^the user should be log out from the application$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:55",
+    "file_colon_line": "features/step_definitions/login_steps.rb:58",
     "steps": [
+      {
+        "name": "the user should be log out from the application",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I login as another AA user to participate$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/login_steps.rb:61",
+    "file_colon_line": "features/step_definitions/login_steps.rb:64",
     "steps": [
 
     ]
@@ -614,7 +1034,7 @@
   {
     "source": "^I click on edit icon for borrower$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:53",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:54",
     "steps": [
       {
         "name": "I click on edit icon for borrower",
@@ -627,7 +1047,7 @@
   {
     "source": "^I Enter the borrwoer (.*)$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:59",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:60",
     "steps": [
       {
         "name": "I Enter the borrwoer <borrower_name>",
@@ -643,7 +1063,7 @@
   {
     "source": "^I Select State of Incorporation (.*)$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:65",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:66",
     "steps": [
       {
         "name": "I Select State of Incorporation <state>",
@@ -659,7 +1079,7 @@
   {
     "source": "^I Select Type of (.*)$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:71",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:72",
     "steps": [
       {
         "name": "I Select Type of <entity>",
@@ -675,7 +1095,7 @@
   {
     "source": "^I Enter Address line (.*)$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:77",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:78",
     "steps": [
       {
         "name": "I Enter Address line <address>",
@@ -691,7 +1111,7 @@
   {
     "source": "^I Enter the city (.*)$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:83",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:84",
     "steps": [
       {
         "name": "I Enter the city <city>",
@@ -707,7 +1127,7 @@
   {
     "source": "^I Enter the state (.*)$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:89",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:90",
     "steps": [
       {
         "name": "I Enter the state <state>",
@@ -723,7 +1143,7 @@
   {
     "source": "^I Enter the code (.*)$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:95",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:96",
     "steps": [
       {
         "name": "I Enter the code <zipcode>",
@@ -739,7 +1159,7 @@
   {
     "source": "^I should see the Borrower detail changes$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:101",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:102",
     "steps": [
       {
         "name": "I should see the Borrower detail changes",
@@ -752,7 +1172,7 @@
   {
     "source": "^I click on edit icon for Description$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:108",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:109",
     "steps": [
       {
         "name": "I click on edit icon for Description",
@@ -765,7 +1185,7 @@
   {
     "source": "^I Enter Loan narrative \"(.*?)\" and Borrower general \"(.*?)\"$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:114",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:115",
     "steps": [
       {
         "name": "I Enter Loan narrative \"New....\" and Borrower general \"New....\"",
@@ -785,7 +1205,7 @@
   {
     "source": "^I should see the Description changes$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:120",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:121",
     "steps": [
       {
         "name": "I should see the Description changes",
@@ -798,7 +1218,7 @@
   {
     "source": "^I click on edit icon for statistics$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:127",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:129",
     "steps": [
       {
         "name": "I click on edit icon for statistics",
@@ -811,7 +1231,7 @@
   {
     "source": "^I select Loan Type (.*)$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:133",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:135",
     "steps": [
       {
         "name": "I select Loan Type <loan_type>",
@@ -827,7 +1247,7 @@
   {
     "source": "^I select Loan Occupancy Type (.*)$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:139",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:141",
     "steps": [
       {
         "name": "I select Loan Occupancy Type <occupancy_type>",
@@ -843,7 +1263,7 @@
   {
     "source": "^I update all the mandatory fields$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:145",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:147",
     "steps": [
       {
         "name": "I update all the mandatory fields",
@@ -856,7 +1276,7 @@
   {
     "source": "^I select Bank Assessed Loan Quality (.*)$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:152",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:154",
     "steps": [
       {
         "name": "I select Bank Assessed Loan Quality <loan_quality>",
@@ -872,7 +1292,7 @@
   {
     "source": "^I should see the statistics fields are updated$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:158",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:160",
     "steps": [
       {
         "name": "I should see the statistics fields are updated",
@@ -885,7 +1305,7 @@
   {
     "source": "^I click on edit icon for preliminary underwriting$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:165",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:167",
     "steps": [
       {
         "name": "I click on edit icon for preliminary underwriting",
@@ -898,7 +1318,7 @@
   {
     "source": "^I update all the required fields$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:171",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:173",
     "steps": [
       {
         "name": "I update all the required fields",
@@ -911,7 +1331,7 @@
   {
     "source": "^I should see the preliminary underwriting fields are updated$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:178",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:180",
     "steps": [
       {
         "name": "I should see the preliminary underwriting fields are updated",
@@ -924,7 +1344,7 @@
   {
     "source": "^I click on Add files and description \"(.*?)\" and \"(.*?)\"$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:198",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:200",
     "steps": [
       {
         "name": "I click on Add files and description \"Test description\" and \"03/01/2015\"",
@@ -944,7 +1364,7 @@
   {
     "source": "^I click 'Done'$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:204",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:206",
     "steps": [
       {
         "name": "I click 'Done'",
@@ -957,7 +1377,7 @@
   {
     "source": "^I Publish the opportunity$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:210",
+    "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:212",
     "steps": [
       {
         "name": "I Publish the opportunity",

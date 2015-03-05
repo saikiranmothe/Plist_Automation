@@ -20,6 +20,15 @@ Then(/^I click on Request Loan Package button$/) do
   end
 end
 
+# When(/^I should see the opportunity details$/) do
+#   pending # express the regexp above with the code you wish you had
+# end
+
+# Then(/^I click on Request Loan Package button$/) do
+#   pending # express the regexp above with the code you wish you had
+# end
+
+
 # Then(/^I should be able to see the Documents$/) do
 #   pending # express the regexp above with the code you wish you had
 # end
@@ -39,4 +48,3 @@ end
 # Then(/^I should see my reservation$/) do
 #   pending # express the regexp above with the code you wish you had
 # end
-

@@ -32,7 +32,7 @@ Then(/^I select a bank from the list of banks$/) do
 end
 
 
-Then(/^I click on Join ParticipationList button$/) do
+Then(/^I click on Join ParticipationList$/) do
   on @site, :join_page do |joinpage|
   joinpage.click_join_plist
   end
@@ -44,8 +44,14 @@ Then(/^home page for the new user name should be display$/) do
   end  
 end
 
-Then(/^check the checkbox for authorization request$/) do
+Then(/^I check the authorization request$/) do
   on @site, :join_page do |joinpage|
   puts joinpage.click_checkbox 
+  end
+end
+
+Then(/^I Upload an image$/) do
+  on @site, :join_page do |joinpage|
+  puts joinpage.upload_img 
   end
 end

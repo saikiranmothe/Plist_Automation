@@ -39,7 +39,7 @@ module WatirPageHelper::Plist
         login_btn = @browser.button(:xpath, "//form/div[2]/div[4]/button[2]").wait_until_present
         login_bt = @browser.button(:xpath, "//form/div[2]/div[4]/button[2]").click
     end
-
+    
     #verifying the login page
     def is_loggedin?
         sleep 3
@@ -60,7 +60,6 @@ module WatirPageHelper::Plist
     #entering username and pwd for admin
      def admin_login(admin_user)
         click_signin
-        sleep 2
         @browser.input(:id, "user_login").wait_until_present
         @browser.input(:id, "user_login").send_keys admin_user.username
         @browser.input(:id, "user_password").wait_until_present
@@ -102,12 +101,96 @@ module WatirPageHelper::Plist
     end
 
     #entering email and pwd 
-    def signin_with_linkedin email,pwd
+    def signin_with_linkedin(linked_user)
         @browser.input(:id, "session_key-oauth2SAuthorizeForm").wait_until_present
-        @browser.input(:id, "session_key-oauth2SAuthorizeForm").send_keys email
+        @browser.input(:id, "session_key-oauth2SAuthorizeForm").send_keys linked_user.email
         @browser.input(:id, "session_password-oauth2SAuthorizeForm").wait_until_present
-        @browser.input(:id, "session_password-oauth2SAuthorizeForm").send_keys pwd
+        @browser.input(:id, "session_password-oauth2SAuthorizeForm").send_keys linked_user.password
     end
+    
+    
+#Forgot Password#########################################################################################
+    def click_forgot_pwd_link
+      click_signin
+      @browser.a(:xpath, "//div[2]/form/div[2]/div[3]/a").when_present.click
+    end
+    
+    def enter_mail email
+        pwd_form = @browser.form(:id, "new_user")
+      if pwd_form.exists?
+        msg = @browser.h1(:xpath, ".//*[@id='new_user']/div[2]/h1").text
+        @browser.input(:id, "user_email").when_present.send_keys email
+        click_submit
+      else
+        raise Exception.new "#{msg} form is not present"
+      end
+    end
+
+    def click_submit
+      @browser.input(:value, "Submit").when_present.click
+    end
+
+    def enter_mail email1
+        pwd_form = @browser.form(:id, "new_user")
+      if pwd_form.exists?
+        msg = @browser.h1(:xpath, ".//*[@id='new_user']/div[2]/h1").text
+        @browser.input(:id, "user_email").when_present.send_keys email1
+        click_submit
+      else
+        raise Exception.new "#{msg} form is not present"
+      end
+    end
+
+    def empty
+       pwd_form = @browser.form(:id, "new_user")
+      if pwd_form.exists?
+        msg = @browser.h1(:xpath, ".//*[@id='new_user']/div[2]/h1").text
+        @browser.input(:id, "user_email").when_present.send_keys ""
+        click_submit
+      else
+        raise Exception.new "#{msg} form is not present"
+      end
+    end
+
+    def verify_msg
+      @@check_msg = @browser.p(:xpath, "//div[2]/div/div/p")
+      @@check_msg.wait_until_present
+     if @@check_msg.present?
+       return "#{@@check_msg}"
+     else
+       raise Exception.new "#{@@check_msg} banner msg is not displaying"
+     end
+    end
+
+    def empty_msg
+      raise Exception.new "Sending Request When enter Empty email"  unless @browser.input(:id, "user_email").exists?
+    end
+
+
+    def invalid_msg
+    raise Exception.new "Sending Request When enter Invalid email"  unless @browser.input(:id, "user_email").exists?
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   end
 end

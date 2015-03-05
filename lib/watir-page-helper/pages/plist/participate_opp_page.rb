@@ -21,7 +21,7 @@ module WatirPageHelper::Plist
      end
   end
 
-  def opp_details
+    def opp_details
   		@browser.a(:xpath,"//div[2]/div/ul/li/div[2]/a").when_present.click
   	    opp_links = @browser.a(:xpath,"//div[2]/div[1]/section/div[*]//a")
   	    opp_links.text
@@ -60,7 +60,7 @@ module WatirPageHelper::Plist
       # else
       #   return "#{follow_text_bef} is Successful"
       # end
-    end
+  end
 
   # def request_loanpkg
   #     @browser.a(:xpath,"//div[2]/div[1]/section/div[1]/div[3]/a").wait_until_present
@@ -96,7 +96,6 @@ module WatirPageHelper::Plist
           else
           raise "Unable to find participation popup"
       end
-    end
 
 
 
@@ -114,5 +113,10 @@ module WatirPageHelper::Plist
 
 
 
-end
+
+
+
+
+
+  end
 end

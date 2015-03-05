@@ -8,7 +8,7 @@ Feature: Admin Login
 
 @login_admin
   Scenario: Admin user login
-    Then I login as an admin user
+    Given I login as an admin user
     Then home page for the admin should be display
     #Then user logs out from application
     #Then the user should be log out from the application

@@ -15,13 +15,13 @@ features/stream/join/plist_join.feature : 800
 ##
 #Login
 features/plist_login.feature : 799
+features/plist_forgot_pwd.feature : 10
 
 ##
-#Create opp
-#features/stream/AA_user/edit_user_details.feature : 
-features/stream/opportunity/plist_create_opp.feature : 2	
-features/stream/opportunity/plist_participate_opp.feature : 1
-
+#Opportunity
+features/stream/opportunity/edit_user_details.feature : 20
+features/stream/opportunity/plist_participate_opp.feature : 399
+features/stream/opportunity/plist_create_opp.feature : 400
 
 ##
 #admin
@@ -32,4 +32,5 @@ features/stream/admin/admin_authorize_user.feature : 698
 features/stream/admin/admin_felters.feature : 697
 features/stream/admin/admin_profile.feature : 696
 features/stream/admin/admin_banks_opportunities.feature : 695
+features/stream/admin/admin_user_reg.feature : 690
 

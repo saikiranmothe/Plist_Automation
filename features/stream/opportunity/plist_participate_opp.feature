@@ -23,13 +23,3 @@ Background:
    Examples:
    | amount |
    | 8000000 |
-
-   #Edit Borrower details
-   # When I click on edit icon for borrower
-   # Then I Enter the borrwoer <borrower_name>
-   # Then I Select Type of <entity>
-   # And I Select State of Incorporation <state>
-   # Then I Enter Address line <address>
-   # Then I Enter the city <city>
-   # Then I Enter the state <state>
-   # Then I Enter the code <zipcode>
