@@ -75,7 +75,7 @@ module WatirPageHelper::Plist
   #       end
   #   end
   
-   def participate_opp
+    def participate_opp
       @browser.a(:xpath,"//div[2]/div[1]/section/div[2]/div/a[text()='Participate']").wait_until_present
       @browser.a(:xpath,"//div[2]/div[1]/section/div[2]/div/a[text()='Participate']").click
       if @browser.form(:id,"form_reservation").wait_until_present
@@ -96,7 +96,7 @@ module WatirPageHelper::Plist
           else
           raise "Unable to find participation popup"
       end
-
+    end
 
 
 

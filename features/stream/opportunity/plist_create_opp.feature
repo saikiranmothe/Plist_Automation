@@ -23,7 +23,7 @@ Background:
 
    #Edit Borrower details
    When I click on edit icon for borrower
-   Then I Enter the borrwoer <borrower_name>
+   Then I Enter the borrower <borrower_name>
    Then I Select Type of <entity>
    And I Select State of Incorporation <state>
    Then I Enter Address line <address>

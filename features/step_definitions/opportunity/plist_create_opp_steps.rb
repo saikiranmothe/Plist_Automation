@@ -57,7 +57,7 @@ When(/^I click on edit icon for borrower$/) do
 end 
 end
 
-Then(/^I Enter the borrwoer (.*)$/) do |borrower_name|
+Then(/^I Enter the borrower (.*)$/) do |borrower_name|
  on @site, :create_opp_page do |create_opp|
  create_opp.enter_borrower borrower_name
 end 
