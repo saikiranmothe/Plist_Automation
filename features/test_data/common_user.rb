@@ -11,6 +11,7 @@ class Common_user
 
   def self.get_default_user
     self.get_user("common_user")
+    self.get_user("common_user1")
   end
 
   def self.get_user(user)

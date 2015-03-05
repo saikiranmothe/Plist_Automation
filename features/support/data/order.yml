@@ -18,8 +18,10 @@ features/plist_login.feature : 799
 
 ##
 #Create opp
-features/stream/AA_user/edit_user_details.feature : 2
-features/stream/AA_user/plist_create_opp.feature : 3
+#features/stream/AA_user/edit_user_details.feature : 
+features/stream/opportunity/plist_create_opp.feature : 2	
+features/stream/opportunity/plist_participate_opp.feature : 1
+
 
 ##
 #admin

@@ -58,5 +58,13 @@ Then(/^the user should be log out from the application$/) do
    end
 end
 
-
+Given(/^I login as another AA user to participate$/) do
+  @site = "plist".downcase
+  visit @site, :login_page
+  on @site, :login_page do |loginpage|
+  @commonuser = Common_user.get_user("common_user1")
+  loginpage.click_signin
+  loginpage.login(@commonuser)
+  end
+end
 

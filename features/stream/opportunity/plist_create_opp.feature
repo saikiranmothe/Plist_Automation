@@ -1,4 +1,4 @@
-@aa_user
+@aa_user1
 @create_opp
 Feature: Create and publish New Opportunity
    As a AA user
@@ -55,13 +55,13 @@ Background:
    Then I should see the preliminary underwriting fields are updated
 
   #Document upload
-   # When I attach a document
-   # Then I click on new doc
-   Then I click on Add files
+   Then I click on Add files and description "Test description" and "03/01/2015"
    Then I click 'Done'
 
   #Publish Opp
   Then I Publish the opportunity
+
+  Then user logs out from application
 
 Examples:
 | loan_origin | lender   | borrower_name | entity      | state | address | city   | zipcode | loan_type | occupancy_type   | loan_quality   |

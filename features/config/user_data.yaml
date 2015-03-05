@@ -1,8 +1,8 @@
 ---
 default:
-  name : qwinixqa5
-  email : qwinixqa5@yopmail.com
-  username : qwinixqa5
+  name : qwinixqa6
+  email : qwinixqa6@yopmail.com
+  username : qwinixqa6
   password : Qwinix1
   ph_no : 1234567890
   city : abcd
@@ -11,6 +11,10 @@ default:
 
 common_user:
   username : qwinixqa5
+  password : Qwinix1
+
+common_user1:
+  username : qwinixqa6
   password : Qwinix1
 
 admin:

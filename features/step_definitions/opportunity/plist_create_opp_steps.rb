@@ -194,9 +194,10 @@ end
 #   end
 # end
 
-Then(/^I click on Add files$/) do
-   on @site, :create_opp_page do |create_opp|
-  create_opp.addfile
+
+Then(/^I click on Add files and description "(.*?)" and "(.*?)"$/) do |text,dt|
+  on @site, :create_opp_page do |create_opp|
+  create_opp.addfile text,dt
   end
 end
 

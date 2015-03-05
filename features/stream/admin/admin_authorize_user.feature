@@ -23,4 +23,4 @@ Scenario Outline: Admin search the users by Name
 
     Examples:
     | search_user |
-    | qwinixqa5   |
+    | qwinixqa6   |
