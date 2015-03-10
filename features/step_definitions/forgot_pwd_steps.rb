@@ -6,7 +6,7 @@ Given(/^I click on Forgot Password\?$/) do
   end
 end
 
-When(/^I Enter (.*)$/) do |email|
+When(/^I enter (.*)$/) do |email|
   on @site, :login_page do |loginpage|
   loginpage.enter_mail email
   end
