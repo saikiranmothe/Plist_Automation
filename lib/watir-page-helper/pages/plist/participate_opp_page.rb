@@ -242,6 +242,7 @@ module WatirPageHelper::Plist
           raise "Unable to find participation popup"
       end
     end
+<<<<<<< HEAD
    
 ####################################################################################################
 
@@ -283,6 +284,8 @@ def manage_participants
   end
 
 
+=======
+>>>>>>> 4e8fec757b93b19420db9ab3b6f41fc95ed21ff1
 
 
 
