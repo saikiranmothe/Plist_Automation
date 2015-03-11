@@ -516,12 +516,7 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:1",
     "steps": [
-      {
-        "name": "I login as AA user",
-        "args": [
 
-        ]
-      }
     ]
   },
   {

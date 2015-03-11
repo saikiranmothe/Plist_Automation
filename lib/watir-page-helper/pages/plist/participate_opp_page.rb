@@ -318,8 +318,5 @@ def participant_sign
 
 
 
-
-
-
   end
 end
