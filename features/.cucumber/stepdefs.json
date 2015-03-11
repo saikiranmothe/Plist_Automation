@@ -589,6 +589,19 @@
     ]
   },
   {
+    "source": "^I click on Manage Participant$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/opportunity/plist_acceptandsign_opp_steps.rb:1",
+    "steps": [
+      {
+        "name": "I click on Manage Participant",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
     "source": "^I should see the create opportunity option from the main menu$",
     "flags": "",
     "file_colon_line": "features/step_definitions/opportunity/plist_create_opp_steps.rb:1",
