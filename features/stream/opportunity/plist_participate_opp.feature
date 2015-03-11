@@ -18,7 +18,7 @@ Background:
    # Then I fill the participation <amount>
    # Then I click on participate 
    # Then I should see my reservation
-   # Then user logs out from application
+   Then user logs out from application
  
    Examples:
    | amount |

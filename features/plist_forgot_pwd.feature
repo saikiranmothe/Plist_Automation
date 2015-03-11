@@ -12,7 +12,7 @@ Scenario: Forgot User Password with empty email
 
 Scenario Outline: Forgot User Password with valid/invalid email format
     Given I click on Forgot Password?
-    When I Enter <email>
+    When I enter <email>
     Then I should see banner message
 
 #Scenario Outline: Forgot User Password with Invalid email format
