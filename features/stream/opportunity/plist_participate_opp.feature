@@ -6,7 +6,7 @@ Feature: Participate in an opportunity
    So that I can participate in opportunity 
 
 Background:
-  Given I login as another AA user to participate
+  Given I login as another AA user
 
 @participation_new
   Scenario Outline: User participate in new opportunity
