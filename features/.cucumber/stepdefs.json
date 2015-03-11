@@ -586,20 +586,38 @@
     ]
   },
   {
-    "source": "^I login as another AA user to participate$",
+    "source": "^I login as another AA user$",
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:64",
     "steps": [
+      {
+        "name": "I login as another AA user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
-    "source": "^I click on Manage Participant$",
+    "source": "^I accept reservation and sign agreement$",
     "flags": "",
     "file_colon_line": "features/step_definitions/opportunity/plist_acceptandsign_opp_steps.rb:1",
     "steps": [
       {
-        "name": "I click on Manage Participant",
+        "name": "I accept reservation and sign agreement",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I click Sign agreement$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/opportunity/plist_acceptandsign_opp_steps.rb:10",
+    "steps": [
+      {
+        "name": "I click Sign agreement",
         "args": [
 
         ]

@@ -248,41 +248,58 @@ module WatirPageHelper::Plist
 def manage_participants
     ele = @browser.a(:xpath,"//div[1]/section/ul/li[3]/a[text()='Manage Participants']")
     ele.wait_until_present
-    if ele.exists?
-      ele.click
-      @browser.a(:xpath,"//div[2]/div/table[1]/tbody/tr[1]/td[5]/a").when_present.click
-      @browser.select_list(:id,"select_status").when_present.select "Accepted"
-      sleep 3
-      @browser.button(:xpath,"//div[2]/div/table[1]/tbody/tr[1]/td/form/div[2]/div[5]/button").when_present.click
-      sleep 3
-      txt = @browser.span(:xpath,".//*[@id='form_reservation_381']/td[4]/span").text
-      begin_btn = @browser.a(:xpath,"//div[2]/div[2]/div[1]/section/div[2]/div/a[text()='Begin Closing']")
-    if txt.include? "Accepted" && begin_btn.exists?
-      return "#{txt}"
-      begin_btn.when_present.click
-      popup = @browser.h4(:xpath,"//div[2]/div[3]/div/div/div[1]/h4")
-      popup.wait_until_present
-      popup.text
-      return "#{popup}"
-      @browser.button(:xpath,"//div[2]/div[2]/a[text()='Confirm']").when_present.click
-    else
-       raise "Confirm popup is not present"
-     end
-     if @browser.a(:xpath,"//div[2]/div/table[1]/tbody/tr[1]/td[5]/a[text()='Sign']").wait_until_present
-        @browser.a(:xpath,"//div[2]/div/table[1]/tbody/tr[1]/td[5]/a[text()='Sign']").click
-        @browser.input(:id,"issuer_name").when_present.send_keys "Test Issuer"
-        @browser.input(:value,"Sign Agreement").wait_until_present
-        @browser.input(:value,"Sign Agreement").click
-       return "Originator Sign agreement is Successful"
-     else
-       raise "Sign Agreement is not Successful"
-      end
-    else
-      raise "Manage Participants is not functional"
-    end
+  if ele.exists?
+          ele.click
+          @browser.a(:xpath,"//div[2]/div/table[1]/tbody/tr[1]/td[5]/a").when_present.click
+          @browser.select_list(:id,"select_status").when_present.select "Accepted"
+          sleep 3
+          @browser.button(:xpath,"//div[2]/div/table[1]/tbody/tr[1]/td/form/div[2]/div[5]/button").when_present.click
+          sleep 3
+          #txt = @browser.span(:xpath,".//*[@id='form_reservation_381']/td[4]/span").text
+          begin_btn = @browser.a(:xpath,"//div[2]/div[2]/div[1]/section/div[2]/div/a[text()='Begin Closing']")
+    #if begin_btn.exists?
+          # return "#{txt}"
+          begin_btn.when_present.click
+          sleep 3
+          # popup = @browser.h4(:xpath,"//div[2]/div[3]/div/div/div[1]/h4")
+          # popup.wait_until_present
+          # popup.text
+          # return "#{popup}"
+         #@browser.a(:xpath,"//div[2]/div[2]/a[text()='Confirm']").click
+          @browser.a(:xpath,"//div[2]/div[3]/div/div/div[2]/div[2]/a[2]").when_present.click
+          sleep 5
+      #if @browser.a(:xpath,"//div[2]/div/table[1]/tbody/tr[1]/td[5]/a[text()='Sign']").exists?
+          @browser.a(:xpath,"//div[2]/div/table[1]/tbody/tr[1]/td[5]/a[text()='Sign']").click
+          @browser.input(:id,"issuer_name").when_present.send_keys "Test Issuer"
+          @browser.input(:value,"Sign Agreement").wait_until_present
+          @browser.input(:value,"Sign Agreement").click
+          #return "Originator Sign agreement is Successful"
+  else
+          raise "Manage Participants is not functional"
   end
+end
 
 
+def participant_sign
+   @browser.a(:xpath,"//div[2]/div[2]/div[1]/section/div[2]/div/a").wait_until_present
+   @browser.a(:xpath,"//div[2]/div[2]/div[1]/section/div[2]/div/a").click
+   @browser.input(:id,"participant_name").when_present.send_keys "Test Participant"
+   @browser.input(:value,"Sign Agreement").wait_until_present
+   @browser.input(:value,"Sign Agreement").click
+   sleep 2
+   if @browser.div(:xpath,"//div[2]/div[4]/div/div/div[1]").exists?
+      @browser.button(:xpath,"//div[2]/div[4]/div/div/div[3]/button").click
+      else
+      raise "Cofirmation popup is not found" 
+    end
+   @browser.a(:xpath,"//div[2]/div[1]/section/div[2]/div/a").wait_until_present   
+   @browser.a(:xpath,"//div[2]/div[1]/section/div[2]/div/a").click
+   sleep 2
+   return "Wire Instruction popup displayed" if @browser.div(:xpath,"//div[2]/div[3]/div/div/div[1]").exists?
+ end    
+
+   
+   
 
 
 
