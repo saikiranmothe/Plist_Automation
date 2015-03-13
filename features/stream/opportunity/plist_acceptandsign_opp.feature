@@ -17,4 +17,25 @@ Scenario: Participant sign agreement
    Given I search for Opportunity by Id
    When I should see the opportunity details
    Then I click Sign agreement
-   
+   Then user logs out from application
+
+Scenario: Admin record payment
+   Given I login as an admin user
+   Then I go to Manage Opportunities tab
+   Then I search for Opportunity id
+   Then I click on record payment
+   Then user logs out from application
+@smoke_disburse
+Scenario: Participant Disburse funds
+   Given I login as another AA user
+   Given I search for Opportunity by Id
+   When I should see the opportunity details
+   Then I click Disburse Funds
+   Then user logs out from application
+
+Scenario: Admin record disbursement
+   Given I login as an admin user
+   Then I go to Manage Opportunities tab
+   Then I search for Opportunity id
+   Then I click on record payment
+   Then I click on record Disbursement

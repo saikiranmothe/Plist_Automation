@@ -100,26 +100,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#   end
+#  end
 # end
 
 
@@ -136,11 +117,11 @@ module WatirPageHelper::Plist
 
   def search_opp 
        @browser.input(:id, "sarch_query_results").wait_until_present
-       @browser.input(:id, "sarch_query_results").send_keys $ele_id
+       @browser.input(:id, "sarch_query_results").send_keys "49-910" #$ele_id
        search_btn = @browser.button(:type, "submit")
        search_btn.when_present.click
        search_result =  @browser.a(:xpath, "//ul[@class='list-unstyled search-result-list']/li/div[2]/a").text
-      if search_result.include? $ele_id 
+      if search_result.include? "49-910" #$ele_id 
          return "search result are displaying as excepted"
      else
          raise Exception.new "search result is not displaying as excepted"
@@ -270,7 +251,8 @@ def manage_participants
           sleep 5
       #if @browser.a(:xpath,"//div[2]/div/table[1]/tbody/tr[1]/td[5]/a[text()='Sign']").exists?
           @browser.a(:xpath,"//div[2]/div/table[1]/tbody/tr[1]/td[5]/a[text()='Sign']").click
-          @browser.input(:id,"issuer_name").when_present.send_keys "Test Issuer"
+          @browser.input(:id,"issuer_name").wait_until_present 3
+          @browser.input(:id,"issuer_name").send_keys "Test Issuer"
           @browser.input(:value,"Sign Agreement").wait_until_present
           @browser.input(:value,"Sign Agreement").click
           #return "Originator Sign agreement is Successful"
@@ -281,25 +263,120 @@ end
 
 
 def participant_sign
-   @browser.a(:xpath,"//div[2]/div[2]/div[1]/section/div[2]/div/a").wait_until_present
+   @browser.a(:xpath,"//div[2]/div[2]/div[1]/section/div[2]/div/a").wait_until_present 5
    @browser.a(:xpath,"//div[2]/div[2]/div[1]/section/div[2]/div/a").click
    @browser.input(:id,"participant_name").when_present.send_keys "Test Participant"
-   @browser.input(:value,"Sign Agreement").wait_until_present
+   @browser.input(:value,"Sign Agreement").wait_until_present 3
    @browser.input(:value,"Sign Agreement").click
-   sleep 2
+   sleep 5
+   @browser.div(:xpath,"//div[2]/div[4]/div/div/div[1]").wait_until_present 5
    if @browser.div(:xpath,"//div[2]/div[4]/div/div/div[1]").exists?
+      sleep 2
       @browser.button(:xpath,"//div[2]/div[4]/div/div/div[3]/button").click
       else
       raise "Cofirmation popup is not found" 
     end
-   @browser.a(:xpath,"//div[2]/div[1]/section/div[2]/div/a").wait_until_present   
+   @browser.a(:xpath,"//div[2]/div[1]/section/div[2]/div/a").wait_until_present 2   
    @browser.a(:xpath,"//div[2]/div[1]/section/div[2]/div/a").click
    sleep 2
    return "Wire Instruction popup displayed" if @browser.div(:xpath,"//div[2]/div[3]/div/div/div[1]").exists?
  end    
 
    
-   
+def search_id
+       @browser.input(:id, "text_search_query").wait_until_present 5
+       @browser.input(:id, "text_search_query").send_keys "49-910" #$ele_id
+       search_btn = @browser.button(:xpath, "//div[2]/div/span/button")
+       search_btn.when_present.click
+       search_result =  @browser.td(:xpath, "//div[3]/table/tbody/tr/td[2]").text
+      if search_result.include? "49-910" #$ele_id
+         return "Opportunity is displaying as excepted"
+         sleep 5
+      else
+         raise Exception.new "search result is not displaying as excepted"
+     end   
+  end
+
+  def admin_recordpayment
+    sleep 5
+      @browser.a(:xpath,"//div[3]/table/tbody/tr/td[6]/a[2]").when_present.click
+       sleep 5
+       @browser.a(:xpath,"//div[2]/table//a[text()='[Modify Payment]']").wait_until_present 2
+       @browser.a(:xpath,"//div[2]/table//a[text()='[Modify Payment]']").click
+       @browser.input(:id,"payment_amount").wait_until_present 5
+       @browser.input(:id,"payment_amount").when_present.send_keys "8000000"
+       @browser.input(:id,"payment_payment_date_time").when_present.send_keys "12/01/2015 12:00AM +0530"
+       sleep 3
+       #@browser.button(:xpath,"//div[10]/div[3]/button[1]").when_present.click 
+       #@browser.button(:xpath,"//div[10]/div[3]/button[2]").when_present.click
+       @browser.input(:id,"payment_confirmation_code").when_present.send_keys "Abcd3020"
+       sleep 3
+       @browser.input(:xpath,"//div[2]/form/div[2]/div/div/input").click
+       sleep 5
+       @browser.alert.exists?
+       @browser.alert.ok
+       sleep 5
+  end
+
+  def disburse_funds
+      @browser.a(:xpath,"//section//a[@class='btn btn-sm btn-disburse-funds']").wait_until_present 3
+      @browser.a(:xpath,"//section//a[@class='btn btn-sm btn-disburse-funds']").click
+      sleep 5
+      @browser.input(:id,"reservation_agree_to_terms_and_conditions").when_present.click
+      @browser.input(:value,"Disburse Funds").when_present.click
+      sleep 5
+      @browser.h4(:xpath,"//div[2]/div[4]/div/div/div[1]/h4").wait_until_present
+      if @browser.h4(:xpath,"//div[2]/div[4]/div/div/div[1]/h4").exists?
+        return "Disburse funds confirmation is displayed"
+        sleep 2
+        @browser.button(:xpath,"//div[2]/div[4]/div/div/div[3]/button").click
+        sleep 2
+        p "Clicking"    
+      end
+  end
+
+  def rec_disbursement 
+      sleep 3
+      signoff_text = @browser.td(:xpath,"//div[2]/table/tbody/tr[1]/td[6]").text
+      if signoff_text.include? "Yes"
+        return "Disbursement Signoff value is Yes"
+        sleep 2
+        @browser.a(:xpath,"//div[3]/div[1]/a[text()='Record Disbursement']").wait_until_present 2
+        @browser.a(:xpath,"//div[3]/div[1]/a[text()='Record Disbursement']").click
+        sleep 5
+        @browser.input(:id,"disbursement_amount").when_present.send_keys "8000000"
+        @browser.input(:id,"disbursement_sent_date_time").when_present.send_keys "12/01/2015 12:00AM +0530"
+        @browser.input(:id,"disbursement_confirmation_code").when_present.send_keys "Abcd3020"
+        @browser.input(:id,"disbursement_sent_by").when_present.send_keys "Admin"
+        @browser.a(:xpath,"//div[2]/form/div[2]/div/div/a[text()='Record Disbursement']").when_present.click
+        sleep 5
+        @browser.input(:id,"ok-btn").wait_until_present
+        if @browser.input(:id,"ok-btn").exists?
+          return "Record Disbursement confirmation popup displayed"
+          @browser.input(:id,"ok-btn").click
+        else
+          raise "Record Disbursement confirmation popup NOT displayed"
+        end
+      else
+        raise "Disbursement Signoff value NOT changed to Yes"
+      end
+  end
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
 
 
 
