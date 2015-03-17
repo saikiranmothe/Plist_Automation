@@ -1,56 +1,115 @@
 [
   {
-    "source": "^I search for the AA user (.*)$",
+    "source": "^I search for the AA user$",
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:1",
     "steps": [
+      {
+        "name": "I search for the AA user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
-    "source": "^I should able to see user in the table (.*)$",
+    "source": "^I should able to see user in the table$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:8",
+    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:9",
     "steps": [
+      {
+        "name": "I should able to see user in the table",
+        "args": [
 
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I search for the another AA user$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:15",
+    "steps": [
+      {
+        "name": "I search for the another AA user",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should able to see another user in the table$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:22",
+    "steps": [
+      {
+        "name": "I should able to see another user in the table",
+        "args": [
+
+        ]
+      }
     ]
   },
   {
     "source": "^I should be able to see 'Authorize' button$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:14",
+    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:28",
     "steps": [
+      {
+        "name": "I should be able to see 'Authorize' button",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I enter verification logs \"(.*?)\"$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:23",
+    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:37",
     "steps": [
-
+      {
+        "name": "I enter verification logs \"Is done\"",
+        "args": [
+          {
+            "offset": 27,
+            "val": "Is done"
+          }
+        ]
+      }
     ]
   },
   {
     "source": "^I click Authorize button$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:29",
+    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:43",
     "steps": [
+      {
+        "name": "I click Authorize button",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should see the role Authorized Affiliated User$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:35",
+    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:49",
     "steps": [
+      {
+        "name": "I should see the role Authorized Affiliated User",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I should be able to see the Notification$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:41",
+    "file_colon_line": "features/step_definitions/admin/admin_authorize_user_steps.rb:55",
     "steps": [
 
     ]
@@ -76,7 +135,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/admin/admin_banks_steps.rb:15",
     "steps": [
+      {
+        "name": "I go to Manage Opportunities tab",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -336,7 +400,7 @@
     ]
   },
   {
-    "source": "^I enter (.*)$",
+    "source": "^I enter valid email(.*)$",
     "flags": "",
     "file_colon_line": "features/step_definitions/forgot_pwd_steps.rb:9",
     "steps": [
@@ -444,7 +508,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:1",
     "steps": [
+      {
+        "name": "I click on Join button",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -452,23 +521,38 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:9",
     "steps": [
+      {
+        "name": "I click on CREATE A NEW ACCOUNT link",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
-    "source": "^I enter valid user details$",
+    "source": "^I fill the valid user details$",
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:15",
     "steps": [
+      {
+        "name": "I fill the valid user details",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
-    "source": "^I click on Select Bank from Join ParticipationList page$",
+    "source": "^I click on Select Bank$",
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:22",
     "steps": [
+      {
+        "name": "I click on Select Bank",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -476,37 +560,96 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:28",
     "steps": [
+      {
+        "name": "I select a bank from the list of banks",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
-    "source": "^I click on Join ParticipationList$",
+    "source": "^I fill the valid user details for another aa user$",
     "flags": "",
     "file_colon_line": "features/step_definitions/join/join_steps.rb:35",
     "steps": [
+      {
+        "name": "I fill the valid user details for another aa user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
-    "source": "^home page for the new user name should be display$",
+    "source": "^I select another bank$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/join/join_steps.rb:41",
+    "file_colon_line": "features/step_definitions/join/join_steps.rb:42",
     "steps": [
+      {
+        "name": "I select another bank",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
     "source": "^I check the authorization request$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/join/join_steps.rb:47",
+    "file_colon_line": "features/step_definitions/join/join_steps.rb:49",
     "steps": [
+      {
+        "name": "I check the authorization request",
+        "args": [
 
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I click on Join ParticipationList$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join/join_steps.rb:55",
+    "steps": [
+      {
+        "name": "I click on Join ParticipationList",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Home page for the user should be display$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join/join_steps.rb:61",
+    "steps": [
+      {
+        "name": "Home page for the user should be display",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Home page for the another new user should be display$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/join/join_steps.rb:67",
+    "steps": [
+      {
+        "name": "Home page for the another new user should be display",
+        "args": [
+
+        ]
+      }
     ]
   },
   {
     "source": "^I Upload an image$",
     "flags": "",
-    "file_colon_line": "features/step_definitions/join/join_steps.rb:53",
+    "file_colon_line": "features/step_definitions/join/join_steps.rb:73",
     "steps": [
 
     ]
@@ -516,7 +659,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:1",
     "steps": [
+      {
+        "name": "I login as AA user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -532,7 +680,12 @@
     "flags": "",
     "file_colon_line": "features/step_definitions/login_steps.rb:19",
     "steps": [
+      {
+        "name": "I login as an admin user",
+        "args": [
 
+        ]
+      }
     ]
   },
   {
@@ -613,6 +766,58 @@
     "steps": [
       {
         "name": "I click Sign agreement",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I search for Opportunity id$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/opportunity/plist_acceptandsign_opp_steps.rb:28",
+    "steps": [
+      {
+        "name": "I search for Opportunity id",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I click on record payment$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/opportunity/plist_acceptandsign_opp_steps.rb:34",
+    "steps": [
+      {
+        "name": "I click on record payment",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I click Disburse Funds$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/opportunity/plist_acceptandsign_opp_steps.rb:41",
+    "steps": [
+      {
+        "name": "I click Disburse Funds",
+        "args": [
+
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I click on record Disbursement$",
+    "flags": "",
+    "file_colon_line": "features/step_definitions/opportunity/plist_acceptandsign_opp_steps.rb:47",
+    "steps": [
+      {
+        "name": "I click on record Disbursement",
         "args": [
 
         ]

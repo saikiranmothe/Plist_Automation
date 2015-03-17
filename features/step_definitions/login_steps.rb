@@ -2,8 +2,8 @@ Given(/^I login as AA user$/) do
   @site = "plist".downcase
   visit @site, :login_page
   on @site, :login_page do |loginpage|
-  #@commonuser = User.get_user("default")
-  @commonuser = User.get_user("common_user")
+  @commonuser = User.get_user("default")
+  #@commonuser = User.get_user("common_user")
   loginpage.click_signin
   loginpage.login(@commonuser)
 end
@@ -65,9 +65,9 @@ Given(/^I login as another AA user$/) do
   @site = "plist".downcase
   visit @site, :login_page
   on @site, :login_page do |loginpage|
-  @commonuser = User.get_user("common_user1")
+  @commonuser1 = User.get_user("second_aa_user")
   loginpage.click_signin
-  loginpage.login(@commonuser)
+  loginpage.login(@commonuser1)
   end
 end
 

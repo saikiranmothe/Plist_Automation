@@ -10,26 +10,28 @@
 
 ##
 #join
-features/stream/join/plist_join.feature : 800
+
 
 ##
 #Login
 features/plist_login.feature : 799
-features/plist_forgot_pwd.feature : 10
+features/plist_forgot_pwd.feature : 20
 
 ##
-#Opportunity
-features/stream/opportunity/edit_user_details.feature : 20
-features/stream/opportunity/plist_acceptandsign_opp.feature : 395
-features/stream/opportunity/plist_participate_opp.feature : 399
-features/stream/opportunity/plist_create_opp.feature : 400
+#Create and Participate Opportunity 
+features/stream/join/plist_join.feature : 800
+features/stream/admin/admin_authorize_user.feature : 799
+features/stream/opportunity/plist_create_opp.feature : 798
+features/stream/opportunity/plist_participate_opp.feature : 797
+features/stream/opportunity/plist_acceptandsign_opp.feature : 796
+features/stream/opportunity/edit_user_details.feature : 10
 
 ##
 #admin
 features/plist_admin_login.feature : 798
 features/stream/admin/admin_lock_unlock.feature : 700
 features/stream/admin/admin_role.feature : 699
-features/stream/admin/admin_authorize_user.feature : 698
+
 features/stream/admin/admin_felters.feature : 697
 features/stream/admin/admin_profile.feature : 696
 features/stream/admin/admin_banks_opportunities.feature : 695

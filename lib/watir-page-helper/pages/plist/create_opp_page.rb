@@ -336,12 +336,18 @@ module WatirPageHelper::Plist
     def addfile text,dt
       click_document
       click_newdoc
-      #path = File.basename("../plist_automation/Documents/cucumber_cheez.pdf")
-      path2 = "C:\\Users\\slal\\Documents\\cucumber_cheez.pdf"
+      #for windows 
+      # path2 = "C:\\Users\\slal\\Documents\\cucumber_cheez.pdf"
+      # sleep 3
+      # @browser.input(:xpath, "//form/div[2]/div[1]/div/div/span/input").send_keys path2
+      # sleep 3
+
+      # for ubuntu
+       path2 = "//home//qwinix//Downloads//cucumber_cheez.pdf"
       sleep 3
       @browser.input(:xpath, "//form/div[2]/div[1]/div/div/span/input").send_keys path2
-      #add_file.send_keys (path2)
       sleep 3
+
       @browser.span(:xpath, "//*[@id='fileupload']/div[2]/table/tbody/tr/td[4]/span").wait_until_present 5
       ele = @browser.span(:xpath, "//*[@id='fileupload']/div[2]/table/tbody/tr/td[4]/span").text
       @@ele = @browser.td(:xpath,"//*[@id='fileupload']/div[2]/table/tbody/tr/td[1]").text

@@ -69,19 +69,40 @@ module WatirPageHelper::Plist
     #select bank from the list
     def select_bank
       select_bank = @browser.button(:xpath, "//div[1]/div[1]/div[1]/div[3]/button")
-        if select_bank.wait_until_present
+      msg = @browser.h4(:xpath,"//div[1]/div[1]/div[1]/div[1]/h4").text
+       if select_bank.wait_until_present
            select_bank.click
-            ele = @browser.input(:id, "authorized")
+            ele = @browser.div(:xpath, "//div[3]/section/form/div[3]/div[1]/div[1]/div")
             ele.wait_until_present
+            ele.text
           if ele.exists?
-            return "Bank Selected sccessfully"
+            return "#{msg} Bank Selected sccessfully"
           else
-             raise Exception.new "Authorization checkbox is not available in Join page"
+             raise "Unable to select #{msg} Bank"
           end
         else
-           raise Exception.new "unable to find the list of banks"
+           raise "unable to find the list of banks"
         end
     end
+
+    def select_another_bank
+     select_bank = @browser.button(:xpath, "//div[1]/div[1]/div[3]/div[3]/button")
+      msg = @browser.div(:xpath,"//div[1]/div[1]/div[3]/div[1]").text
+        if select_bank.wait_until_present
+           select_bank.click
+            ele = @browser.div(:xpath, "//div[3]/section/form/div[3]/div[1]/div[1]/div")
+            ele.wait_until_present
+            ele.text
+          if ele.exists?
+            return "#{msg} Bank Selected sccessfully"
+          else
+             raise "Unable to select #{msg} Bank"
+          end
+        else
+           raise "unable to find the list of banks"
+        end
+    end
+
 
     def click_checkbox
       ele = @browser.input(:id, "authorized")
