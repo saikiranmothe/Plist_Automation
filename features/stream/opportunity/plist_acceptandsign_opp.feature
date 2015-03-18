@@ -1,4 +1,4 @@
-@aa_user1
+@smoke_create_and_participate_opp
 @acceptandsign_opp
 Feature: accept reservation
    
@@ -25,7 +25,7 @@ Scenario: Admin record payment
    Then I search for Opportunity id
    Then I click on record payment
    Then user logs out from application
-@smoke_disburse
+
 Scenario: Participant Disburse funds
    Given I login as another AA user
    Given I search for Opportunity by Id
@@ -37,5 +37,4 @@ Scenario: Admin record disbursement
    Given I login as an admin user
    Then I go to Manage Opportunities tab
    Then I search for Opportunity id
-   Then I click on record payment
    Then I click on record Disbursement

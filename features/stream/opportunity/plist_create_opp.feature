@@ -1,15 +1,13 @@
-@aa_user1
+@smoke_create_and_participate_opp
 @create_opp
 Feature: Create and publish New Opportunity
    As a AA user
    I should be able to create new opportunity
    So that I can publish the opportunity in the application
 
-Background:
-  Given I login as AA user
-
 @create_participnew
   Scenario Outline: User create a new opportunity and publish
+   Given I login as AA user
    Given I should see the create opportunity option from the main menu
    When I should be able to see the create opportunity popup
    Then I click on Participation New radio button
@@ -60,7 +58,6 @@ Background:
 
   #Publish Opp
   Then I Publish the opportunity
-
   Then user logs out from application
 
 Examples:

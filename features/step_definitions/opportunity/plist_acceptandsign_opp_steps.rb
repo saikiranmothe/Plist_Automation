@@ -47,5 +47,6 @@ end
 Then(/^I click on record Disbursement$/) do
 on @site, :participate_opp_page do |participate_opp|
 puts participate_opp.rec_disbursement 
+puts participate_opp.opp_close?
 end
 end

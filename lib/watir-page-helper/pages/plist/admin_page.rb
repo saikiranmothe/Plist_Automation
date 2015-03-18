@@ -278,18 +278,18 @@ module WatirPageHelper::Plist
     end        
   end
 
-  def search_aa_user search_user
+  def search_aa_user(search_user)
        @browser.input(:id, "text_search_query").wait_until_present
        @browser.a(:xpath, "//div[1]/div/form/div[6]/a").when_present.click
-       @browser.input(:id, "text_search_query").send_keys search_user
+       @browser.input(:id, "text_search_query").send_keys search_user.username
        search_btn = @browser.button(:xpath, "//div[2]/div/span/button")
        search_btn.when_present.click
   end
 
-  def is_search_user? search_user
+  def is_search_user?(search_user)
     @browser.td(:xpath, "//div[3]/table/tbody/tr/td[2]").wait_until_present 
     search_result = @browser.td(:xpath, "//div[3]/table/tbody/tr/td[2]").text
-      if search_result.include? search_user
+      if search_result.include? search_user.username
          return "search result are displayning as excepted"
      else
          raise Exception.new "search result is not displayning as excepted"

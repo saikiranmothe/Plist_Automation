@@ -10,6 +10,7 @@ Feature: Login
     Then I should see the home page with user name displayed
     Then user logs out from application
     Then the user should be log out from the application
+    
 
   @smoke_login_linkedin
   Scenario: User login for the first time using Linkedin
